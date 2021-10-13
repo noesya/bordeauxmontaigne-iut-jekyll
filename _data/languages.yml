@@ -7,6 +7,8 @@ fr:
   previous: "Précédent"
   more: "Lire la suite"
   next: "Suivant"
+  institut:
+    title: Institut
   news:
     infos: "Informations sur l’article"
     more: "Voir toutes les actualités"
@@ -24,6 +26,8 @@ en:
   previous: "Previous"
   more: "Read more"
   next: "Next"
+  institut:
+    title: Institut
   news:
     infos: "Article informations"
     more: "See more news"

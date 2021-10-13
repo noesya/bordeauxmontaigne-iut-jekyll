@@ -1,6 +1,6 @@
 <header class="hero"{% if page.color %} style="background-color: {{page.color}} "{% endif %}>
   {% if page.hero_image %}
-    {% picture {{ page.hero_image }} --alt {{ page.title }} --img class="hero__image" %}
+    {% picture {{ page.hero_image }} mobile: {{ page.hero_image_mobile }} --alt {{ page.title }} --img class="hero__image" %}
   {% endif %}
   <div class="container">
     <div class="row">

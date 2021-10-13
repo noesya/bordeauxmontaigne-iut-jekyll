@@ -1,17 +1,51 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <a href="/">{{site.title}}</a>
+      <div class="col-md-4">
+        <a href="/"><img src="/assets/images/logo.svg" alt="{{site.title}}"></a>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-8">
+        <address>
+          Institut Universitaire de Technologie Bordeaux Montaigne<br>
+          1 rue Jacques Ellul<br>
+          33080 Bordeaux Cedex<br>
+          France<br>
+          +33 5 57 12 20 44
+        </address>
+      </div>
+    </div>
+    <div class="row row-cols-md-3">
+      <div class="col">
+        <a href="/institut" class="h2">Institut</a>
         <ul class="nav flex-column">
-        {% for item in site.data.menus.primary %}
-          <li class="nav-item">
-            <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
-          </li>
-        {% endfor %}
+          {% for item in site.institut %}
+            <li class="nav-item">
+              <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+            </li>
+          {% endfor %}
         </ul>
+      </div>
+      <div class="col">
+        <a href="/diplomes" class="h2">Diplômes</a>
+        <ul class="nav flex-column">
+          {% for item in site.diplomes %}
+            <li class="nav-item">
+              <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="col">
+        <a href="/recherche" class="h2">Recherche</a>
+        <ul class="nav flex-column">
+          {% for item in site.recherche %}
+            <li class="nav-item">
+              <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <a href="/actualites" class="h2">Actualités</a>
+        <p class="h2">Légal</p>
         <ul class="nav flex-column">
         {% for item in site.data.menus.legal %}
           <li class="nav-item">

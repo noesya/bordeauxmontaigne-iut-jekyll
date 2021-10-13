@@ -1,5 +1,5 @@
 title: Template website
-description: Lorem ipsum description
+description: "L’IUT Bordeaux Montaigne, le plus court chemin pour aller loin"
 lang: fr
 
 exclude:
@@ -25,6 +25,12 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  -
+    scope:
+      path: ""
+      type: "diplomes"
+    values:
+      layout: "page"
 
 collections:
   pages:
@@ -32,6 +38,9 @@ collections:
   posts:
     output: true
     permalink: /actualites/:name
+  diplomes:
+    output: true
+    permalink: /diplomes/:name
 
 paginate: 8
 

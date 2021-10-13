@@ -1,4 +1,4 @@
-# Bordeaux Montaigne
+# Bordeaux Montaigne IUT
 
 Ce template Jekyll est basé sur le template des websites.
 
@@ -8,5 +8,12 @@ Ce template Jekyll est basé sur le template des websites.
 bundle install
 yarn install
 ```
+
+### Gem
+
+* Jekyll picture tag
+* Jekyll minifier
+* Jekyll paginate
+* Jekyll sitemap
 
 jekyll_picture_tag utilise libvips : https://libvips.github.io/libvips/install.html

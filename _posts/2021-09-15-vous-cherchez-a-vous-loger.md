@@ -1,7 +1,6 @@
 ---
 title: Vous cherchez à vous loger ? Utilisez notre plateforme de logement en ligne
 date: 2021-10-01 10:00
-author: Arnaud Levy
 author: Jutin Puyo
 category: Vie étudiante
 ---

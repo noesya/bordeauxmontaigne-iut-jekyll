@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.languages[lang] %}
+
+<article itemscope itemtype="https://schema.org/Article">
+  {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+  {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+  {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+
+  {% include hero.html %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        {%- if page.image -%}
+          {% picture {{ page.image }} --alt {{ page.title }} --img class="img-fluid" %}
+        {%- endif -%}
+        <div itemprop="articleBody">
+          {{ content }}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <ul class="nav flex-column">
+          {% assign list = site.diplomes | where: 'category', page.title %}
+          {% for diplome in list %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{diplome.url}}">{{diplome.title}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</article>

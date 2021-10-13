@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="container">
-    <div class="row">
+    <div class="row mb-5">
       <div class="col-md-4">
         <a href="/"><img src="/assets/images/logo.svg" alt="{{site.title}}"></a>
       </div>
@@ -16,7 +16,9 @@
     </div>
     <div class="row row-cols-md-3">
       <div class="col">
-        <a href="/institut" class="h2">Institut</a>
+        <div class="footer__title">
+          <a href="/institut">Institut</a>
+        </div>
         <ul class="nav flex-column">
           {% for item in site.institut %}
             <li class="nav-item">
@@ -26,7 +28,9 @@
         </ul>
       </div>
       <div class="col">
-        <a href="/diplomes" class="h2">Diplômes</a>
+        <div class="footer__title">
+          <a href="/diplomes">Diplômes</a>
+        </div>
         <ul class="nav flex-column">
           {% for item in site.diplomes %}
             <li class="nav-item">
@@ -36,16 +40,22 @@
         </ul>
       </div>
       <div class="col">
-        <a href="/recherche" class="h2">Recherche</a>
-        <ul class="nav flex-column">
+        <div class="footer__title">
+          <a href="/recherche">Recherche</a>
+        </div>
+        <ul class="nav flex-column mb-5">
           {% for item in site.recherche %}
             <li class="nav-item">
               <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
             </li>
           {% endfor %}
         </ul>
-        <a href="/actualites" class="h2">Actualités</a>
-        <p class="h2">Légal</p>
+        <div class="footer__title mb-5">
+          <a href="/actualites">Actualités</a>
+        </div>
+        <div class="footer__title">
+          <p>Légal</p>
+        </div>
         <ul class="nav flex-column">
         {% for item in site.data.menus.legal %}
           <li class="nav-item">

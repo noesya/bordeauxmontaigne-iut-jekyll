@@ -1,6 +1,10 @@
 primary:
-  - title: À propos
-    url: /a-propos
+  - title: Institut
+    url: /Institut
+  - title: Diplômes
+    url: /diplomes
+  - title: Recherche
+    url: /recherche
   - title: Actualités
     url: /actualites
 legal:

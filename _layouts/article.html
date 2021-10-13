@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.languages[lang] %}
+
+<article itemscope itemtype="https://schema.org/Article">
+  {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+  {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+  {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+
+  {% include hero.html %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        {%- if page.toc -%}
+        <ol class="nav flex-column toc" id="nav-toc">
+          {%- for toc in page.toc -%}
+          <li class="nav-item">
+            <a href="#{{toc | slugify}}" class="nav-link">{{toc}}</a>
+          </li>
+          {%- endfor -%}
+        </ol>
+        {%- endif -%}
+      </div>
+      <div class="col-md-8 offset-md-1">
+        {%- if page.image -%}
+          {% picture {{ page.image }} --alt {{ page.title }} --img class="img-fluid" %}
+        {%- endif -%}
+        <div itemprop="articleBody" data-bs-spy="scroll" data-bs-target="#nav-toc" data-bs-offset="0">
+          {{ content }}
+        </div>
+       </div>
+    </div>
+  </div>
+</article>

@@ -24,13 +24,22 @@ defaults:
       path: ""
       type: "posts"
     values:
+      color: "#007960"
       layout: "post"
+  -
+    scope:
+      path: ""
+      type: "institut"
+    values:
+      color: "#176CAF"
+      layout: "article"
   -
     scope:
       path: ""
       type: "diplomes"
     values:
-      layout: "page"
+      color: "#CA0051"
+      layout: "article"
 
 collections:
   pages:
@@ -38,9 +47,12 @@ collections:
   posts:
     output: true
     permalink: /actualites/:name
+  institut:
+    output: true
+    permalink: /:collection/:name
   diplomes:
     output: true
-    permalink: /diplomes/:name
+    permalink: /:collection/:name
 
 paginate: 8
 

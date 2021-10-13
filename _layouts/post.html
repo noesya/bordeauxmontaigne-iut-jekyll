@@ -5,7 +5,7 @@ layout: default
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.languages[lang] %}
 
-<article itemscope itemtype="https://schema.org/Article">
+<article itemscope itemtype="https://schema.org/NewsArticle">
   {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
   {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
   {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -50,7 +50,7 @@ layout: default
         {%- if page.image -%}
           {% picture {{ page.image }} --alt {{ page.title }} --img class="img-fluid" %}
         {%- endif -%}
-        <div class="e-content">
+        <div itemprop="articleBody">
           {{ content }}
         </div>
         {% include post-pagination.html %}

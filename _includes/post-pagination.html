@@ -1,0 +1,28 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.languages[lang] %}
+
+<nav aria-label="{{ trad.news.navigation }}">
+  <ul class="pagination justify-content-between">
+
+    {% if page.previous %}
+      <li class="page-item">
+        <a class="page-link" href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title | markdownify | strip_html }}">{{ trad.news.previous }}</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">{{ trad.news.previous }}</a>
+      </li>
+    {% endif %}
+
+    {% if page.next %}
+      <li class="page-item">
+        <a class="page-link" href="{{ page.next.url | relative_url }}" title="{{ page.next.title | markdownify | strip_html }}">{{ trad.news.next }}</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">{{ trad.news.next }}</a>
+      </li>
+    {% endif %}
+
+  </ul>
+</nav>

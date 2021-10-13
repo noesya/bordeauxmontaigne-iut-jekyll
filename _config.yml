@@ -1,0 +1,53 @@
+title: Template website
+description: Lorem ipsum description
+lang: fr
+
+exclude:
+  - README.md
+  - package.json
+  - yarn.lock
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+collections:
+  pages:
+    output: true
+  posts:
+    output: true
+    permalink: /actualites/:name
+
+paginate: 8
+
+plugins:
+  - jekyll-minifier
+
+sass:
+    style: compressed
+
+jekyll-minifier:
+  remove_spaces_inside_tags: true
+  remove_multi_spaces: true
+  remove_intertag_spaces: true
+  remove_comments: true
+  compress_css: false
+  compress_javascript: true
+
+picture:
+  ignore_missing_images: true

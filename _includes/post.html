@@ -1,0 +1,9 @@
+<div class="card">
+  {%- if post.image -%}
+    {% picture {{ post.image }} --alt {{ post.title }} --img class="card-img-top" %}
+  {%- endif -%}
+  <div class="card-body">
+    <p class="card-title">{{ post.title }}</p>
+    <a href="{{ post.url }}" class="streched-link">Lire la suite</a>
+  </div>
+</div>

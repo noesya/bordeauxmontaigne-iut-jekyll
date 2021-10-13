@@ -1,6 +1,6 @@
-# Osuny Template Website
+# Bordeaux Montaigne
 
-Ce template Jekyll est le template des websites.
+Ce template Jekyll est basé sur le template des websites.
 
 ## Installation
 

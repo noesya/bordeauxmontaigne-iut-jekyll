@@ -1,6 +1,6 @@
 ---
 title: DUT Animation Sociale et Socioculturelle
-category: Diplômes Universitaires de Technologie (DUT)
+category: Diplômes Universitaires de Technologie
 permalink: /:collection/:slugified_categories/:title
 toc:
   - Publics

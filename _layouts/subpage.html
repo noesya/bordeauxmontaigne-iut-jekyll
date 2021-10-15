@@ -23,11 +23,13 @@ layout: default
         </div>
       </div>
       <div class="col-md-4">
-        <ul class="nav flex-column">
-          {% assign list = site.diplomes | where: 'category', page.title %}
-          {% for diplome in list %}
+        <ul class="nav toc">
+          {% assign type = page.url | split: "/" %}
+          {% assign type = type[1] %}
+          {% assign list = site[type] | where: 'category', page.title %}
+          {% for item in list %}
             <li class="nav-item">
-              <a class="nav-link" href="{{diplome.url}}">{{diplome.title}}</a>
+              <a class="nav-link" href="{{item.url}}">{{item.title}}</a>
             </li>
           {% endfor %}
         </ul>

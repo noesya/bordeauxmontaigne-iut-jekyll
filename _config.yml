@@ -64,10 +64,12 @@ collections:
     output: true
     permalink: /:collection/:name
 
-paginate: 8
-
 plugins:
   - jekyll-minifier
+  - jekyll-paginate
+
+paginate: 2
+paginate_path: "/actualites/page:num/"
 
 sass:
     style: compressed

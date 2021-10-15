@@ -1,7 +1,6 @@
 ---
 title: Institut
 permalink: institut
-layout: page
 color: "#176CAF"
 ---
 

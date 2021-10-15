@@ -1,6 +1,7 @@
 ---
 title: Licences professionnelles
 layout: subpage
+excerpt: Les IUT sont habilités à délivrer des Licences Professionnelles, comme les autres composantes des universités.
 ---
 
 ## Description générale des Licences Professionnelles

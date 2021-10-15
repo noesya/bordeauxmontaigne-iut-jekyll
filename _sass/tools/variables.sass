@@ -37,3 +37,8 @@ $navbar-padding-y: $grid-gutter-width
 $nav-link-font-size: px2rem(22)
 
 $table-th-font-weight: 400
+
+$spacer: 1rem
+$spacers: (0: 0, 1: $spacer / 4, 2: $spacer / 2, 3: $spacer, 4: $spacer * 1.5, 5: $spacer * 3)
+$spacers-custom: (6: $spacer * 6)
+$spacers: map-merge($spacers, $spacers-custom)

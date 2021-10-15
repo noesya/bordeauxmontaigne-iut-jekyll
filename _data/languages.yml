@@ -9,6 +9,8 @@ fr:
   next: "Suivant"
   institut:
     title: Institut
+  diplomes:
+    title: Diplômes
   news:
     infos: "Informations sur l’article"
     more: "Voir toutes les actualités"
@@ -16,6 +18,8 @@ fr:
     next: "Article suivant"
     previous: "Article précédent"
     title: "Actualités"
+  recherche:
+    title: Recherche
   share: "Partager sur"
 en:
   author: "Author"

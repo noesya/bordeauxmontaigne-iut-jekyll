@@ -1,7 +1,6 @@
 ---
 title: Diplômes
 permalink: diplomes
-layout: page
 color: "#CA0051"
 ---
 

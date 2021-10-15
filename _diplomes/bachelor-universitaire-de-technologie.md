@@ -1,6 +1,7 @@
 ---
 title: Bachelor Universitaire de Technologie (BUT)
 layout: subpage
+excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare massa volutpat ornare vitae erat id.
 ---
 ## Qu’est-ce que le B.U.T. ?
 Le nouveau diplôme exclusif aux IUT, préparé en trois ans, de grade licence.

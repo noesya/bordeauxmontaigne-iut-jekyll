@@ -1,6 +1,7 @@
 ---
 title: Diplômes Universitaires de Technologie (DUT)
 layout: subpage
+excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare massa volutpat ornare vitae erat id.
 ---
 
 ## Présentation générale des DUT

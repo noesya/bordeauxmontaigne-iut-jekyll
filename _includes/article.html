@@ -1,0 +1,8 @@
+<div class="card card--article">
+  <div class="card-body">
+    <p class="card-title "><a href="{{ post.url }}" class="stretched-link link link--more">{{ post.title }}</a></p>
+    {%- if post.excerpt -%}
+      <p class="card-text">{{ post.excerpt }}</p>
+    {%- endif -%}
+  </div>
+</div>

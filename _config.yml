@@ -40,6 +40,13 @@ defaults:
     values:
       color: "#CA0051"
       layout: "article"
+  -
+    scope:
+      path: ""
+      type: "recherche"
+    values:
+      color: "#EB7100"
+      layout: "article"
 
 collections:
   pages:
@@ -51,6 +58,9 @@ collections:
     output: true
     permalink: /:collection/:name
   diplomes:
+    output: true
+    permalink: /:collection/:name
+  recherche:
     output: true
     permalink: /:collection/:name
 

@@ -32,7 +32,8 @@
           <a href="/diplomes">Diplômes</a>
         </div>
         <ul class="nav flex-column">
-          {% for item in site.diplomes %}
+          {% assign parent_diplomes = site.diplomes | where: 'layout', 'subpage' %}
+          {% for item in parent_diplomes %}
             <li class="nav-item">
               <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
             </li>

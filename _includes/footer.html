@@ -31,11 +31,21 @@
         <div class="footer__title">
           <a href="/diplomes">Diplômes</a>
         </div>
+        {% assign parent_diplomes = site.diplomes | where: 'layout', 'subpage' %}
         <ul class="nav flex-column">
-          {% assign parent_diplomes = site.diplomes | where: 'layout', 'subpage' %}
-          {% for item in parent_diplomes %}
+          {% for parent in parent_diplomes %}
             <li class="nav-item">
-              <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+              <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
+              {% assign child_diplomes = site.diplomes | where: 'categoy', parent.title %}
+              {% if child_diplomes.size > 0 %}
+              <ul>
+                {% for child in child_diplomes %}
+                  <li class="nav-item">
+                    <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+              {% endif %}
             </li>
           {% endfor %}
         </ul>

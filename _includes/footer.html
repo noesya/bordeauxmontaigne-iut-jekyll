@@ -2,11 +2,12 @@
   <div class="container">
     <div class="row mb-5">
       <div class="col-md-4">
-        <a href="/"><img src="/assets/images/logo.svg" alt="{{site.title}}"></a>
+        <a href="/"><img src="/assets/images/logo-glyph.svg" alt="{{site.title}}" width="257" height="158"></a>
       </div>
       <div class="col-md-8">
         <address>
-          Institut Universitaire de Technologie Bordeaux Montaigne<br>
+          Institut Universitaire de Technologie<br>
+           Bordeaux Montaigne<br>
           1 rue Jacques Ellul<br>
           33080 Bordeaux Cedex<br>
           France<br>
@@ -24,7 +25,7 @@
           {% for parent in parent_institut %}
             <li class="nav-item">
               <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
-              {% assign child_institut = site.institut | where: 'categoy', parent.title %}
+              {% assign child_institut = site.institut | where: 'category', parent.title %}
               {% if child_institut.size > 0 %}
               <ul>
                 {% for child in child_institut %}
@@ -47,7 +48,7 @@
           {% for parent in parent_diplomes %}
             <li class="nav-item">
               <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
-              {% assign child_diplomes = site.diplomes | where: 'categoy', parent.title %}
+              {% assign child_diplomes = site.diplomes | where: 'category', parent.title %}
               {% if child_diplomes.size > 0 %}
               <ul>
                 {% for child in child_diplomes %}

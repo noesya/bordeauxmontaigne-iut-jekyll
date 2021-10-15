@@ -48,7 +48,7 @@ layout: default
       </div>
       <div class="col-md-8 offset-md-1">
         {%- if page.image -%}
-          {% picture {{ page.image }} --alt {{ page.title }} --img class="img-fluid" %}
+          {% picture {{ page.image }} --alt {{ page.title }} --img class="img-fluid" loading="lazy" %}
         {%- endif -%}
         <div itemprop="articleBody">
           {{ content }}

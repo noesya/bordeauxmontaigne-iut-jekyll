@@ -1,6 +1,6 @@
 <div class="card">
   {%- if post.image -%}
-    {% picture {{ post.image }} --alt {{ post.title }} --img class="img-fluid" %}
+    {% picture {{ post.image }} --alt {{ post.title }} --img class="img-fluid" loading="lazy" %}
   {%- endif -%}
   <div class="card-body">
     <p class="card-title">{{ post.title }}</p>

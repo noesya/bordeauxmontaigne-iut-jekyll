@@ -1,6 +1,6 @@
 ---
 title: Diplômes
-permalink: diplomes
+permalink: diplomes/index
 color: "#CA0051"
 ---
 

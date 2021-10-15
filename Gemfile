@@ -6,13 +6,13 @@ gem 'jekyll'
 # https://github.com/rbuchberger/jekyll_picture_tag
 # Minifies HTML, XML, CSS, JSON and JavaScript
 # https://github.com/digitalsparky/jekyll-minifier
-# Paginate
-# https://github.com/jekyll/jekyll-paginate
+# Paginate V2
+# https://github.com/sverrirs/jekyll-paginate-v2/
 # Sitemap
 # https://github.com/jekyll/jekyll-sitemap
 group :jekyll_plugins do
     gem 'jekyll_picture_tag'
     gem 'jekyll-minifier'
-    gem 'jekyll-paginate'
+    gem 'jekyll-paginate-v2'
     gem 'jekyll-sitemap'
 end

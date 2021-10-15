@@ -3,9 +3,36 @@ description: "L’IUT Bordeaux Montaigne, le plus court chemin pour aller loi
 lang: fr
 
 exclude:
+  - Gemfile
+  - Gemfile.lock
   - README.md
   - package.json
   - yarn.lock
+
+plugins:
+  - jekyll-minifier
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  per_page: 2
+  title: ':title - page :num of :max'
+
+sass:
+    style: compressed
+
+jekyll-minifier:
+  remove_spaces_inside_tags: true
+  remove_multi_spaces: true
+  remove_intertag_spaces: true
+  remove_comments: true
+  compress_css: false
+  compress_javascript: true
+
+picture:
+  ignore_missing_images: true
+
+
 
 defaults:
   -
@@ -63,24 +90,3 @@ collections:
   recherche:
     output: true
     permalink: /:collection/:name
-
-plugins:
-  - jekyll-minifier
-  - jekyll-paginate
-
-paginate: 2
-paginate_path: "/actualites/page:num/"
-
-sass:
-    style: compressed
-
-jekyll-minifier:
-  remove_spaces_inside_tags: true
-  remove_multi_spaces: true
-  remove_intertag_spaces: true
-  remove_comments: true
-  compress_css: false
-  compress_javascript: true
-
-picture:
-  ignore_missing_images: true

@@ -1,6 +1,6 @@
 ---
 title: Institut
-permalink: institut
+permalink: institut/index
 color: "#176CAF"
 ---
 

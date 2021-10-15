@@ -19,10 +19,21 @@
         <div class="footer__title">
           <a href="/institut">Institut</a>
         </div>
+        {% assign parent_institut = site.institut | where: 'layout', 'subpage' %}
         <ul class="nav flex-column">
-          {% for item in site.institut %}
+          {% for parent in parent_institut %}
             <li class="nav-item">
-              <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+              <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
+              {% assign child_institut = site.institut | where: 'categoy', parent.title %}
+              {% if child_institut.size > 0 %}
+              <ul>
+                {% for child in child_institut %}
+                  <li class="nav-item">
+                    <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+              {% endif %}
             </li>
           {% endfor %}
         </ul>

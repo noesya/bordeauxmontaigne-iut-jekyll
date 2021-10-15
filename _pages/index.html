@@ -35,11 +35,11 @@ color: "#002539"
       </blockquote>
     </div>
     <div class="col-md-4 offset-md-2">
+      {% assign parent_institut = site.institut | where: 'layout', 'subpage' %}
       <ul class="nav flex-column">
-        <li class="nav-item"><a href="#" class="nav-link">Les atouts des IUT</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Ressources</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Équipe pédagogique</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Plan d’accès et contact</a></li>
+        {% for institut in parent_institut %}
+          <li class="nav-item"><a href="{{ institut.url }}" class="nav-link link--more">{{ institut.title }}</a></li>
+        {% endfor %}
       </ul>
     </div>
   </div>

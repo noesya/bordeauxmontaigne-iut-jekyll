@@ -1,5 +1,6 @@
 ---
-title: Bachelor Universitaire de Technologie (BUT)
+title: Bachelor Universitaire de Technologie
+permalink: /:collection/:name/
 layout: subpage
 excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare massa volutpat ornare vitae erat id.
 ---

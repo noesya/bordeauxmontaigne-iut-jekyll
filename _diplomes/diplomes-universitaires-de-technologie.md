@@ -1,5 +1,6 @@
 ---
-title: Diplômes Universitaires de Technologie (DUT)
+title: Diplômes Universitaires de Technologie
+permalink: /:collection/:name/
 layout: subpage
 excerpt: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare massa volutpat ornare vitae erat id.
 ---

@@ -1,6 +1,6 @@
 ---
 title: BUT Information numérique dans les organisations
-category: Bachelor Universitaire de Technologie (BUT)
+category: Bachelor Universitaire de Technologie
 permalink: /:collection/:slugified_categories/:title
 toc:
   - Publics

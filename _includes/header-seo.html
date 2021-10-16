@@ -6,7 +6,7 @@
 
 <!-- HTML Meta Tags -->
 <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
-<meta name="description" content="{{ page.description | markdownify | strip_html | strip }}">
+<meta name="description" content="{{ seo_description }}">
 
 <!-- Facebook Meta Tags -->
 <meta property="og:title" content="{{ seo_title }}">

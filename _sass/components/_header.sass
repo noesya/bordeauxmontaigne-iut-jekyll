@@ -5,6 +5,8 @@
         position: static
         &-menu
             margin-top: 0
+            padding-top: $grid-gutter-width
+            padding-bottom: $grid-gutter-width * 2
             right: 0
             > ul
                 @extend .container
@@ -28,7 +30,3 @@
         text-decoration: none
         &:hover
             text-decoration: underline
-
-    @include media-breakpoint-up(md)
-        .dropdown-menu
-            min-height: 450px

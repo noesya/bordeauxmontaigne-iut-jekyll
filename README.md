@@ -17,3 +17,5 @@ yarn install
 * Jekyll sitemap
 
 jekyll_picture_tag utilise libvips : https://libvips.github.io/libvips/install.html
+
+Novela test

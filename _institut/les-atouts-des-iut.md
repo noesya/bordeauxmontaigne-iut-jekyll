@@ -1,6 +1,7 @@
 ---
 title: Les atouts des IUT
 category: "Présentation de l’IUT"
+permalink: /:collection/:slugified_categories/:title
 toc:
   - Une qualité d’enseignement universitaire reconnue et plébiscitée par les entreprises depuis plus de 50 ans
   - Une volonté constante d’être en phase avec la réalité

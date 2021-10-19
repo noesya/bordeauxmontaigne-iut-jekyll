@@ -1,6 +1,43 @@
 primary:
   - title: Institut
-    url: /Institut
+    url: /institut
+    children:
+      - title: Présentation de l’IUT
+        url: /institut/presentation-de-l-iut
+        children:
+          - title: Les atouts des IUT
+          - title: Ressources
+          - title: Équipe pédagogique
+          - title: Plan d’accès et contact
+      - title: Être candidat
+        children:
+          - title: Sportif de haut niveau / Etudiant handicapé
+      - title: Centre de ressources
+        children:
+          - title: Le CRM IUT/IJBA – Le Centre de Ressources Montaigne
+          - title: Le CRM IUT/IJBA – Consulter et emprunter
+          - title: Le CRM – Comment consulter les mémoires
+      - title: Scolarité
+        children:
+          - title: Statistiques
+          - title: Frais d’inscription
+          - title: Inscription administrative
+      - title: Entreprises
+      - title: Apprentissage
+      - title: Vie étudiante
+        children:
+          - title: AquiPass
+          - title: Aide & Entraide
+          - title: Services numériques
+          - title: Service d'impression
+          - title: Outils pédagogiques
+      - title: Formation continue
+        children:
+          - title: Codes utiles
+          - title: Médiation
+          - title: Modes de financement
+          - title: Offre de formation
+          - title: Organisation du service
   - title: Diplômes
     url: /diplomes
   - title: Recherche

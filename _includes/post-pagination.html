@@ -1,7 +1,7 @@
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.languages[lang] %}
 
-<nav aria-label="{{ trad.news.navigation }}">
+<nav aria-label="{{ trad.news.navigation }}" class="mt-5">
   <ul class="pagination justify-content-between">
 
     {% if page.previous %}

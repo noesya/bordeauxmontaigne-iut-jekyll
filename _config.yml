@@ -11,17 +11,6 @@ exclude:
 
 plugins:
   - jekyll-minifier
-  - jekyll-paginate-v2
-
-# Pagination Settings
-pagination:
-  enabled: true
-  per_page: 3
-  permalink: '/page/:num/'
-  title: ':title - page :num of :max'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
 
 sass:
     style: compressed

@@ -10,6 +10,6 @@ gem 'jekyll'
 # https://github.com/jekyll/jekyll-sitemap
 group :jekyll_plugins do
     gem 'jekyll-minifier'
-    gem 'jekyll-paginate-v2'
+    #gem 'jekyll-paginate-v2'
     gem 'jekyll-sitemap'
 end

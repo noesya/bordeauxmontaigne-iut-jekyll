@@ -6,17 +6,12 @@ layout: default
 {% assign trad = site.data.languages[lang] %}
 
 <article itemscope itemtype="https://schema.org/Article">
-  {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
   {% if page.excerpt %}<meta itemprop="description" content="{{ page.description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
 
   {% include hero.html %}
 
   <div class="container">
     <table class="table">
-      <tr>
-        <th>Path</th>
-        <td>{{ page.path }}</td>
-      </tr>
       <tr>
         <th>ID This</th>
         {% assign this = page.path | remove: '.html' | remove: '_pages/'  %}
@@ -25,11 +20,6 @@ layout: default
       <tr>
         <th>ID Parent</th>
         <td>{{ page.parent }}</td>
-      </tr>
-      <tr>
-        <th>Parent path</th>
-        {% assign parent_path = page.parent | prepend: "_pages/" : | append: ".html" %}
-        <td>{{parent_path}}</td>
       </tr>
       <tr>
         <th>Permalink</th>
@@ -55,8 +45,6 @@ layout: default
         </td>
       </tr>
     </table>
-
-    <hr>
 
     {% if page.text %}
     <div itemprop="articleBody">

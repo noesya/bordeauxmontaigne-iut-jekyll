@@ -5,7 +5,19 @@ layout: default
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.languages[lang] %}
 
-{% include hero.html %}
-<div class="container">
-  {{ content }}
-</div>
+<article itemscope itemtype="https://schema.org/Article">
+  {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+  {% if page.excerpt %}<meta itemprop="description" content="{{ page.description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+
+  {% include hero.html %}
+
+  <div class="container">
+    {{ page.parent }}
+    <hr>
+    {{ page.description }}
+    <hr>
+    <div itemprop="articleBody">
+      {{ page.text }}
+    </div>
+  </div>
+</article>

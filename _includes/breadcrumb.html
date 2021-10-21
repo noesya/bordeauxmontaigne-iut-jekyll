@@ -18,7 +18,7 @@
           {% for crumb in crumbs limit: crumb_limit %}
             {% assign crumb_url = crumb | append: '/' %}
           {% endfor %}
-          <a href="{{ crumb_url}}">
+          <a href="{{ crumb_url | absolute_url }}">
             {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
           </a>
         </li>

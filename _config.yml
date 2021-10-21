@@ -13,10 +13,15 @@ plugins:
   - jekyll-minifier
   - jekyll-paginate-v2
 
+# Pagination Settings
 pagination:
   enabled: true
-  per_page: 2
+  per_page: 3
+  permalink: '/page/:num/'
   title: ':title - page :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 sass:
     style: compressed
@@ -28,11 +33,6 @@ jekyll-minifier:
   remove_comments: true
   compress_css: false
   compress_javascript: true
-
-picture:
-  ignore_missing_images: true
-
-
 
 defaults:
   -
@@ -51,42 +51,11 @@ defaults:
       path: ""
       type: "posts"
     values:
-      color: "#007960"
       layout: "post"
-  -
-    scope:
-      path: ""
-      type: "institut"
-    values:
-      color: "#176CAF"
-      layout: "article"
-  -
-    scope:
-      path: ""
-      type: "diplomes"
-    values:
-      color: "#CA0051"
-      layout: "article"
-  -
-    scope:
-      path: ""
-      type: "recherche"
-    values:
-      color: "#EB7100"
-      layout: "article"
 
 collections:
   pages:
     output: true
   posts:
     output: true
-    permalink: /actualites/:name
-  institut:
-    output: true
-    permalink: /:collection/:name
-  diplomes:
-    output: true
-    permalink: /:collection/:name
-  recherche:
-    output: true
-    permalink: /:collection/:name
+    permalink: /actualites/:title

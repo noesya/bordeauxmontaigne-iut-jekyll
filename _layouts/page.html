@@ -41,12 +41,8 @@ layout: default
       </tr>
       <tr>
         <th>Parent</th>
-        {% assign parents = site[page.collection] | where: 'path', parent_path %}
-        <td>
-          {% for parent in parents %}
-            <a href="{{ parent.url }}">{{ parent.title }}</a>
-          {% endfor %}
-        </td>
+        {% assign parent = site[page.collection] | where: 'path', parent_path | first %}
+        <td><a href="{{ parent.url }}">{{ parent.title }}</a></td>
       </tr>
       <tr>
         <th>Children</th>

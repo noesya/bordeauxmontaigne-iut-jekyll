@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Institut
 permalink: institut/index
 ---

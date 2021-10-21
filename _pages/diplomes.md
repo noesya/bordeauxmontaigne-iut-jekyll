@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Diplômes
 permalink: diplomes/index
 ---

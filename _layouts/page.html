@@ -5,7 +5,68 @@ layout: default
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.languages[lang] %}
 
-{% include hero.html %}
-<div class="container">
-  {{ content }}
-</div>
+
+
+
+
+<article itemscope itemtype="https://schema.org/Article">
+  {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+  {% if page.excerpt %}<meta itemprop="description" content="{{ page.description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+
+  {% include hero.html %}
+
+  <div class="container">
+    <table class="table">
+      <tr>
+        <th>Path</th>
+        <td>{{ page.path }}</td>
+      </tr>
+      <tr>
+        <th>This</th>
+        {% assign this = page.path | remove: '.html' | remove: '_pages/'  %}
+        <td>{{ this }}</td>
+      </tr>
+      <tr>
+        <th>Parent</th>
+        <td>{{ page.parent }}</td>
+      </tr>
+      <tr>
+        <th>Parent path</th>
+        {% assign parent_path = page.parent | prepend: "_pages/" : | append: ".html" %}
+        <td>{{parent_path}}</td>
+      </tr>
+      <tr>
+        <th>Permalink</th>
+        <td>{{ page.permalink }}</td>
+      </tr>
+      <tr>
+        <th>Title</th>
+        <td>{{ page.title }}</td>
+      </tr>
+      <tr>
+        <th>Title parent</th>
+        {% assign parent = site.pages | where: 'path', parent_path %}
+        <td>{{ parent.title }}</td>
+      </tr>
+      <tr>
+        <th>Children</th>
+        {% assign children = site[page.collection] | where: 'parent', this %}
+        <td>
+          {% for child in children %}
+            {{ child.title }}
+            <br>
+          {% endfor %}
+        </td>
+      </tr>
+    </table>
+
+    <hr>
+    {{ page.description }}
+    <hr>
+    {% if page.text %}
+    <div itemprop="articleBody">
+      {{ page.text }}
+    </div>
+    {% endif %}
+  </div>
+</article>

@@ -1,7 +1,6 @@
 ---
 title: Institut
 permalink: institut/index
-color: "#176CAF"
 ---
 
 ## Offre de formation

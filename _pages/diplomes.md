@@ -1,8 +1,6 @@
 ---
 title: Diplômes
 permalink: diplomes/index
-layout: subpage
-color: "#CA0051"
 ---
 
 ## Offre de formation

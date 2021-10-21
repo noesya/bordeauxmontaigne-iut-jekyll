@@ -22,6 +22,11 @@ layout: default
         <td>{{ page.path }}</td>
       </tr>
       <tr>
+        <th>This</th>
+        {% assign this = page.path | remove: '.html' | remove: '_pages/'  %}
+        <td>{{ this }}</td>
+      </tr>
+      <tr>
         <th>Parent</th>
         <td>{{ page.parent }}</td>
       </tr>
@@ -38,9 +43,17 @@ layout: default
         <th>Title</th>
         <td>{{ page.title }}</td>
       </tr>
+      <tr>
+        <th>Title parent</th>
+        {% assign parent = site.pages | where: 'path', parent_path %}
+        <td>{{ parent.title }}</td>
+      </tr>
+      <tr>
+        <th>Children</th>
+        {% assign children = site[page.collection] | where: 'parent', this %}
+        <td>{{ parent.title }}</td>
+      </tr>
     </table>
-
-    {% assign parent = site.pages | where: 'path', parent_path %}
 
     <hr>
     {{ page.description }}

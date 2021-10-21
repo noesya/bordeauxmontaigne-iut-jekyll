@@ -51,7 +51,11 @@ layout: default
       <tr>
         <th>Children</th>
         {% assign children = site[page.collection] | where: 'parent', this %}
-        <td>{{ parent.title }}</td>
+        <td>
+          {% for child in children %}
+            {{ child.title }}
+          {% endfor %}
+        </td>
       </tr>
     </table>
 

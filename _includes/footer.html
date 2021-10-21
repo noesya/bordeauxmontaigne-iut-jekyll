@@ -7,7 +7,7 @@
       <div class="col-md-8">
         <address>
           Institut Universitaire de Technologie<br>
-           Bordeaux Montaigne<br>
+ Bordeaux Montaigne<br>
           1 rue Jacques Ellul<br>
           33080 Bordeaux Cedex<br>
           France<br>
@@ -43,12 +43,13 @@
         <div class="footer__title">
           <a href="/diplomes">Diplômes</a>
         </div>
-        {% assign parent_diplomes = site.diplomes | where: 'layout', 'subpage' %}
+        {% assign parent_diplomes = site.pages | where: 'parent', site.data.pages.diplomes %}
         <ul class="nav flex-column">
-          {% for parent in parent_diplomes %}
+          {% for parent_diplome in parent_diplomes %}
+            {% assign this = parent_diplome.path | remove: '.html' | remove: '_pages/'  %}
+            {% assign child_diplomes = site.pages | where: 'parent', this %}
             <li class="nav-item">
-              <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
-              {% assign child_diplomes = site.diplomes | where: 'category', parent.title %}
+              <a href="{{ parent_diplome.url }}" class="nav-link">{{ parent_diplome.title }}</a>
               {% if child_diplomes.size > 0 %}
               <ul>
                 {% for child in child_diplomes %}
@@ -79,7 +80,7 @@
         <div class="footer__title">
           <p>Légal</p>
         </div>
-        <ul class="nav flex-column">
+        <ul class="nav nav--legals flex-column">
         {% for item in site.data.menus.legal %}
           <li class="nav-item">
             <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>

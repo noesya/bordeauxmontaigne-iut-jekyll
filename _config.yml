@@ -23,6 +23,9 @@ jekyll-minifier:
   compress_css: false
   compress_javascript: true
 
+picture:
+  ignore_missing_images: true
+  
 defaults:
   -
     scope:

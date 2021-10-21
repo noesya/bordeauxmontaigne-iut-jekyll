@@ -16,16 +16,24 @@
             margin-bottom: 0
             text-decoration: none
 
-    ul ul
+    ul
         list-style: none
-        margin-bottom: $grid-gutter-width
         margin-left: 0
         padding: 0
 
-    .nav > li > a
-        font-size: px2rem(18)
-        line-height: px2rem(26)
+    .nav > li
+        margin-bottom: $grid-gutter-width
+        & > a
+            font-size: px2rem(18)
+            line-height: px2rem(26)
 
     .nav-link
         font-size: px2rem(14)
         line-height: px2rem(22)
+
+    .nav--legals
+        li
+            margin-bottom: 0
+            .nav-link
+                font-size: px2rem(14)
+                line-height: px2rem(22)

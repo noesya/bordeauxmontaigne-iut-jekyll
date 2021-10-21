@@ -6,8 +6,6 @@ layout: default
 {% assign trad = site.data.languages[lang] %}
 
 <article itemscope itemtype="https://schema.org/Article">
-  {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
-  {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
   {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
 
   {% include hero.html %}
@@ -16,7 +14,7 @@ layout: default
     <div class="row">
       <div class="col-md-4">
         {%- if page.toc -%}
-        <ol class="nav toc" id="nav-toc" style="--active-color: {{page.color}}">
+        <ol class="nav toc" id="nav-toc">
           {%- for toc in page.toc -%}
           <li class="nav-item">
             <a href="#{{ toc | slugify }}" class="nav-link">{{toc}}</a>

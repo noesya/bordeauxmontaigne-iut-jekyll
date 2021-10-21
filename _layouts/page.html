@@ -18,12 +18,12 @@ layout: default
         <td>{{ page.path }}</td>
       </tr>
       <tr>
-        <th>This</th>
+        <th>ID This</th>
         {% assign this = page.path | remove: '.html' | remove: '_pages/'  %}
         <td>{{ this }}</td>
       </tr>
       <tr>
-        <th>Parent</th>
+        <th>ID Parent</th>
         <td>{{ page.parent }}</td>
       </tr>
       <tr>
@@ -40,16 +40,21 @@ layout: default
         <td>{{ page.title }}</td>
       </tr>
       <tr>
-        <th>Title parent</th>
-        {% assign parent = site[page.collection] | where: 'path', parent_path %}
-        <td>{{ parent.title }}</td>
+        <th>Parent</th>
+        {% assign parents = site[page.collection] | where: 'path', parent_path %}
+        <td>
+          {% for parent in parents %}
+            <a href="{{ parent.url }}">{{ parent.title }}</a>
+            <br>
+          {% endfor %}
+        </td>
       </tr>
       <tr>
         <th>Children</th>
         {% assign children = site[page.collection] | where: 'parent', this %}
         <td>
           {% for child in children %}
-            {{ child.title }}
+            <a href="{{ child.url }}">{{ child.title }}</a>
             <br>
           {% endfor %}
         </td>

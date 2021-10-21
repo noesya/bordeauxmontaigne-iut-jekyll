@@ -5,10 +5,6 @@ layout: default
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.languages[lang] %}
 
-
-
-
-
 <article itemscope itemtype="https://schema.org/Article">
   {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
   {% if page.excerpt %}<meta itemprop="description" content="{{ page.description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -45,7 +41,7 @@ layout: default
       </tr>
       <tr>
         <th>Title parent</th>
-        {% assign parent = site.pages | where: 'path', parent_path %}
+        {% assign parent = site[page.collection] | where: 'path', parent_path %}
         <td>{{ parent.title }}</td>
       </tr>
       <tr>

@@ -22,6 +22,60 @@
         </div>
         <ul class="nav flex-column">
 
+          {% assign path = site.data.pages.presentation | prepend: "_pages/" | append: ".html" %}
+          {% assign presentation = site.pages | where: 'path', path | first %}
+          {% assign parent_presentation = site.pages | where: 'parent', site.data.pages.presentation %}
+          <li class="nav-item">
+            <a href="{{ presentation.url }}" class="nav-link">{{ presentation.title }}</a>
+            {% if parent_presentation.size > 0 %}
+            <ul>
+              {% for parent in parent_presentation %}
+                {% assign this = parent.path | remove: '.html' | remove: '_pages/'  %}
+                {% assign children = site.pages | where: 'parent', this %}
+                <li class="nav-item">
+                  <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
+                  {% if children.size > 0 %}
+                  <ul>
+                    {% for child in children %}
+                      <li class="nav-item">
+                        <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+
+          {% assign path = site.data.pages.metiers | prepend: "_pages/" | append: ".html" %}
+          {% assign metiers = site.pages | where: 'path', path | first %}
+          {% assign parent_metiers = site.pages | where: 'parent', site.data.pages.metiers %}
+          <li class="nav-item">
+            <a href="{{ metiers.url }}" class="nav-link">{{ metiers.title }}</a>
+            {% if parent_metiers.size > 0 %}
+            <ul>
+              {% for parent in parent_metiers %}
+                {% assign this = parent.path | remove: '.html' | remove: '_pages/'  %}
+                {% assign children = site.pages | where: 'parent', this %}
+                <li class="nav-item">
+                  <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
+                  {% if children.size > 0 %}
+                  <ul>
+                    {% for child in children %}
+                      <li class="nav-item">
+                        <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+
           {% assign path = site.data.pages.scolarite | prepend: "_pages/" | append: ".html" %}
           {% assign scolarite = site.pages | where: 'path', path | first %}
           {% assign parent_scolarites = site.pages | where: 'parent', site.data.pages.scolarite %}
@@ -57,6 +111,33 @@
             {% if parent_candidat.size > 0 %}
             <ul>
               {% for parent in parent_candidat %}
+                {% assign this = parent.path | remove: '.html' | remove: '_pages/'  %}
+                {% assign children = site.pages | where: 'parent', this %}
+                <li class="nav-item">
+                  <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
+                  {% if children.size > 0 %}
+                  <ul>
+                    {% for child in children %}
+                      <li class="nav-item">
+                        <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+
+          {% assign path = site.data.pages.formation | prepend: "_pages/" | append: ".html" %}
+          {% assign formation = site.pages | where: 'path', path | first %}
+          {% assign parent_formation = site.pages | where: 'parent', site.data.pages.formation %}
+          <li class="nav-item">
+            <a href="{{ formation.url }}" class="nav-link">{{ formation.title }}</a>
+            {% if parent_formation.size > 0 %}
+            <ul>
+              {% for parent in parent_formation %}
                 {% assign this = parent.path | remove: '.html' | remove: '_pages/'  %}
                 {% assign children = site.pages | where: 'parent', this %}
                 <li class="nav-item">

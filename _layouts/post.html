@@ -23,7 +23,7 @@ layout: default
                 {% if lang == 'fr' %}
                   {{ page.date | date: "%d/%m/%Y" }}
                 {% else %}
-                  {{ page.date | date: "%Y/%m/%d" }}
+                  {{ page.date | date_to_string: "ordinal", "US" }}
                 {% endif %}
               </time>
             </td>

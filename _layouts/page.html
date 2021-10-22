@@ -11,47 +11,53 @@ layout: default
   {% include hero.html %}
 
   <div class="container">
-    <table class="table">
-      <tr>
-        <th>ID This</th>
-        {% assign this = page.path | remove: '.html' | remove: '_pages/'  %}
-        <td>{{ this }}</td>
-      </tr>
-      <tr>
-        <th>ID Parent</th>
-        <td>{{ page.parent }}</td>
-      </tr>
-      <tr>
-        <th>Permalink</th>
-        <td>{{ page.permalink }}</td>
-      </tr>
-      <tr>
-        <th>Title</th>
-        <td>{{ page.title }}</td>
-      </tr>
-      <tr>
-        <th>Parent</th>
-        {% assign parent_path = page.parent | prepend: "_pages/" | append: ".html" %}
-        {% assign parent = site[page.collection] | where: 'path', parent_path | first %}
-        <td><a href="{{ parent.url }}">{{ parent.title }}</a></td>
-      </tr>
-      <tr>
-        <th>Children</th>
-        {% assign children = site[page.collection] | where: 'parent', this %}
-        <td>
-          {% for child in children %}
-            <a href="{{ child.url }}">{{ child.title }}</a>
-            <br>
-          {% endfor %}
-        </td>
-      </tr>
-    </table>
+     <div class="row">
+         <div class="col-md-3">
+            <table class="table">
+              <tr>
+                <th>ID This</th>
+                {% assign this = page.path | remove: '.html' | remove: '_pages/'  %}
+                <td>{{ this }}</td>
+              </tr>
+              <tr>
+                <th>ID Parent</th>
+                <td>{{ page.parent }}</td>
+              </tr>
+              <tr>
+                <th>Permalink</th>
+                <td>{{ page.permalink }}</td>
+              </tr>
+              <tr>
+                <th>Title</th>
+                <td>{{ page.title }}</td>
+              </tr>
+              <tr>
+                <th>Parent</th>
+                {% assign parent_path = page.parent | prepend: "_pages/" | append: ".html" %}
+                {% assign parent = site[page.collection] | where: 'path', parent_path | first %}
+                <td><a href="{{ parent.url }}">{{ parent.title }}</a></td>
+              </tr>
+              <tr>
+                <th>Children</th>
+                {% assign children = site[page.collection] | where: 'parent', this %}
+                <td>
+                  {% for child in children %}
+                    <a href="{{ child.url }}">{{ child.title }}</a>
+                    <br>
+                  {% endfor %}
+                </td>
+              </tr>
+            </table>
+         </div>
+         <div class="offset-md-1 col-md-8">
+             {% if page.text %}
+             <div itemprop="articleBody">
+               {{ page.text | markdownify }}
+             </div>
+             {% endif %}
+         </div>
+     </div>
 
-    {% if page.text %}
-    <div itemprop="articleBody">
-      {{ page.text }}
-    </div>
-    {% endif %}
 
   </div>
 </article>

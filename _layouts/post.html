@@ -48,6 +48,7 @@ layout: default
       </div>
       <div class="col-md-8 offset-md-1">
         {%- if page.image -%}
+            <img src="{{page.image}}" alt="" class="img-fluid mb-4">
         {%- endif -%}
         <div itemprop="articleBody">
           {{ page.text }}

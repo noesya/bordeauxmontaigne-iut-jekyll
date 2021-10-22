@@ -15,12 +15,12 @@ layout: default
          <div class="col-md-3">
             <table class="table">
               <tr>
-                <th>ID This</th>
+                <th>ID</th>
                 {% assign this = page.path | remove: '.html' | remove: '_pages/'  %}
                 <td>{{ this }}</td>
               </tr>
               <tr>
-                <th>ID Parent</th>
+                <th>ID parent</th>
                 <td>{{ page.parent }}</td>
               </tr>
               <tr>
@@ -37,27 +37,27 @@ layout: default
                 {% assign parent = site[page.collection] | where: 'path', parent_path | first %}
                 <td><a href="{{ parent.url }}">{{ parent.title }}</a></td>
               </tr>
-              <tr>
-                <th>Children</th>
-                {% assign children = site[page.collection] | where: 'parent', this %}
-                <td>
-                  {% for child in children %}
-                    <a href="{{ child.url }}">{{ child.title }}</a>
-                    <br>
-                  {% endfor %}
-                </td>
-              </tr>
             </table>
          </div>
          <div class="offset-md-1 col-md-8">
              {% if page.text %}
              <div itemprop="articleBody">
-               {{ page.text | markdownify }}
+               {{page.text}}
+             </div>
+             {% endif %}
+
+             {% assign children = site[page.collection] | where: 'parent', this %}
+             {% if children.size > 0 %}
+             <hr class="my-5">
+             <div class="row">
+                 {% for child in children %}
+                 <div class="col-md-6 mb-4">
+                     <a href="{{ child.url }}">{{ child.title }}</a>
+                 </div>
+                 {% endfor %}
              </div>
              {% endif %}
          </div>
      </div>
-
-
   </div>
 </article>

@@ -1,10 +1,8 @@
 title: IUT Bordeaux Montaigne
 description: "L’IUT Bordeaux Montaigne, le plus court chemin pour aller loin"
 lang: fr
-pagination:
-  enabled: true
-  debug: true
-  per_page: 10
+permalink: /actualites/:year/:month/:day/:title
+
 
 exclude:
   - Gemfile
@@ -53,3 +51,10 @@ defaults:
 collections:
   pages:
     output: true
+
+pagination:
+  enabled: true
+  debug: true
+  per_page: 10
+  sort_field: 'date'
+  sort_reverse: true

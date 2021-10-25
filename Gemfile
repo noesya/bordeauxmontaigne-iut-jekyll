@@ -13,6 +13,6 @@ gem 'jekyll'
 group :jekyll_plugins do
     gem 'jekyll_picture_tag'
     gem 'jekyll-minifier'
-    #gem 'jekyll-paginate-v2'
     gem 'jekyll-sitemap'
+    gem 'jekyll-paginate-v2'
 end

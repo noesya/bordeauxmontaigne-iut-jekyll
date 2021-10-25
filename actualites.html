@@ -1,0 +1,23 @@
+---
+layout: default
+title: Actualités
+permalink: /actualites
+pagination:
+  enabled: true
+---
+
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.languages[lang] %}
+
+{% include hero.html %}
+
+<div class="container">
+  <div class="row row-cols-md-3">
+    {% for post in paginator.posts %}
+      <div class="col">
+        {% include post.html %}
+      </div>
+    {% endfor %}
+  </div>
+  {% include pagination.html %}
+</div>

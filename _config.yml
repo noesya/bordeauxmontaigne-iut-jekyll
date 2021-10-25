@@ -1,8 +1,6 @@
 title: IUT Bordeaux Montaigne
 description: "L’IUT Bordeaux Montaigne, le plus court chemin pour aller loin"
 lang: fr
-permalink: /actualites/:year/:month/:day/:title
-
 
 exclude:
   - Gemfile

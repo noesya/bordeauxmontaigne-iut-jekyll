@@ -16,43 +16,45 @@ layout: default
     <div class="row">
       <div class="col-md-3">
         <table class="table" aria-label="{{ lang.news.infos }}">
-          <tr>
-            <th scope="row">{{ trad.date }}</th>
-            <td>
-              <time datetime="{{ page.date | date: "%Y-%m-%d" }}">
-                {% if lang == 'fr' %}
-                  {{ page.date | date: "%d/%m/%Y" }}
-                {% else %}
-                  {{ page.date | date_to_string: "ordinal", "US" }}
-                {% endif %}
-              </time>
-            </td>
-          </tr>
-          {% if page.author %}
-          <tr>
-            <th scope="row">{{ trad.author }}</th>
-            <td class="p-author">{{ page.author }}</td>
-          </tr>
-          {% endif %}
-          {% if page.category %}
-          <tr>
-            <th scope="row">{{ trad.category }}</th>
-            <td class="p-category" itemtype="https://schema.org/articleSection">{{ page.category }}</td>
-          </tr>
-          {% endif %}
-          <tr>
-            <th scope="row">{{ trad.share }}</th>
-            <td><a href="{{ 'https://www.facebook.com/sharer/sharer.php?u=' | append: page.url }}" target="_blank" rel="noreferrer">Facebook</a></td>
-          </tr>
-          <tr>
-            <th scope="row">{{ trad.share }}</th>
-            <td><a href="{{ 'https://twitter.com/intent/tweet?text=' | append: page.title | append: ' ' | append: page.url }}" target="_blank" rel="noreferrer">Twitter</a></td>
-          </tr>
+            <tbody class="border-top">
+              <tr>
+                <th scope="row" class="ps-0">{{ trad.date }}</th>
+                <td class="pe-0">
+                  <time datetime="{{ page.date | date: "%Y-%m-%d" }}">
+                    {% if lang == 'fr' %}
+                      {{ page.date | date: "%d/%m/%Y" }}
+                    {% else %}
+                      {{ page.date | date_to_string: "ordinal", "US" }}
+                    {% endif %}
+                  </time>
+                </td>
+              </tr>
+              {% if page.author %}
+              <tr>
+                <th scope="row" class="ps-0">{{ trad.author }}</th>
+                <td class="p-author pe-0"">{{ page.author }}</td>
+              </tr>
+              {% endif %}
+              {% if page.category %}
+              <tr>
+                <th scope="row" class="ps-0">{{ trad.category }}</th>
+                <td class="p-category pe-0"" itemtype="https://schema.org/articleSection">{{ page.category }}</td>
+              </tr>
+              {% endif %}
+              <tr>
+                <th scope="row" class="ps-0">{{ trad.share }}</th>
+                <td class="pe-0"><a href="{{ 'https://www.facebook.com/sharer/sharer.php?u=' | append: page.url }}" target="_blank" rel="noreferrer">Facebook</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="ps-0">{{ trad.share }}</th>
+                <td class="pe-0"><a href="{{ 'https://twitter.com/intent/tweet?text=' | append: page.title | append: ' ' | append: page.url }}" target="_blank" rel="noreferrer">Twitter</a></td>
+              </tr>
+          </tbody>
         </table>
       </div>
       <div class="col-md-8 offset-md-1">
         {%- if page.image -%}
-            <img src="{{page.image}}" alt="" class="img-fluid mb-4">
+            <img src="{{page.image}}" alt="" class="img-fluid mb-4 border">
         {%- endif -%}
         <div itemprop="articleBody">
           {{ page.text }}

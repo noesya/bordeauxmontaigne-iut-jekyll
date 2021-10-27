@@ -3,9 +3,7 @@ module Jekyll::BreadcrumbFilter
     Builder.new(page).to_s
   end
 
-  class Builder
-    attr_reader :page
-
+  class Analyzer
     def self.pages
       unless @pages
         @pages = {}
@@ -22,49 +20,20 @@ module Jekyll::BreadcrumbFilter
       @pages
     end
 
+    def self.find_page(url)
+      pages[url]
+    end
+
     def self.site
       @site ||= Jekyll.sites.first
     end
 
     def self.clean_url(url)
-      url.gsub('.html', '')
+      url.gsub('/index.html', '')
+         .gsub('.html', '')
     end
 
-    def initialize(page)
-      @page = page
-    end
-
-    def to_s
-      html = '<nav aria-label="breadcrumb">'
-      html += '<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">'
-      crumbs_to(page).each_with_index do |crumb, index|
-        html += '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">'
-        if crumb[:url]
-          html += "<a href=\"#{crumb[:url]}\" itemprop=\"item\">"
-          html += "<span itemprop=\"name\">#{crumb[:title]}</span>"
-          html += "<meta itemprop=\"position\" content=\"#{index+1}\" />"
-          html += '</a>'
-        else
-          html += crumb[:title]
-        end
-        html += '</li>'
-      end
-      html += '</ol>'
-      html += '</nav>'
-      html
-    end
-
-    protected
-
-    def find_page(url)
-      Jekyll::BreadcrumbFilter::Builder.pages[url]
-    end
-
-    def clean_url(url)
-      Jekyll::BreadcrumbFilter::Builder.clean_url url
-    end
-
-    def crumbs_to(page)
+    def self.crumbs_to(page)
       crumbs = []
       crumbs << {
         url: '/',
@@ -85,6 +54,54 @@ module Jekyll::BreadcrumbFilter
         end
       end
       crumbs
+    end
+  end
+
+  class Builder
+    attr_reader :page
+
+    def initialize(page)
+      @page = page
+    end
+
+    def to_s
+      "#{opening_tag}#{crumbs_tag}#{closing_tag}"
+    end
+
+    protected
+
+    def opening_tag
+      '<nav aria-label="breadcrumb"><ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">'
+    end
+
+    def crumbs_tag
+      html = ''
+      crumbs.each_with_index do |crumb, index|
+        html += crumb_tag(crumb, index)
+      end
+      html
+    end
+
+    def crumb_tag(crumb, index)
+      html = '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">'
+      if crumb[:url]
+        html += "<a href=\"#{crumb[:url]}\" itemprop=\"item\">"
+        html += "<span itemprop=\"name\">#{crumb[:title]}</span>"
+        html += "<meta itemprop=\"position\" content=\"#{index+1}\" />"
+        html += '</a>'
+      else
+        html += crumb[:title]
+      end
+      html += '</li>'
+      html
+    end
+
+    def closing_tag
+      '</ol></nav>'
+    end
+
+    def crumbs
+      Analyzer.crumbs_to(page)
     end
   end
 end

@@ -1,0 +1,22 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.languages[lang] %}
+<!DOCTYPE html>
+<html lang="{{lang}}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include header-seo.html %}
+    {% include header-assets.html %}
+    {% include header-ga.html %}
+  </head>
+  {% assign body_class = page.url | remove:'/index' | split: '/' %}
+  <body class="{{ body_class[1] | default: 'home' }}" data-bs-spy="scroll" data-bs-target="#nav-toc" data-bs-offset="0">
+    {% include header.html %}
+    <main class="main" aria-label="Content">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    {% include cookie-banner.html %}
+    {% include footer-assets.html %}
+  </body>
+</html>

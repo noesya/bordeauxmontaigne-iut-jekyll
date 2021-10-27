@@ -22,20 +22,21 @@ layout: scrollspy
          {{page.text | page_nav_text_with_ids | correct_punctuation}}
        </div>
        {% endif %}
+
+       {% if children.size > 0 %}
+         <div class="container">
+           <hr class="my-5">
+           <div class="row row-cols-md-2 g-3">
+               {% for child in children %}
+               <div class="col">
+                   <a href="{{ child.url }}">{{ child.title }}</a>
+               </div>
+               {% endfor %}
+           </div>
+         </div>
+       {% endif %}
+
      </div>
    </div>
   </div>
 </article>
-
-{% if children.size > 0 %}
-  <div class="container">
-    <hr class="my-5">
-    <div class="row row-cols-md-2 g-3">
-        {% for child in children %}
-        <div class="col">
-            <a href="{{ child.url }}">{{ child.title }}</a>
-        </div>
-        {% endfor %}
-    </div>
-  </div>
-{% endif %}

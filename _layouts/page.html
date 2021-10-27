@@ -12,28 +12,28 @@ layout: default
   {% include hero.html %}
 
   <div class="container">
-     <div class="row">
-         <div class="col-md-3">
-             {{page.text | page_nav_links}}
-         </div>
-         <div class="offset-md-1 col-md-8">
-             {% if page.text %}
-             <div itemprop="articleBody">
-               {{page.text | page_nav_text_with_ids | correct_punctuation}}
-             </div>
-             {% endif %}
-
-             {% if children.size > 0 %}
-             <hr class="my-5">
-             <div class="row">
-                 {% for child in children %}
-                 <div class="col-md-6 mb-4">
-                     <a href="{{ child.url }}">{{ child.title }}</a>
-                 </div>
-                 {% endfor %}
-             </div>
-             {% endif %}
-         </div>
+   <div class="row">
+     <div class="col-md-4">
+       {{page.text | page_nav_links}}
      </div>
+     <div class="col-md-8">
+       {% if page.text %}
+       <div itemprop="articleBody" data-bs-spy="scroll" data-bs-target="#nav-toc" data-bs-offset="0" tabindex="0">
+         {{page.text | page_nav_text_with_ids | correct_punctuation}}
+       </div>
+       {% endif %}
+
+       {% if children.size > 0 %}
+       <hr class="my-5">
+       <div class="row">
+           {% for child in children %}
+           <div class="col-md-6 mb-4">
+               <a href="{{ child.url }}">{{ child.title }}</a>
+           </div>
+           {% endfor %}
+       </div>
+       {% endif %}
+     </div>
+   </div>
   </div>
 </article>

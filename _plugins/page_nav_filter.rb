@@ -2,10 +2,10 @@ require 'nokogiri'
 module Jekyll::PageNavFilter
   def page_nav_links(html)
     doc = Nokogiri::HTML html
-    nav = "<ul>"
+    nav = "<ul class='nav toc' id='nav-toc'>"
     doc.css('h2').each_with_index do |node, index|
       id = make_id index
-      nav += "<li><a href=\"##{id}\">#{node.content}</a></li>"
+      nav += "<li class='nav-item'><a class='nav-link' href=\"##{id}\">#{node.content}</a></li>"
     end
     nav += "</ul>"
     nav

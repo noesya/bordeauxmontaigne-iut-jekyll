@@ -4,6 +4,7 @@ window.template.cookieConsent = {
 
     init: function () {
         'use strict';
+        console.log('COOKIE');
         this.cookieBanner = document.querySelector('.js-gdpr-cookie-consent');
         this.cookieConsentOkButton = document.querySelector('.js-gdpr-cookie-consent-btn-ok');
         this.cookieConsentKoButton = document.querySelector('.js-gdpr-cookie-consent-btn-ko');

@@ -1,25 +1,32 @@
 {% assign crumbs = page.url | remove:'/index' | split: '/' %}
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item">
+  <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
       {% if crumbs.size > 1 %}
-        <a href="/">{{ trad.home }}</a>
+        <a href="/" itemprop="item">
+          <span itemprop="name">{{ trad.home }}</span>
+          <meta itemprop="position" content="1" />
+        </a>
       {% else %}
         {{ trad.home }}
       {% endif %}
     </li>
     {% for crumb in crumbs offset: 1 %}
       {% if forloop.last %}
-        <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+        <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <meta itemprop="position" content="{{forloop.index | plus: 1}}" />
+          <span itemprop="name">{{ page.title }}</span>
+        </li>
       {% else %}
-        <li class="breadcrumb-item">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
           {% assign crumb_limit = forloop.index | plus: 1 %}
           {% assign crumb_url = '' %}
           {% for crumb in crumbs limit: crumb_limit %}
             {% assign crumb_url = crumb | append: '/' %}
           {% endfor %}
-          <a href="{{ crumb_url | absolute_url }}">
-            {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+          <meta itemprop="position" content="{{forloop.index | plus: 1}}" />
+          <a href="{{ crumb_url | absolute_url }}" itemprop="item">
+            <span itemprop="name">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</span>
           </a>
         </li>
       {% endif %}

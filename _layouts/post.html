@@ -5,7 +5,7 @@ layout: default
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.languages[lang] %}
 
-<article itemscope itemtype="https://schema.org/NewsArticle">
+<article itemscope itemtype="https://schema.org/BlogPosting">
   {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
   {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
   {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -28,14 +28,18 @@ layout: default
               </time>
             </td>
           </tr>
+          {% if page.author %}
           <tr>
             <th scope="row">{{ trad.author }}</th>
             <td class="p-author">{{ page.author }}</td>
           </tr>
+          {% endif %}
+          {% if page.category %}
           <tr>
             <th scope="row">{{ trad.category }}</th>
-            <td class="p-category">{{ page.category }}</td>
+            <td class="p-category" itemtype="https://schema.org/articleSection">{{ page.category }}</td>
           </tr>
+          {% endif %}
           <tr>
             <th scope="row">{{ trad.share }}</th>
             <td><a href="{{ 'https://www.facebook.com/sharer/sharer.php?u=' | append: page.url }}" target="_blank" rel="noreferrer">Facebook</a></td>

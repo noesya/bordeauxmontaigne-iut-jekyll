@@ -4,6 +4,7 @@ layout: default
 
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.languages[lang] %}
+{% assign children = site.pages | where: 'parent', page.identifier %}
 
 <article itemscope itemtype="https://schema.org/Article">
   {% if page.excerpt %}<meta itemprop="description" content="{{ page.description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -13,40 +14,15 @@ layout: default
   <div class="container">
      <div class="row">
          <div class="col-md-3">
-            <table class="table">
-              <tr>
-                <th>ID</th>
-                {% assign this = page.path | remove: '.html' | remove: '_pages/'  %}
-                <td>{{ this }}</td>
-              </tr>
-              <tr>
-                <th>ID parent</th>
-                <td>{{ page.parent }}</td>
-              </tr>
-              <tr>
-                <th>Permalink</th>
-                <td>{{ page.permalink }}</td>
-              </tr>
-              <tr>
-                <th>Title</th>
-                <td>{{ page.title }}</td>
-              </tr>
-              <tr>
-                <th>Parent</th>
-                {% assign parent_path = page.parent | prepend: "_pages/" | append: ".html" %}
-                {% assign parent = site[page.collection] | where: 'path', parent_path | first %}
-                <td><a href="{{ parent.url }}">{{ parent.title }}</a></td>
-              </tr>
-            </table>
+             {{page.text | page_nav_links}}
          </div>
          <div class="offset-md-1 col-md-8">
              {% if page.text %}
              <div itemprop="articleBody">
-               {{page.text}}
+               {{page.text | page_nav_text_with_ids | correct_punctuation}}
              </div>
              {% endif %}
 
-             {% assign children = site[page.collection] | where: 'parent', this %}
              {% if children.size > 0 %}
              <hr class="my-5">
              <div class="row">

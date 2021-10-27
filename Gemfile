@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem 'jekyll'
+gem 'nokogiri'
 
 # Responsive images
 # https://github.com/rbuchberger/jekyll_picture_tag

@@ -10,8 +10,7 @@
             right: 0
             > ul
                 @extend .container
-                column-count: 3
-                column-gap: $grid-gutter-width
+                @extend .grid
                 > li
                     break-inside: avoid-column
                     font-size: px2rem(18)

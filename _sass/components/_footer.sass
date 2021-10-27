@@ -7,29 +7,33 @@
         font-size: px2rem(14)
         line-height: px2rem(26)
 
-    &__title
-        border-bottom: 1px solid $border-color
-        margin-bottom:  $grid-gutter-width / 2
-        padding-bottom:  $grid-gutter-width / 2
-        > *
-            @extend .h2
-            margin-bottom: 0
-            text-decoration: none
-
     ul
         list-style: none
         margin-left: 0
         padding: 0
 
-    .nav > li
-        margin-bottom: $grid-gutter-width
-        & > a
-            font-size: px2rem(18)
-            line-height: px2rem(26)
-
     .nav-link
         font-size: px2rem(14)
         line-height: px2rem(22)
+
+    .nav > li
+        break-inside: auto
+        margin-bottom: $grid-gutter-width
+        & > a
+            @extend .h2
+            border-bottom: 1px solid $border-color
+            margin-bottom:  $grid-gutter-width / 2
+            margin-top: 0
+            padding-bottom:  $grid-gutter-width / 2
+            text-decoration: none
+
+    .nav-2 > li
+        margin-bottom: $grid-gutter-width
+        &:last-child
+            margin-bottom: 0
+        & > a
+            font-size: px2rem(18)
+            line-height: px2rem(26)
 
     .nav--legals
         li

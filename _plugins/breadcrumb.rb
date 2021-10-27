@@ -33,16 +33,16 @@ module Jekyll::BreadcrumbFilter
       html = '<nav aria-label="breadcrumb">'
       html += '<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">'
       crumbs_to(page).each_with_index do |crumb, index|
-         html += '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">'
-         if crumb[:url]
-           html += "<a href=\"#{crumb[:url]}\" itemprop=\"item\">"
-           html += "<span itemprop=\"name\">#{crumb[:title]}</span>"
-           html += "<meta itemprop=\"position\" content=\"#{index+1}\" />"
-           html += '</a>'
-         else
-           html += crumb[:title]
-         end
-       html += '</li>'
+        html += '<li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">'
+        if crumb[:url]
+          html += "<a href=\"#{crumb[:url]}\" itemprop=\"item\">"
+          html += "<span itemprop=\"name\">#{crumb[:title]}</span>"
+          html += "<meta itemprop=\"position\" content=\"#{index+1}\" />"
+          html += '</a>'
+        else
+          html += crumb[:title]
+        end
+        html += '</li>'
       end
       html += '</ol>'
       html += '</nav>'
@@ -73,7 +73,7 @@ module Jekyll::BreadcrumbFilter
         current_page = find_page current_path
         if current_page
           crumb = {
-            title: current_page.data['title']
+            title: current_page.data['title'].to_s
           }
           crumb[:url] = current_path unless current_path == url
           crumbs << crumb

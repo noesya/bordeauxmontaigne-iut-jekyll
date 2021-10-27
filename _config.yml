@@ -12,6 +12,8 @@ exclude:
 plugins:
   - jekyll-minifier
   - jekyll-paginate-v2
+  - jekyll-include-cache
+
 
 sass:
     style: compressed

@@ -16,4 +16,5 @@ group :jekyll_plugins do
     gem 'jekyll-minifier'
     gem 'jekyll-sitemap'
     gem 'jekyll-paginate-v2'
+    gem 'jekyll-include-cache'
 end

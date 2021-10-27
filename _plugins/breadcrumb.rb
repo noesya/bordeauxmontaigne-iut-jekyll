@@ -13,6 +13,11 @@ module Jekyll::BreadcrumbFilter
           path = clean_url document.url
           @pages[path] = document
         end
+        site.pages.each do |page|
+          path = clean_url page.url
+          @pages[path] = page
+        end
+        # debugger
       end
       @pages
     end

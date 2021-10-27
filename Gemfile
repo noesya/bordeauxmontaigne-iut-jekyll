@@ -17,4 +17,5 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jekyll-paginate-v2'
     gem 'jekyll-include-cache'
+    gem 'octopress-debugger'
 end

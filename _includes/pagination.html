@@ -1,6 +1,27 @@
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.languages[lang] %}
 
+{% comment %}
+<table>
+  <tr>
+    <th>page_path</th>
+    <td>{{ paginator.page_path }}</td>
+  </tr>
+  <tr>
+    <th>previous_page</th>
+    <td>{{ paginator.previous_page }}</td>
+  </tr>
+  <tr>
+    <th>next_page</th>
+    <td>{{ paginator.next_page }}</td>
+  </tr>
+  <tr>
+    <th>total_pages</th>
+    <td>{{ paginator.total_pages }}</td>
+  </tr>
+</table>
+{% endcomment %}
+
 {% if paginator.total_pages > 1 %}
 <nav aria-label="{{ trad.pagination }}">
   <ul class="pagination justify-content-center">
@@ -9,14 +30,64 @@
       <li class="page-item">
         <a class="page-link" href="{{ paginator.previous_page_path }}">{{ trad.previous }}</a>
       </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">{{ trad.previous }}</span>
+      </li>
     {% endif %}
 
     {% if paginator.next_page %}
       <li class="page-item">
         <a class="page-link" href="{{ paginator.next_page_path }}">{{ trad.next }}</a>
       </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">{{ trad.next }}</span>
+      </li>
     {% endif %}
 
   </ul>
+
+  {% comment %}
+  {% assign current_page = paginator.page %}
+  {% assign next_page = current_page | plus: 1 %}
+  {% assign paginate_limit = 10 %}
+
+  <ul class="pagination justify-content-center">
+
+    {% for page in (1..paginator.total_pages)  %}
+
+      {% if page == current_page %}
+        <li class="page-item active" aria-current="page">
+          <span class="page-link">{{ page }}</span>
+        </li>
+      {% else %}
+
+        {% if page == 1 %}
+          <li class="page-item">
+            <a class="page-link" href="{{ paginator.page_path | replace: 'index.html', page }}">{{ page }}</a>
+          </li>
+        {% elsif page == next_page and paginator.total_pages > paginate_limit %}
+          <li class="page-item">
+            <a class="page-link" href="{{ paginator.page_path | replace: 'index.html', page }}">{{ page }}</a>
+          </li>
+        {% endif %}
+
+      {% endif %}
+
+    {% endfor %}
+
+    {% if paginator.total_pages > paginate_limit and paginator.total_pages != current_page %}
+      <li class="page-item disabled">
+        <span class="page-link">…</span>
+      </li>
+      <li class="page-item disabled">
+        <span class="page-link">{{ paginator.total_pages }}</span>
+      </li>
+    {% endif %}
+
+  </ul>
+  {% endcomment %}
+
 </nav>
 {% endif %}

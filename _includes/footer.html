@@ -15,199 +15,34 @@
         </address>
       </div>
     </div>
-    <div class="row row-cols-md-3">
-      <div class="col">
-        <div class="footer__title">
-          <a href="/institut">Institut</a>
-        </div>
-        <ul class="nav flex-column">
-
-          {% assign path = site.data.pages.presentation | prepend: "_pages/" | append: ".html" %}
-          {% assign presentation = site.pages | where: 'path', path | first %}
-          {% assign parent_presentation = site.pages | where: 'parent', site.data.pages.presentation %}
-          <li class="nav-item">
-            <a href="{{ presentation.url }}" class="nav-link">{{ presentation.title }}</a>
-            {% if parent_presentation.size > 0 %}
-            <ul>
-              {% for parent in parent_presentation %}
-                {% assign this = parent.path | remove: '.html' | remove: '_pages/'  %}
-                {% assign children = site.pages | where: 'parent', this %}
-                <li class="nav-item">
-                  <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
-                  {% if children.size > 0 %}
-                  <ul>
-                    {% for child in children %}
-                      <li class="nav-item">
-                        <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                  {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-          </li>
-
-          {% assign path = site.data.pages.metiers | prepend: "_pages/" | append: ".html" %}
-          {% assign metiers = site.pages | where: 'path', path | first %}
-          {% assign parent_metiers = site.pages | where: 'parent', site.data.pages.metiers %}
-          <li class="nav-item">
-            <a href="{{ metiers.url }}" class="nav-link">{{ metiers.title }}</a>
-            {% if parent_metiers.size > 0 %}
-            <ul>
-              {% for parent in parent_metiers %}
-                {% assign this = parent.path | remove: '.html' | remove: '_pages/'  %}
-                {% assign children = site.pages | where: 'parent', this %}
-                <li class="nav-item">
-                  <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
-                  {% if children.size > 0 %}
-                  <ul>
-                    {% for child in children %}
-                      <li class="nav-item">
-                        <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                  {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-          </li>
-
-          {% assign path = site.data.pages.scolarite | prepend: "_pages/" | append: ".html" %}
-          {% assign scolarite = site.pages | where: 'path', path | first %}
-          {% assign parent_scolarites = site.pages | where: 'parent', site.data.pages.scolarite %}
-          <li class="nav-item">
-            <a href="{{ scolarite.url }}" class="nav-link">{{ scolarite.title }}</a>
-            {% if parent_scolarites.size > 0 %}
-            <ul>
-              {% for parent in parent_scolarites %}
-                {% assign this = parent.path | remove: '.html' | remove: '_pages/'  %}
-                {% assign children = site.pages | where: 'parent', this %}
-                <li class="nav-item">
-                  <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
-                  {% if children.size > 0 %}
-                  <ul>
-                    {% for child in children %}
-                      <li class="nav-item">
-                        <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                  {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-          </li>
-
-          {% assign path = site.data.pages.candidat | prepend: "_pages/" | append: ".html" %}
-          {% assign candidat = site.pages | where: 'path', path | first %}
-          {% assign parent_candidat = site.pages | where: 'parent', site.data.pages.candidat %}
-          <li class="nav-item">
-            <a href="{{ candidat.url }}" class="nav-link">{{ candidat.title }}</a>
-            {% if parent_candidat.size > 0 %}
-            <ul>
-              {% for parent in parent_candidat %}
-                {% assign this = parent.path | remove: '.html' | remove: '_pages/'  %}
-                {% assign children = site.pages | where: 'parent', this %}
-                <li class="nav-item">
-                  <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
-                  {% if children.size > 0 %}
-                  <ul>
-                    {% for child in children %}
-                      <li class="nav-item">
-                        <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                  {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-          </li>
-
-          {% assign path = site.data.pages.formation | prepend: "_pages/" | append: ".html" %}
-          {% assign formation = site.pages | where: 'path', path | first %}
-          {% assign parent_formation = site.pages | where: 'parent', site.data.pages.formation %}
-          <li class="nav-item">
-            <a href="{{ formation.url }}" class="nav-link">{{ formation.title }}</a>
-            {% if parent_formation.size > 0 %}
-            <ul>
-              {% for parent in parent_formation %}
-                {% assign this = parent.path | remove: '.html' | remove: '_pages/'  %}
-                {% assign children = site.pages | where: 'parent', this %}
-                <li class="nav-item">
-                  <a href="{{ parent.url }}" class="nav-link">{{ parent.title }}</a>
-                  {% if children.size > 0 %}
-                  <ul>
-                    {% for child in children %}
-                      <li class="nav-item">
-                        <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                  {% endif %}
-                </li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-          </li>
-
-        </ul>
-      </div>
-      <div class="col">
-        <div class="footer__title">
-          <a href="/diplomes">Diplômes</a>
-        </div>
-        {% assign parent_diplomes = site.pages | where: 'parent', site.data.pages.diplomes %}
-        <ul class="nav flex-column">
-          {% for parent_diplome in parent_diplomes %}
-            {% assign this = parent_diplome.path | remove: '.html' | remove: '_pages/'  %}
-            {% assign child_diplomes = site.pages | where: 'parent', this %}
-            <li class="nav-item">
-              <a href="{{ parent_diplome.url }}" class="nav-link">{{ parent_diplome.title }}</a>
-              {% if child_diplomes.size > 0 %}
-              <ul>
-                {% for child in child_diplomes %}
-                  <li class="nav-item">
-                    <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-      <div class="col">
-        <div class="footer__title">
-          <a href="/recherche">Recherche</a>
-        </div>
-        <ul class="nav flex-column mb-5">
-          {% for item in site.recherche %}
-            <li class="nav-item">
-              <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-        <div class="footer__title mb-5">
-          <a href="/actualites">Actualités</a>
-        </div>
-        <div class="footer__title">
-          <p>Légal</p>
-        </div>
-        <ul class="nav nav--legals flex-column">
-        {% for item in site.data.menus.legal %}
-          <li class="nav-item">
+    <ul class="nav grid">
+      {% for item in site.data.menus.primary %}
+        {% assign children = item.children %}
+        <li class="nav-item">
+          {% if children %}
             <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
-          </li>
-        {% endfor %}
-        </ul>
-      </div>
-    </div>
+            <ul class="nav-2">
+              {% for child in children %}
+                {% assign grandchildren = child.children %}
+                <li class="nav-item">
+                  <a href="{{child.url}}" class="nav-link">{{child.title}}</a>
+                  {% if grandchildren %}
+                  <ul class="nav-3">
+                    {% for grandchild in grandchildren %}
+                    <li class="nav-item">
+                      <a href="{{child.url}}" class="nav-link">{{grandchild.title}}</a>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <a href="{{ item.url }}" class="nav-link" id="{{ item.title | slugify }}">{{ item.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </footer>

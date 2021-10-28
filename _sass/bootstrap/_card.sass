@@ -3,3 +3,10 @@
         .link
             font-size: px2rem(22)
             text-decoration: none
+    &-media
+        @extend .ratio
+        --bs-aspect-ratio: 50%
+        border: 1px solid $border-color
+        img
+            object-fit: cover
+            object-position: top

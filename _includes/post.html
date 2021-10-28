@@ -1,10 +1,12 @@
-<div class="card mb-5">
+<div class="card">
   {%- if post.image -%}
     {% assign image = post.image %}
   {%- else -%}
     {% assign image = '/assets/images/default.jpg' %}
   {%- endif -%}
-  <img src="{{image}}" alt="{{ post.title | escape }}" class="img-fluid border post_image">
+  <div class="card-media">
+    <img src="{{image}}" alt="{{ post.title | escape }}" height="" width="634" loading="lazy">
+  </div>
   <div class="card-body">
     <p class="card-title">{{ post.title }}</p>
     <a href="{{ post.url }}" class="stretched-link link link--more">{{trad.more}}</a>

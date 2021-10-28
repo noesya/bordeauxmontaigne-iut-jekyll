@@ -53,7 +53,7 @@ collections:
     output: true
   posts:
     output: true
-    permalink: /actualites/:categories/:year/:month/:day:title
+    permalink: /actualites/:categories/:year/:month/:day/:title
 
 pagination:
   enabled: true

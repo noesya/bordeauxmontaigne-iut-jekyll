@@ -9,7 +9,7 @@
     {% include header-assets.html %}
     {% include header-ga.html %}
   </head>
-  {% assign body_class = page.url | remove:'/index' | split: '/' %}
+  {% assign body_class = page.url | remove:'/index' | remove: '.html' | split: '/' %}
   <body class="{{ body_class[1] | default: 'home' }}" data-bs-spy="scroll" data-bs-target="#nav-toc" data-bs-offset="0">
     {% include header.html %}
     <main class="main" aria-label="Content">

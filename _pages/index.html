@@ -1,6 +1,7 @@
 ---
 layout: default
-title: "L’IUT Bordeaux Montaigne, le plus court chemin pour aller loin"
+title: "IUT Bordeaux Montaigne"
+description: "L’IUT Bordeaux Montaigne, le plus court chemin pour aller loin"
 permalink: /
 hero_image: /assets/images/uploads/iut.png
 hero_image_mobile: /assets/images/uploads/iut-mobile.png
@@ -9,7 +10,7 @@ hero_image_mobile: /assets/images/uploads/iut-mobile.png
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.languages[lang] %}
 
-{% include hero.html %}
+{% include hero.html title=page.description %}
 
 <div class="container">
 

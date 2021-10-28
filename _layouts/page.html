@@ -9,7 +9,7 @@ layout: scrollspy
 <article itemscope itemtype="https://schema.org/Article">
   {% if page.excerpt %}<meta itemprop="description" content="{{ page.description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
 
-  {% include hero.html %}
+  {% include hero.html title=page.title %}
 
   <div class="container">
    <div class="row">

@@ -1,93 +1,85 @@
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.languages[lang] %}
 
-{% comment %}
-<table>
-  <tr>
-    <th>page_path</th>
-    <td>{{ paginator.page_path }}</td>
-  </tr>
-  <tr>
-    <th>previous_page</th>
-    <td>{{ paginator.previous_page }}</td>
-  </tr>
-  <tr>
-    <th>next_page</th>
-    <td>{{ paginator.next_page }}</td>
-  </tr>
-  <tr>
-    <th>total_pages</th>
-    <td>{{ paginator.total_pages }}</td>
-  </tr>
-</table>
-{% endcomment %}
-
 {% if paginator.total_pages > 1 %}
-<nav aria-label="{{ trad.pagination }}">
+<nav aria-label="{{ trad.pagination }}" class="mt-5">
   <ul class="pagination justify-content-center">
+    {% assign blog_url = "/actualites/" %}
+    {% assign second_to_last_page_number = paginator.total_pages | times: 1 | minus: 1 %}
 
-    {% if paginator.previous_page %}
-      <li class="page-item">
-        <a class="page-link" href="{{ paginator.previous_page_path }}">{{ trad.previous }}</a>
-      </li>
-    {% else %}
-      <li class="page-item disabled">
-        <span class="page-link">{{ trad.previous }}</span>
-      </li>
-    {% endif %}
-
-    {% if paginator.next_page %}
-      <li class="page-item">
-        <a class="page-link" href="{{ paginator.next_page_path }}">{{ trad.next }}</a>
-      </li>
-    {% else %}
-      <li class="page-item disabled">
-        <span class="page-link">{{ trad.next }}</span>
-      </li>
-    {% endif %}
-
-  </ul>
-
-  {% comment %}
-  {% assign current_page = paginator.page %}
-  {% assign next_page = current_page | plus: 1 %}
-  {% assign paginate_limit = 10 %}
-
-  <ul class="pagination justify-content-center">
-
-    {% for page in (1..paginator.total_pages)  %}
-
-      {% if page == current_page %}
-        <li class="page-item active" aria-current="page">
-          <span class="page-link">{{ page }}</span>
-        </li>
-      {% else %}
-
-        {% if page == 1 %}
-          <li class="page-item">
-            <a class="page-link" href="{{ paginator.page_path | replace: 'index.html', page }}">{{ page }}</a>
-          </li>
-        {% elsif page == next_page and paginator.total_pages > paginate_limit %}
-          <li class="page-item">
-            <a class="page-link" href="{{ paginator.page_path | replace: 'index.html', page }}">{{ page }}</a>
-          </li>
-        {% endif %}
-
-      {% endif %}
-
+    <!-- This generates an array of all of the numbers in the trail -->
+    {% assign trail_page_numbers = "" | split: ',' %}
+    {% for trail in paginator.page_trail %}
+      {% assign trail_page_numbers = trail_page_numbers | push: trail.num %}
     {% endfor %}
 
-    {% if paginator.total_pages > paginate_limit and paginator.total_pages != current_page %}
+    <!-- Show the button to the previous page -->
+    {% if paginator.previous_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.previous_page_path }}">Previous</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">Previous</span>
+      </li>
+    {% endif %}
+
+    <!-- Always show the first page -->
+    {% unless trail_page_numbers contains 1 %}
+      <li class="page-item">
+        <a class="page-link" href="{{ url }}">1</a>
+      </li>
+    {% endunless %}
+
+    <!-- If there's space between the trail and the first page, then show ... -->
+    {% unless trail_page_numbers contains 2 %}
       <li class="page-item disabled">
         <span class="page-link">…</span>
       </li>
+    {% endunless %}
+
+    <!-- Loop through the trail -->
+    {% for trail in paginator.page_trail %}
+      {% assign page_number = trail.num %}
+      {% if trail.num == paginator.page %}
+        <li class="page-item active">
+          <span class="page-link">{{ page_number }}</span>
+        </li>
+      {% else %}
+        {% assign url = blog_url | append: page_number | append: "/" %}
+        <li class="page-item">
+          <a class="page-link" href="{{ url }}">{{ page_number }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+
+    <!-- If there's space between the trail and the last page, then show ... -->
+    {% unless trail_page_numbers contains second_to_last_page_number %}
       <li class="page-item disabled">
-        <span class="page-link">{{ paginator.total_pages }}</span>
+        <span class="page-link">…</span>
+      </li>
+    {% endunless %}
+
+    <!-- Always show the last page -->
+    {% unless trail_page_numbers contains paginator.total_pages %}
+      {% assign page_number = paginator.total_pages %}
+      {% assign url = blog_url | append: page_number | append: "/" %}
+      <li class="page-item">
+        <a class="page-link" href="{{ url }}">{{ page_number }}</a>
+      </li>
+    {% endunless %}
+
+    <!-- Show the button to the next page -->
+    {% if paginator.next_page %}
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.next_page_path }}">Next</a>
+      </li>
+    {% else %}
+      <li class="page-item disabled">
+        <span class="page-link">Next</span>
       </li>
     {% endif %}
 
   </ul>
-  {% endcomment %}
-
 </nav>
 {% endif %}

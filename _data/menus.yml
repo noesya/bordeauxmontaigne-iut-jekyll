@@ -6,38 +6,66 @@ primary:
         url: /institut/presentation-de-l-iut
         children:
           - title: Les atouts des IUT
+            url: "#"
           - title: Ressources
+            url: "#"
           - title: Équipe pédagogique
+            url: "#"
           - title: Plan d’accès et contact
+            url: "#"
       - title: Être candidat
+        url: "#"
         children:
           - title: Sportif de haut niveau / Etudiant handicapé
+            url: "#"
       - title: Centre de ressources
+        url: "#"
         children:
           - title: Le CRM IUT/IJBA – Le Centre de Ressources Montaigne
+            url: "#"
           - title: Le CRM IUT/IJBA – Consulter et emprunter
+            url: "#"
           - title: Le CRM – Comment consulter les mémoires
+            url: "#"
       - title: Scolarité
+        url: "#"
         children:
           - title: Statistiques
+            url: "#"
           - title: Frais d’inscription
+            url: "#"
           - title: Inscription administrative
+            url: "#"
       - title: Entreprises
+        url: "#"
       - title: Apprentissage
+        url: "#"
       - title: Vie étudiante
+        url: "#"
         children:
           - title: AquiPass
+            url: "#"
           - title: Aide & Entraide
+            url: "#"
           - title: Services numériques
+            url: "#"
           - title: Service d'impression
+            url: "#"
           - title: Outils pédagogiques
+            url: "#"
       - title: Formation continue
+        url: "#"
         children:
           - title: Codes utiles
+            url: "#"
           - title: Médiation
+            url: "#"
           - title: Modes de financement
+            url: "#"
           - title: Offre de formation
+            url: "#"
           - title: Organisation du service
+            url: "#"
   - title: Diplômes
     url: /diplomes
   - title: Recherche

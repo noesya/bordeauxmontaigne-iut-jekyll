@@ -39,7 +39,7 @@
               {% endfor %}
             </ul>
           {% else %}
-            <a href="{{ item.url }}" class="nav-link" id="{{ item.title | slugify }}">{{ item.title }}</a>
+            <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
           {% endif %}
         </li>
       {% endfor %}

@@ -1,6 +1,7 @@
 title: IUT Bordeaux Montaigne
 description: "L’IUT Bordeaux Montaigne, le plus court chemin pour aller loin"
 lang: fr
+url: "https://bordeauxmontaigne-iut.netlify.app"
 
 exclude:
   - Gemfile
@@ -13,7 +14,7 @@ plugins:
   - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll-include-cache
-
+  - jekyll-sitemap
 
 sass:
     style: compressed

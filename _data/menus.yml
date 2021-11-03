@@ -1,30 +1,33 @@
 ---
-- primary:
-  - title: Présentation de l'IUT
-    target: "/presentation-de-liut"
-    children: []
-  - title: Offre de formation
-    target: "/formation-continue/offre-de-formation"
+primary:
+- title: Présentation de l'IUT
+  target: "/presentation-de-liut"
+  children: []
+- title: Offre de formation
+  target: "/formation-continue/offre-de-formation"
+  children:
+  - title: Bachelor Universitaire de Technologie (B.U.T.)
+    target: "/diplomes/but"
     children:
-    - title: Bachelor Universitaire de Technologie (B.U.T.)
-      target: "/diplomes/but"
-      children:
-      - title: Métiers du multimédia et de l’internet
-        target: "/diplomes/but/metiers-du-multimedia-et-de-linternet"
-        children: []
-    - title: Diplômes Universitaires de Technologie (DUT)
-      target: "/diplomes/dut"
+    - title: Métiers du multimédia et de l’internet
+      target: "/diplomes/but/metiers-du-multimedia-et-de-linternet"
       children: []
-    - title: Licences professionnelles
-      target: "/diplomes/licences-pro"
+    - title: Publicité
+      target: "/diplomes/but/publicite"
       children: []
-    - title: Masters professionnels
-      target: "/diplomes/master"
-      children: []
-    - title: Diplômes Universitaires (DU)
-      target: "/diplomes/diplomes-universitaires"
-      children: []
-- legal:
-  - title: Mentions légales
-    target: "/infos/mentions-legales"
+  - title: Diplômes Universitaires de Technologie (DUT)
+    target: "/diplomes/dut"
     children: []
+  - title: Licences professionnelles
+    target: "/diplomes/licences-pro"
+    children: []
+  - title: Masters professionnels
+    target: "/diplomes/master"
+    children: []
+  - title: Diplômes Universitaires (DU)
+    target: "/diplomes/diplomes-universitaires"
+    children: []
+legal:
+- title: Mentions légales
+  target: "/infos/mentions-legales"
+  children: []

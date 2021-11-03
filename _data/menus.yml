@@ -5,4 +5,7 @@
     children: []
   - title: Offre de formation
     target: "/formation-continue/offre-de-formation"
-    children: []
+    children:
+    - title: Bachelor Universitaire de Technologie (B.U.T.)
+      target: "/diplomes/but"
+      children: []

@@ -32,21 +32,13 @@ hero_image_mobile: /assets/images/uploads/iut-mobile.png
     <div class="top">
       <h2>{{ trad.institut.title }}</h2>
     </div>
-    <div class="row mb-6">
-      <div class="col-md-6">
-        <blockquote class="blockquote">
-          <p>Portée par l’exigence académique et le souci de l’efficacité professionnelle, notre mission est de former nos étudiantes et nos étudiants à devenir des cadres intermédiaires investis, rigoureux, polyvalents, créatifs. C’est pourquoi notre pédagogie, au cœur des sciences humaines et sociales, s’appuie sur la conduite de projets et privilégie un apprentissage des compétences, tourné vers l’emploi.</p>
-          <cite>Isabelle Cousserand-Blin<br> directrice de l’IUT Bordeaux Montaigne</cite>
-        </blockquote>
-      </div>
-      <div class="col-md-4 offset-md-2">
-        {% assign parent_institut = site.institut | where: 'layout', 'subpage' %}
-        <ul class="nav flex-column">
-          {% for institut in parent_institut %}
-            <li class="nav-item"><a href="{{ institut.url }}" class="nav-link link--more">{{ institut.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </div>
+    <div class="row row-cols-md-2">
+      {% assign parent_presentation = site.pages | where: 'parent', site.data.pages.presentation %}
+      {% for article in parent_presentation %}
+        <div class="col">
+          {% include article.html %}
+        </div>
+      {% endfor %}
     </div>
   </section>
 

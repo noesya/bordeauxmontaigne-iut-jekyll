@@ -3,3 +3,6 @@
   - title: Présentation de l'IUT
     target: "/presentation-de-liut"
     children: []
+  - title: Offre de formation
+    target: "/formation-continue/offre-de-formation"
+    children: []

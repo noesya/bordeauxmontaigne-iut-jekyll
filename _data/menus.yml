@@ -18,3 +18,6 @@
     - title: Masters professionnels
       target: "/diplomes/master"
       children: []
+    - title: Diplômes Universitaires (DU)
+      target: "/diplomes/diplomes-universitaires"
+      children: []

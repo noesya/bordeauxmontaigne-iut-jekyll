@@ -12,3 +12,6 @@
     - title: Diplômes Universitaires de Technologie (DUT)
       target: "/diplomes/dut"
       children: []
+    - title: Licences professionnelles
+      target: "/diplomes/licences-pro"
+      children: []

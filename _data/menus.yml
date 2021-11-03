@@ -15,3 +15,6 @@
     - title: Licences professionnelles
       target: "/diplomes/licences-pro"
       children: []
+    - title: Masters professionnels
+      target: "/diplomes/master"
+      children: []

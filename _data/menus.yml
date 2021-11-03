@@ -24,4 +24,7 @@
     - title: Diplômes Universitaires (DU)
       target: "/diplomes/diplomes-universitaires"
       children: []
-- legal: []
+- legal:
+  - title: Mentions légales
+    target: "/infos/mentions-legales"
+    children: []

@@ -8,7 +8,10 @@
     children:
     - title: Bachelor Universitaire de Technologie (B.U.T.)
       target: "/diplomes/but"
-      children: []
+      children:
+      - title: Métiers du multimédia et de l’internet
+        target: "/diplomes/but/metiers-du-multimedia-et-de-linternet"
+        children: []
     - title: Diplômes Universitaires de Technologie (DUT)
       target: "/diplomes/dut"
       children: []

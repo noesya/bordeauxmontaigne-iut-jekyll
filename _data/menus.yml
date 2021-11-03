@@ -9,3 +9,6 @@
     - title: Bachelor Universitaire de Technologie (B.U.T.)
       target: "/diplomes/but"
       children: []
+    - title: Diplômes Universitaires de Technologie (DUT)
+      target: "/diplomes/dut"
+      children: []

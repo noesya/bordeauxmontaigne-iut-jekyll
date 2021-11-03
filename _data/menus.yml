@@ -1,2 +1,5 @@
 ---
-- primary: []
+- primary:
+  - title: Présentation de l'IUT
+    target: "/presentation-de-liut"
+    children: []

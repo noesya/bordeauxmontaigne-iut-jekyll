@@ -15,6 +15,9 @@ primary:
   - title: Plan d’accès et contact
     target: "/presentation-de-liut/plan-dacces-et-contact"
     children: []
+  - title: Consignes de sécurité
+    target: https://www.u-bordeaux-montaigne.fr/fr/actualites/vie-institutionnelle/vigipirate-consignes-de-securite.html
+    children: []
 - title: Offre de formation
   target: 
   children:

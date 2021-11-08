@@ -1,33 +1,45 @@
 ---
 primary:
 - title: Présentation de l'IUT
-  target: "/presentation-de-liut"
-  children: []
+  target: 
+  children:
+  - title: Les atouts des IUT
+    target: "/presentation-de-liut/les-atouts-des-iut"
+    children: []
+  - title: Équipe pédagogique
+    target: "/presentation-de-liut/equipe-pedagogique"
+    children: []
+  - title: Ressources
+    target: "/presentation-de-liut/ressources-techniques"
+    children: []
 - title: Offre de formation
-  target: "/formation-continue/offre-de-formation"
+  target: 
   children:
   - title: Bachelor Universitaire de Technologie (B.U.T.)
-    target: "/diplomes/but"
+    target: 
     children:
     - title: Métiers du multimédia et de l’internet
-      target: "/diplomes/but/metiers-du-multimedia-et-de-linternet"
+      target: 
       children: []
     - title: Publicité
-      target: "/diplomes/but/publicite"
+      target: 
       children: []
   - title: Diplômes Universitaires de Technologie (DUT)
-    target: "/diplomes/dut"
+    target: 
     children: []
   - title: Licences professionnelles
-    target: "/diplomes/licences-pro"
+    target: 
     children: []
   - title: Masters professionnels
-    target: "/diplomes/master"
+    target: 
     children: []
   - title: Diplômes Universitaires (DU)
-    target: "/diplomes/diplomes-universitaires"
+    target: 
     children: []
+- title: Vie étudiante
+  target: 
+  children: []
 legal:
 - title: Mentions légales
-  target: "/infos/mentions-legales"
+  target: 
   children: []

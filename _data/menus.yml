@@ -12,6 +12,9 @@ primary:
   - title: Ressources
     target: "/presentation-de-liut/ressources-techniques"
     children: []
+  - title: Plan d’accès et contact
+    target: "/presentation-de-liut/plan-dacces-et-contact"
+    children: []
 - title: Offre de formation
   target: 
   children:

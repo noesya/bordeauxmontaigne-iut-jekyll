@@ -1,16 +1,41 @@
 .header
     .nav-link
         font-size: px2rem(18)
+    .navbar-collapse
+        @include media-breakpoint-down(lg)
+            background: white
+            bottom: 0
+            left: 0
+            padding-left: $grid-gutter-width
+            padding-right: $grid-gutter-width
+            position: fixed
+            right: 0
+            top: 90px
+            z-index: 1
     .dropdown
         position: static
         &-menu
             margin-top: 0
-            padding-bottom: $grid-gutter-width * 2
-            padding-top: $grid-gutter-width
             right: 0
+            // @include media-breakpoint-up(md)
+            //     &::before
+            //         background-color: $modal-backdrop-bg
+            //         bottom: 0
+            //         content: ''
+            //         left: 0
+            //         opacity: $modal-backdrop-opacity
+            //         pointer-events: none
+            //         position: fixed
+            //         right: 0
+            //         top: 0
             > ul
                 @extend .container
                 @extend .grid
+                padding-bottom: $grid-gutter-width * 2
+                padding-top: $grid-gutter-width
+                @include media-breakpoint-up(lg)
+                    min-height: 450px
+                    position: relative
                 > li
                     break-inside: avoid-column
                     font-size: px2rem(18)

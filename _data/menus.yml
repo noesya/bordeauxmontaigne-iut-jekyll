@@ -121,6 +121,9 @@ primary:
     - title: Ressources
       target: "/presentation-de-liut/ressources-techniques"
       children: []
+    - title: Codes utiles
+      target: "/formation-continue/codes-utiles"
+      children: []
 - title: Vie étudiante
   target: 
   children:

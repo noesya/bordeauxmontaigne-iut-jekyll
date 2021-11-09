@@ -40,11 +40,11 @@ layout: default
               <tr>
                 <th scope="row" class="ps-0">{{ trad.categories }}</th>
                 <td class="p-category pe-0">
-                  {% for c in page.categories %}
-                    {% assign category = site.categories | where: 'identifier', c %}
+                  {%- for c in page.categories -%}
+                    {%- assign category = site.categories | where: 'identifier', c -%}
                     {% unless forloop.first %}, {% endunless %}
                     <a href="{{ category[0].url }}" itemtype="https://schema.org/articleSection">{{ category[0].name }}</a>
-                  {% endfor %}
+                  {%- endfor -%}
                 </td>
               </tr>
               {% endif %}

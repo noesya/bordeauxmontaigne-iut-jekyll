@@ -1,8 +1,4 @@
 ---
-legal:
-- title: Mentions légales
-  target: 
-  children: []
 primary:
 - title: Présentation de l'IUT
   target: 
@@ -115,15 +111,6 @@ primary:
   - title: Scolarité
     target: "/scolarite"
     children:
-    - title: Inscription administrative
-      target: "/scolarite/inscription-administrative"
-      children: []
-    - title: Statistiques
-      target: "/scolarite/statistiques"
-      children: []
-    - title: Frais d'inscription
-      target: "/scolarite/frais-dinscription"
-      children: []
     - title: Être candidat·e
       target: "/etre-candidat"
       children:
@@ -136,6 +123,19 @@ primary:
       - title: Validation des acquis (VAE/VAPP)
         target: https://www.u-bordeaux-montaigne.fr/fr/formations/admission-inscription/validations_d_acquis.html
         children: []
+    - title: Inscription administrative
+      target: "/scolarite/inscription-administrative"
+      children: []
+    - title: Statistiques
+      target: "/scolarite/statistiques"
+      children: []
+    - title: Frais d'inscription
+      target: "/scolarite/frais-dinscription"
+      children: []
     - title: Attention au plagiat
       target: https://etu.u-bordeaux-montaigne.fr/fr/etudes-et-scolarite/examens/plagiat.html
       children: []
+legal:
+- title: Mentions légales
+  target: 
+  children: []

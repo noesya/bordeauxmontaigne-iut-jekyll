@@ -102,7 +102,10 @@ primary:
     children: []
   - title: Formation continue
     target: "/formation-continue"
-    children: []
+    children:
+    - title: Organisation du service
+      target: "/formation-continue/organisation-du-service"
+      children: []
 - title: Vie étudiante
   target: 
   children:

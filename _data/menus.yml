@@ -97,3 +97,6 @@ primary:
 - title: Vie étudiante
   target: 
   children: []
+- title: Être candidat·e
+  target: "/etre-candidat"
+  children: []

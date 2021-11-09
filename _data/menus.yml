@@ -133,3 +133,6 @@ primary:
     - title: Statistiques
       target: "/scolarite/statistiques"
       children: []
+    - title: Frais d'inscription
+      target: "/scolarite/frais-dinscription"
+      children: []

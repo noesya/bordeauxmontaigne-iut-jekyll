@@ -36,11 +36,11 @@ primary:
     - title: Métiers du multimédia et de l’internet
       target: "/diplomes/but/metiers-du-multimedia-et-de-linternet"
       children: []
-    - title: Publicité
-      target: "/diplomes/but/publicite"
-      children: []
     - title: Métiers du livre et du patrimoine
       target: "/diplomes/but/metiers-du-livre-et-du-patrimoine"
+      children: []
+    - title: Publicité
+      target: "/diplomes/but/publicite"
       children: []
   - title: Diplômes Universitaires de Technologie (DUT)
     target: 

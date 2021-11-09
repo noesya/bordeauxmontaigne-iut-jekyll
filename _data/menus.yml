@@ -84,7 +84,10 @@ primary:
     children:
     - title: Gestion et animation de ludothèque
       target: "/formation-continue/offre-de-formation/du-gestion-et-animation-de-ludotheques"
-      children: []
+      children:
+      - title: Diplôme Universitaire d'Etudes Technologiques Internationales (DUETI)
+        target: "/diplomes/diplomes-universitaires/etudes-technologiques-internationales-dueti"
+        children: []
   - title: Masters professionnels
     target: 
     children: []

@@ -24,14 +24,14 @@ primary:
   - title: Bachelor Universitaire de Technologie (B.U.T.)
     target: "/diplomes/but"
     children:
+    - title: Animation sociale et socioculturelle
+      target: "/diplomes/but/animation-sociale-et-socioculturelle"
+      children: []
     - title: Métiers du multimédia et de l’internet
       target: "/diplomes/but/metiers-du-multimedia-et-de-linternet"
       children: []
     - title: Publicité
       target: "/diplomes/but/publicite"
-      children: []
-    - title: Animation sociale et socioculturelle
-      target: "/diplomes/but/animation-sociale-et-socioculturelle"
       children: []
   - title: Diplômes Universitaires de Technologie (DUT)
     target: 

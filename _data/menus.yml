@@ -126,4 +126,7 @@ primary:
     children: []
   - title: Scolarité
     target: "/scolarite"
-    children: []
+    children:
+    - title: Inscription administrative
+      target: "/scolarite/inscription-administrative"
+      children: []

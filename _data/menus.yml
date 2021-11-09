@@ -92,19 +92,19 @@ primary:
       children: []
 - title: Vie étudiante
   target: 
-  children: []
-- title: Être candidat·e
-  target: "/etre-candidat"
   children:
-  - title: Accessibilité et handicap
-    target: https://www.u-bordeaux-montaigne.fr/fr/campus/accessibilite-et-handicap.html
-    children: []
-  - title: Sportifs de haut et bon niveau
-    target: https://etu.u-bordeaux-montaigne.fr/fr/culture-et-vie-etudiante/sport/sportifs-de-haut-et-bon-niveau.html
-    children: []
-  - title: Validation des acquis (VAE/VAPP)
-    target: https://www.u-bordeaux-montaigne.fr/fr/formations/admission-inscription/validations_d_acquis.html
-    children: []
+  - title: Être candidat·e
+    target: "/etre-candidat"
+    children:
+    - title: Accessibilité et handicap
+      target: https://www.u-bordeaux-montaigne.fr/fr/campus/accessibilite-et-handicap.html
+      children: []
+    - title: Sportifs de haut et bon niveau
+      target: https://etu.u-bordeaux-montaigne.fr/fr/culture-et-vie-etudiante/sport/sportifs-de-haut-et-bon-niveau.html
+      children: []
+    - title: Validation des acquis (VAE/VAPP)
+      target: https://www.u-bordeaux-montaigne.fr/fr/formations/admission-inscription/validations_d_acquis.html
+      children: []
 legal:
 - title: Mentions légales
   target: 

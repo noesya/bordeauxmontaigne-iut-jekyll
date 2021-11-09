@@ -64,6 +64,9 @@ primary:
     - title: Libraire
       target: "/formation-continue/offre-de-formation/licence-pro-libraire"
       children: []
+    - title: Bibliothécaire
+      target: "/formation-continue/offre-de-formation/licence-pro-bibliothecaire"
+      children: []
   - title: Masters professionnels
     target: 
     children: []

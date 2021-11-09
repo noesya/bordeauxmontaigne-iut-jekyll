@@ -42,6 +42,9 @@ primary:
     - title: Publicité
       target: "/diplomes/but/publicite"
       children: []
+    - title: Villes et territoires durables
+      target: "/diplomes/but/villes-et-territoires-durables"
+      children: []
   - title: Diplômes Universitaires de Technologie (DUT)
     target: 
     children: []

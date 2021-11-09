@@ -109,6 +109,9 @@ primary:
     - title: Modes de financement
       target: "/formation-continue/modes-de-financement"
       children: []
+    - title: Offre de formation
+      target: "/formation-continue/offre-de-formation"
+      children: []
 - title: Vie étudiante
   target: 
   children:

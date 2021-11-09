@@ -43,7 +43,7 @@ layout: default
                   {%- for c in page.categories -%}
                     {%- assign category = site.categories | where: 'identifier', c -%}
                     {% unless forloop.first %}, {% endunless %}
-                    <a href="{{ category[0].url }}" itemtype="https://schema.org/articleSection">{{ category[0].name }}</a>
+                    <a href="{{ category[0].url }}" itemtype="https://schema.org/articleSection">{{ category[0].title }}</a>
                   {%- endfor -%}
                 </td>
               </tr>

@@ -4,7 +4,7 @@ layout: default
 
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.locales[lang] %}
-{% assign posts = site.posts | where: 'category', page.identifier %}
+{% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.identifier' %}
 
 {% include hero.html title=page.title %}
 

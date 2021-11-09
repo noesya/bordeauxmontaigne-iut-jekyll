@@ -31,10 +31,9 @@ layout: default
               </tr>
               {% if page.author %}
               {% assign author = site.authors | where: 'identifier', page.author %}
-              {{author | jsonify }}
               <tr>
                 <th scope="row" class="ps-0">{{ trad.author }}</th>
-                <td class="p-author pe-0"><a href="{{ author.url }}">{{ author.first_name }} {{ author.last_name }}</a></td>
+                <td class="p-author pe-0"><a href="{{ author[0].url }}" itemprop="author">{{ author[0].title }}</a></td>
               </tr>
               {% endif %}
               {% if page.category %}

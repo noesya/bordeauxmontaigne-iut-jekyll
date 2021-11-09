@@ -100,6 +100,9 @@ primary:
   - title: Apprentissage
     target: "/apprentissage"
     children: []
+  - title: Formation continue
+    target: "/formation-continue"
+    children: []
 - title: Vie étudiante
   target: 
   children:

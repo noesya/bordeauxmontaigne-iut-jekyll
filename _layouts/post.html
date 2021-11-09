@@ -42,7 +42,8 @@ layout: default
                 <td class="p-category pe-0">
                   {% for c in page.categories %}
                     {% assign category = site.categories | where: 'identifier', c %}
-                    <a href="{{ category.url }}" itemtype="https://schema.org/articleSection">{{ category.name }}</a>
+                    {% unless forloop.first %}, {% endunless %}
+                    <a href="{{ category[0].url }}" itemtype="https://schema.org/articleSection">{{ category[0].name }}</a>
                   {% endfor %}
                 </td>
               </tr>

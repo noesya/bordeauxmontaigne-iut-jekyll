@@ -49,9 +49,6 @@ primary:
     - title: Villes et territoires durables
       target: "/diplomes/but/villes-et-territoires-durables"
       children: []
-  - title: Diplômes Universitaires de Technologie (DUT)
-    target: 
-    children: []
   - title: Licences professionnelles
     target: 
     children:
@@ -76,6 +73,9 @@ primary:
     - title: 'Métiers du livre : Libraire'
       target: "/formation-continue/offre-de-formation/licence-pro-libraire"
       children: []
+  - title: Diplômes Universitaires de Technologie (DUT)
+    target: 
+    children: []
   - title: Masters professionnels
     target: 
     children: []

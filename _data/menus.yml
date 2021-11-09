@@ -124,3 +124,6 @@ primary:
   - title: Aide & entraide
     target: "/vie-etudiante/aide-entraide"
     children: []
+  - title: Scolarité
+    target: "/scolarite"
+    children: []

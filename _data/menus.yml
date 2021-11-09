@@ -90,7 +90,10 @@ primary:
       children: []
   - title: Masters professionnels
     target: 
-    children: []
+    children:
+    - title: Inénierie de l'animation territoriale
+      target: "/formation-continue/offre-de-formation/master-pro-ingenierie-de-lanimation-territoriale"
+      children: []
 - title: Vie étudiante
   target: 
   children: []

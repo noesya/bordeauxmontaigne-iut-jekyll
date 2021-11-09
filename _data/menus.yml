@@ -97,15 +97,15 @@ primary:
 - title: Vie étudiante
   target: 
   children:
-  - title: Service d'impression
-    target: "/vie-etudiante/service-dimpression"
-    children: []
   - title: Aquipass
     target: "/vie-etudiante/aquipass"
     children: []
   - title: Services numériques
     target: "/vie-etudiante/services-numeriques"
     children:
+    - title: Service d'impression
+      target: "/vie-etudiante/service-dimpression"
+      children: []
     - title: Outils pédagogiques
       target: "/vie-etudiante/outils-pedagogiques"
       children: []

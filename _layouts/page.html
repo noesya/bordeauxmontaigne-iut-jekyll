@@ -17,6 +17,13 @@ layout: scrollspy
        {{page.text | page_nav_links}}
      </div>
      <div class="col-md-8">
+
+       {% if page.image %}
+         {% assign directory = page.image | slice: 0, 2 %}
+         {% assign image_url = site.data.media[directory][page.image].url %}
+         <img src="{{image_url}}" alt="" class="img-fluid mb-4" itemprop="image">
+       {% endif %}
+
        {% if page.text %}
        <div itemprop="articleBody">
          {{page.text | page_nav_text_with_ids | correct_punctuation}}

@@ -97,6 +97,9 @@ primary:
     - title: Inénierie de l'animation territoriale
       target: "/formation-continue/offre-de-formation/master-pro-ingenierie-de-lanimation-territoriale"
       children: []
+  - title: Apprentissage
+    target: "/apprentissage"
+    children: []
 - title: Vie étudiante
   target: 
   children:

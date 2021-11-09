@@ -30,6 +30,9 @@ primary:
     - title: Publicité
       target: "/diplomes/but/publicite"
       children: []
+    - title: Animation sociale et socioculturelle
+      target: "/diplomes/but/animation-sociale-et-socioculturelle"
+      children: []
   - title: Diplômes Universitaires de Technologie (DUT)
     target: 
     children: []

@@ -136,3 +136,6 @@ primary:
     - title: Frais d'inscription
       target: "/scolarite/frais-dinscription"
       children: []
+    - title: Attention au plagiat
+      target: https://etu.u-bordeaux-montaigne.fr/fr/etudes-et-scolarite/examens/plagiat.html
+      children: []

@@ -115,6 +115,9 @@ primary:
     - title: Réglement intérieur
       target: ''
       children: []
+    - title: Conditions générales de vente
+      target: ''
+      children: []
 - title: Vie étudiante
   target: 
   children:

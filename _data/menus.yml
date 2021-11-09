@@ -1,4 +1,8 @@
 ---
+legal:
+- title: Mentions légales
+  target: 
+  children: []
 primary:
 - title: Présentation de l'IUT
   target: 
@@ -93,6 +97,9 @@ primary:
 - title: Vie étudiante
   target: 
   children:
+  - title: Aide & entraide
+    target: "/vie-etudiante/aide-entraide"
+    children: []
   - title: Services numériques
     target: "/vie-etudiante/services-numeriques"
     children:
@@ -105,9 +112,6 @@ primary:
     - title: Outils pédagogiques
       target: "/vie-etudiante/outils-pedagogiques"
       children: []
-  - title: Aide & entraide
-    target: "/vie-etudiante/aide-entraide"
-    children: []
   - title: Scolarité
     target: "/scolarite"
     children:
@@ -135,7 +139,3 @@ primary:
     - title: Statistiques
       target: "/scolarite/statistiques"
       children: []
-legal:
-- title: Mentions légales
-  target: 
-  children: []

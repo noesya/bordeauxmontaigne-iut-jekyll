@@ -1,4 +1,8 @@
 ---
+legal:
+- title: Mentions légales
+  target: 
+  children: []
 primary:
 - title: Présentation de l'IUT
   target: 
@@ -114,7 +118,6 @@ primary:
   - title: Services numériques
     target: "/vie-etudiante/services-numeriques"
     children: []
-legal:
-- title: Mentions légales
-  target: 
-  children: []
+  - title: Outils pédagogiques
+    target: "/vie-etudiante/outils-pedagogiques"
+    children: []

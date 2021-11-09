@@ -1,4 +1,8 @@
 ---
+legal:
+- title: Mentions légales
+  target: 
+  children: []
 primary:
 - title: Présentation de l'IUT
   target: 
@@ -54,6 +58,9 @@ primary:
     - title: Conception de projets & médiation artistique et culturelle
       target: "/formation-continue/offre-de-formation/licence-pro-conception-de-projets-mediation-artistique-et-culturelle"
       children: []
+    - title: Éditeur
+      target: "/formation-continue/offre-de-formation/licence-pro-editeur"
+      children: []
   - title: Masters professionnels
     target: 
     children: []
@@ -61,9 +68,5 @@ primary:
     target: 
     children: []
 - title: Vie étudiante
-  target: 
-  children: []
-legal:
-- title: Mentions légales
   target: 
   children: []

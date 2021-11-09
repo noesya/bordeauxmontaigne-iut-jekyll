@@ -25,7 +25,7 @@ primary:
     target: "/diplomes/but"
     children:
     - title: Métiers du multimédia et de l’internet
-      target: 
+      target: "/diplomes/but/metiers-du-multimedia-et-de-linternet"
       children: []
     - title: Publicité
       target: 

@@ -22,7 +22,7 @@ primary:
   target: 
   children:
   - title: Bachelor Universitaire de Technologie (B.U.T.)
-    target: 
+    target: "/diplomes/but"
     children:
     - title: Métiers du multimédia et de l’internet
       target: 

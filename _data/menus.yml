@@ -105,6 +105,9 @@ primary:
     - title: Validation des acquis (VAE/VAPP)
       target: https://www.u-bordeaux-montaigne.fr/fr/formations/admission-inscription/validations_d_acquis.html
       children: []
+- title: Service d'impression
+  target: "/vie-etudiante/service-dimpression"
+  children: []
 legal:
 - title: Mentions légales
   target: 

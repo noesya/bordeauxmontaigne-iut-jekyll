@@ -1,8 +1,4 @@
 ---
-legal:
-- title: Mentions légales
-  target: 
-  children: []
 primary:
 - title: Présentation de l'IUT
   target: 
@@ -55,7 +51,7 @@ primary:
   - title: Licences professionnelles
     target: 
     children:
-    - title: Bibliothécaire
+    - title: 'Métiers du livre : Bibliothécaire'
       target: "/formation-continue/offre-de-formation/licence-pro-bibliothecaire"
       children: []
     - title: Communication éditoriale et digitale
@@ -80,5 +76,9 @@ primary:
     target: 
     children: []
 - title: Vie étudiante
+  target: 
+  children: []
+legal:
+- title: Mentions légales
   target: 
   children: []

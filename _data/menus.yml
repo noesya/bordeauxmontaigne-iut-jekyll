@@ -180,6 +180,9 @@ primary:
     - title: Présentation du CRM
       target: "/centre-de-ressources-montaigne/presentation-crm"
       children: []
+    - title: L'équipe qui vous accueille
+      target: "/centre-de-ressources-montaigne/equipe"
+      children: []
 legal:
 - title: Mentions légales
   target: 

@@ -55,6 +55,9 @@ primary:
   - title: Licences professionnelles
     target: 
     children:
+    - title: Bibliothécaire
+      target: "/formation-continue/offre-de-formation/licence-pro-bibliothecaire"
+      children: []
     - title: Conception de projets & médiation artistique et culturelle
       target: "/formation-continue/offre-de-formation/licence-pro-conception-de-projets-mediation-artistique-et-culturelle"
       children: []
@@ -63,9 +66,6 @@ primary:
       children: []
     - title: Libraire
       target: "/formation-continue/offre-de-formation/licence-pro-libraire"
-      children: []
-    - title: Bibliothécaire
-      target: "/formation-continue/offre-de-formation/licence-pro-bibliothecaire"
       children: []
     - title: Coordination de projets de développement social et culturel
       target: "/formation-continue/offre-de-formation/licence-pro-coordination-de-projets-de-developpement-social-et-culturel"

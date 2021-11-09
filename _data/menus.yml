@@ -118,6 +118,9 @@ primary:
     - title: Conditions générales de vente
       target: ''
       children: []
+    - title: Ressources
+      target: "/presentation-de-liut/ressources-techniques"
+      children: []
 - title: Vie étudiante
   target: 
   children:

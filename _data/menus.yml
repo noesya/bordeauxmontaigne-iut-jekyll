@@ -50,7 +50,10 @@ primary:
     children: []
   - title: Licences professionnelles
     target: 
-    children: []
+    children:
+    - title: Conception de projets & médiation artistique et culturelle
+      target: "/formation-continue/offre-de-formation/licence-pro-conception-de-projets-mediation-artistique-et-culturelle"
+      children: []
   - title: Masters professionnels
     target: 
     children: []

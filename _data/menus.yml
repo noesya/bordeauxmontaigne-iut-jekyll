@@ -39,6 +39,9 @@ primary:
     - title: Information numérique dans les organisations
       target: "/diplomes/but/information-numerique-dans-les-organisations"
       children: []
+    - title: Métiers du livre et du patrimoine
+      target: "/diplomes/but/metiers-du-livre-et-du-patrimoine"
+      children: []
   - title: Diplômes Universitaires de Technologie (DUT)
     target: 
     children: []

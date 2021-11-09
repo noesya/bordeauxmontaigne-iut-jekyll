@@ -106,6 +106,9 @@ primary:
     - title: Organisation du service
       target: "/formation-continue/organisation-du-service"
       children: []
+    - title: Modes de financement
+      target: "/formation-continue/modes-de-financement"
+      children: []
 - title: Vie étudiante
   target: 
   children:

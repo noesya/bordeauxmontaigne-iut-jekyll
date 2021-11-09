@@ -105,10 +105,10 @@ primary:
     children: []
   - title: Services numériques
     target: "/vie-etudiante/services-numeriques"
-    children: []
-  - title: Outils pédagogiques
-    target: "/vie-etudiante/outils-pedagogiques"
-    children: []
+    children:
+    - title: Outils pédagogiques
+      target: "/vie-etudiante/outils-pedagogiques"
+      children: []
   - title: Aide & entraide
     target: "/vie-etudiante/aide-entraide"
     children: []

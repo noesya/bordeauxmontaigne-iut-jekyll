@@ -47,7 +47,7 @@ defaults:
       path: ""
       type: "categories"
     values:
-      layout: "default"
+      layout: "category"
   -
     scope:
       path: ""
@@ -67,6 +67,7 @@ collections:
     permalink: /:collection/:name
   categories:
     output: true
+    permalink: /actualites/:name
   pages:
     output: true
   posts:

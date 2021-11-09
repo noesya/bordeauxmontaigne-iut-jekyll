@@ -33,6 +33,9 @@ primary:
     - title: Publicité
       target: "/diplomes/but/publicite"
       children: []
+    - title: Communication des organisations
+      target: "/diplomes/but/communication-des-organisations"
+      children: []
   - title: Diplômes Universitaires de Technologie (DUT)
     target: 
     children: []

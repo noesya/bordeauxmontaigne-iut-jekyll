@@ -81,7 +81,10 @@ primary:
       children: []
   - title: Diplômes Universitaires (DU)
     target: 
-    children: []
+    children:
+    - title: Gestion et animation de ludothèque
+      target: "/formation-continue/offre-de-formation/du-gestion-et-animation-de-ludotheques"
+      children: []
   - title: Masters professionnels
     target: 
     children: []

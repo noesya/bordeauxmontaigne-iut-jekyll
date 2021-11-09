@@ -75,7 +75,10 @@ primary:
       children: []
   - title: Diplômes Universitaires de Technologie (DUT)
     target: 
-    children: []
+    children:
+    - title: Animation sociale et socioculturelle en formation continue
+      target: "/formation-continue/offre-de-formation/dut-animation-sociale-et-socioculturelle-fc"
+      children: []
   - title: Diplômes Universitaires (DU)
     target: 
     children: []

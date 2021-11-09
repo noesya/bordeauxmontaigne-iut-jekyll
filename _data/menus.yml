@@ -69,6 +69,9 @@ primary:
     - title: 'Métiers du livre : Libraire'
       target: "/formation-continue/offre-de-formation/licence-pro-libraire"
       children: []
+    - title: Médiation par le jeu et gestion de ludothèques
+      target: "/formation-continue/offre-de-formation/licence-pro-mediation-par-le-jeu-et-gestion-de-ludotheques"
+      children: []
   - title: Masters professionnels
     target: 
     children: []

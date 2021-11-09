@@ -108,6 +108,9 @@ primary:
 - title: Service d'impression
   target: "/vie-etudiante/service-dimpression"
   children: []
+- title: Aquipass
+  target: "/vie-etudiante/aquipass"
+  children: []
 legal:
 - title: Mentions légales
   target: 

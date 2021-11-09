@@ -127,6 +127,9 @@ primary:
     - title: Validation des acquis (VAE/VAPP)
       target: https://www.u-bordeaux-montaigne.fr/fr/formations/formation_continue/validation-des-acquis.html
       children: []
+    - title: Médiation
+      target: "/infos/intranet/contacter-un-mediateur"
+      children: []
 - title: Vie étudiante
   target: 
   children:

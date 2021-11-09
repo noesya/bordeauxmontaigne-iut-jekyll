@@ -8,7 +8,7 @@ hero_image_mobile: /assets/images/uploads/iut-mobile.png
 ---
 
 {% assign lang = page.lang | default: site.lang %}
-{% assign trad = site.data.languages[lang] %}
+{% assign trad = site.data.locales[lang] %}
 
 {% include hero.html title=page.description %}
 

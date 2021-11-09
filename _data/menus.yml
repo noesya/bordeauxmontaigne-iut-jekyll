@@ -176,7 +176,10 @@ primary:
       children: []
   - title: Centre de ressources Montaigne
     target: "/centre-de-ressources-montaigne"
-    children: []
+    children:
+    - title: Présentation du CRM
+      target: "/centre-de-ressources-montaigne/presentation-crm"
+      children: []
 legal:
 - title: Mentions légales
   target: 

@@ -112,6 +112,9 @@ primary:
     - title: Offre de formation
       target: "/formation-continue/offre-de-formation"
       children: []
+    - title: Réglement intérieur
+      target: ''
+      children: []
 - title: Vie étudiante
   target: 
   children:

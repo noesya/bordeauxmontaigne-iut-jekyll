@@ -58,6 +58,9 @@ primary:
     - title: Bibliothécaire
       target: "/formation-continue/offre-de-formation/licence-pro-bibliothecaire"
       children: []
+    - title: Communication éditoriale et digitale
+      target: "/formation-continue/offre-de-formation/licence-pro-communication-editoriale-et-digitale"
+      children: []
     - title: Conception de projets & médiation artistique et culturelle
       target: "/formation-continue/offre-de-formation/licence-pro-conception-de-projets-mediation-artistique-et-culturelle"
       children: []
@@ -69,9 +72,6 @@ primary:
       children: []
     - title: Libraire
       target: "/formation-continue/offre-de-formation/licence-pro-libraire"
-      children: []
-    - title: Communication éditoriale et digitale
-      target: "/formation-continue/offre-de-formation/licence-pro-communication-editoriale-et-digitale"
       children: []
   - title: Masters professionnels
     target: 

@@ -3,7 +3,7 @@ layout: scrollspy
 ---
 
 {% assign lang = page.lang | default: site.lang %}
-{% assign trad = site.data.languages[lang] %}
+{% assign trad = site.data.locales[lang] %}
 {% assign children = site.pages | where: 'parent', page.identifier %}
 
 <article itemscope itemtype="https://schema.org/Article">

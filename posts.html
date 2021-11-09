@@ -7,7 +7,7 @@ pagination:
 ---
 
 {% assign lang = page.lang | default: site.lang %}
-{% assign trad = site.data.languages[lang] %}
+{% assign trad = site.data.locales[lang] %}
 
 {% include hero.html title=page.title %}
 

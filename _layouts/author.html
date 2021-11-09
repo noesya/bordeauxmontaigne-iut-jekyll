@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign lang = page.lang | default: site.lang %}
-{% assign trad = site.data.languages[lang] %}
+{% assign trad = site.data.locales[lang] %}
 {% assign posts = site.posts | where: 'author', page.identifier %}
 
 <article itemscope itemtype="https://schema.org/Person">

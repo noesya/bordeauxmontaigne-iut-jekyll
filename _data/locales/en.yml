@@ -1,0 +1,20 @@
+author: "Author"
+category: "Category"
+categories: "Categories"
+date: "Date"
+home: "Home"
+pagination: "Pagination"
+previous: "Previous"
+more: "Read more"
+next: "Next"
+institut:
+  title: Institut
+news:
+  infos: "Article informations"
+  more: "See more news"
+  navigation: "Articles navigation"
+  navigation_post: "Navigation between articles"
+  next: "Next article"
+  previous: "Previous article"
+  title: "News"
+share: "Share on"

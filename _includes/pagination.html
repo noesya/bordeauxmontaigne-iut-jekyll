@@ -1,5 +1,5 @@
 {% assign lang = page.lang | default: site.lang %}
-{% assign trad = site.data.languages[lang] %}
+{% assign trad = site.data.locales[lang] %}
 
 {% if paginator.total_pages > 1 %}
 <nav aria-label="{{ trad.pagination }}" class="mt-5">

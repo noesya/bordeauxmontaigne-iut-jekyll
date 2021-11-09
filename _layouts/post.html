@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% assign lang = page.lang | default: site.lang %}
-{% assign trad = site.data.languages[lang] %}
+{% assign trad = site.data.locales[lang] %}
 
 <article itemscope itemtype="https://schema.org/BlogPosting">
   {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
@@ -36,11 +36,14 @@ layout: default
                 <td class="p-author pe-0"><a href="{{ author[0].url }}" itemprop="author">{{ author[0].title }}</a></td>
               </tr>
               {% endif %}
-              {% if page.category %}
+              {% if page.categories %}
               <tr>
-                <th scope="row" class="ps-0">{{ trad.category }}</th>
-                <td class="p-category pe-0" itemtype="https://schema.org/articleSection">
-                  {{ page.category }}
+                <th scope="row" class="ps-0">{{ trad.categories }}</th>
+                <td class="p-category pe-0">
+                  {% for c in page.categories %}
+                    {% assign category = site.categories | where: 'identifier', c %}
+                    <a href="{{ category.url }}" itemtype="https://schema.org/articleSection">{{ category.name }}</a>
+                  {% endfor %}
                 </td>
               </tr>
               {% endif %}

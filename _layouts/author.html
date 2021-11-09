@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.languages[lang] %}
+{% assign posts = site.posts | where: 'author', page.identifier %}
+
+<article itemscope itemtype="https://schema.org/Article">
+  {% if page.excerpt %}<meta itemprop="description" content="{{ page.description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+
+  {% include hero.html title=page.title %}
+
+  <div class="container">
+
+   {% if page.image %}
+     {% assign directory = page.image | slice: 0, 2 %}
+     {% assign image_url = site.data.media[directory][page.image].url %}
+     <img src="{{image_url}}" alt="" class="img-fluid mb-4" itemprop="image">
+   {% endif %}
+
+   {% if page.biography %}
+   <div itemprop="articleBody">
+     {{ page.biography | correct_punctuation }}
+   </div>
+   {% endif %}
+
+  {% if posts.size > 0 %}
+    <hr class="my-5">
+    <div class="row row-cols-1 row-cols-md-2 gy-5">
+      {% for post in posts %}
+        <div class="col">
+          {% include post.html %}
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  </div>
+</article>

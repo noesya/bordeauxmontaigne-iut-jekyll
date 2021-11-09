@@ -39,6 +39,12 @@ defaults:
   -
     scope:
       path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  -
+    scope:
+      path: ""
       type: "pages"
     values:
       layout: "page"
@@ -50,11 +56,13 @@ defaults:
       layout: "post"
 
 collections:
+  authors:
+    output: true
   pages:
     output: true
   posts:
     output: true
-    permalink: /actualites/:categories/:year/:month/:day/:title
+    permalink: /actualites/:year/:month/:day/:title
 
 pagination:
   enabled: true

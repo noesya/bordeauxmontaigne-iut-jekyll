@@ -31,15 +31,18 @@ layout: default
               </tr>
               {% if page.author %}
               {% assign author = site.authors | where: 'identifier', page.author %}
+              {{author | jsonify }}
               <tr>
                 <th scope="row" class="ps-0">{{ trad.author }}</th>
-                <td class="p-author pe-0">{{ author.first_name }} {{ author.last_name }}</td>
+                <td class="p-author pe-0"><a href="{{ author.url }}">{{ author.first_name }} {{ author.last_name }}</a></td>
               </tr>
               {% endif %}
               {% if page.category %}
               <tr>
                 <th scope="row" class="ps-0">{{ trad.category }}</th>
-                <td class="p-category pe-0" itemtype="https://schema.org/articleSection">{{ page.category }}</td>
+                <td class="p-category pe-0" itemtype="https://schema.org/articleSection">
+                  {{ page.category }}
+                </td>
               </tr>
               {% endif %}
               <tr>

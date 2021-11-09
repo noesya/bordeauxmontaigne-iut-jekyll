@@ -126,11 +126,11 @@ primary:
     - title: Inscription administrative
       target: "/scolarite/inscription-administrative"
       children: []
-    - title: Statistiques
-      target: "/scolarite/statistiques"
-      children: []
     - title: Frais d'inscription
       target: "/scolarite/frais-dinscription"
+      children: []
+    - title: Statistiques
+      target: "/scolarite/statistiques"
       children: []
     - title: Attention au plagiat
       target: https://etu.u-bordeaux-montaigne.fr/fr/etudes-et-scolarite/examens/plagiat.html

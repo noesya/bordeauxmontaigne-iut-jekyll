@@ -54,7 +54,10 @@ layout: default
       </div>
       <div class="col-md-8 offset-md-1">
         {%- if page.image -%}
-            <img src="{{page.image}}" alt="" class="img-fluid mb-4 border">
+          {% assign directory = page.image | slice: 0, 1 %}
+          {{ directory }}
+          {% assign image_url = site.data.media[directory][page.image].url %}
+          <img src="{{image_url}}" alt="" class="img-fluid mb-4 border">
         {%- endif -%}
         <div itemprop="articleBody">
           {{ page.text }}

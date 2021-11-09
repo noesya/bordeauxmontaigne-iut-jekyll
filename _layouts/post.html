@@ -30,15 +30,16 @@ layout: default
                 </td>
               </tr>
               {% if page.author %}
+              {% assign author = site.authors | where: 'id', page.author %}
               <tr>
                 <th scope="row" class="ps-0">{{ trad.author }}</th>
-                <td class="p-author pe-0"">{{ page.author }}</td>
+                <td class="p-author pe-0">{{ author.first_name }} {{ author.last_name }}</td>
               </tr>
               {% endif %}
               {% if page.category %}
               <tr>
                 <th scope="row" class="ps-0">{{ trad.category }}</th>
-                <td class="p-category pe-0"" itemtype="https://schema.org/articleSection">{{ page.category }}</td>
+                <td class="p-category pe-0" itemtype="https://schema.org/articleSection">{{ page.category }}</td>
               </tr>
               {% endif %}
               <tr>
@@ -59,7 +60,7 @@ layout: default
           {% assign image_url = site.data.media[directory][page.image].url %}
           <img src="{{image_url}}" alt="" class="img-fluid mb-4" itemprop="image">
         {% endif %}
-        
+
         <div itemprop="articleBody">
           {{ page.text }}
         </div>

@@ -28,7 +28,7 @@ primary:
       target: "/diplomes/but/metiers-du-multimedia-et-de-linternet"
       children: []
     - title: Publicité
-      target: 
+      target: "/diplomes/but/publicite"
       children: []
   - title: Diplômes Universitaires de Technologie (DUT)
     target: 

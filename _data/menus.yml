@@ -1,4 +1,8 @@
 ---
+legal:
+- title: Mentions légales
+  target: 
+  children: []
 primary:
 - title: Présentation de l'IUT
   target: 
@@ -60,6 +64,9 @@ primary:
     - title: Coordination de projets de développement social et culturel
       target: "/formation-continue/offre-de-formation/licence-pro-coordination-de-projets-de-developpement-social-et-culturel"
       children: []
+    - title: Médiation par le jeu et gestion de ludothèques
+      target: "/formation-continue/offre-de-formation/licence-pro-mediation-par-le-jeu-et-gestion-de-ludotheques"
+      children: []
     - title: 'Métiers du livre : Bibliothécaire'
       target: "/formation-continue/offre-de-formation/licence-pro-bibliothecaire"
       children: []
@@ -69,9 +76,6 @@ primary:
     - title: 'Métiers du livre : Libraire'
       target: "/formation-continue/offre-de-formation/licence-pro-libraire"
       children: []
-    - title: Médiation par le jeu et gestion de ludothèques
-      target: "/formation-continue/offre-de-formation/licence-pro-mediation-par-le-jeu-et-gestion-de-ludotheques"
-      children: []
   - title: Masters professionnels
     target: 
     children: []
@@ -79,9 +83,5 @@ primary:
     target: 
     children: []
 - title: Vie étudiante
-  target: 
-  children: []
-legal:
-- title: Mentions légales
   target: 
   children: []

@@ -121,3 +121,6 @@ primary:
   - title: Outils pédagogiques
     target: "/vie-etudiante/outils-pedagogiques"
     children: []
+  - title: Aide & entraide
+    target: "/vie-etudiante/aide-entraide"
+    children: []

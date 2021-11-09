@@ -30,7 +30,7 @@ layout: default
                 </td>
               </tr>
               {% if page.author %}
-              {% assign author = site.authors | where: 'id', page.author %}
+              {% assign author = site.authors | where: 'identifier', page.author %}
               <tr>
                 <th scope="row" class="ps-0">{{ trad.author }}</th>
                 <td class="p-author pe-0">{{ author.first_name }} {{ author.last_name }}</td>

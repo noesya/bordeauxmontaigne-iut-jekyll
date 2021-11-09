@@ -61,6 +61,9 @@ primary:
     - title: Éditeur
       target: "/formation-continue/offre-de-formation/licence-pro-editeur"
       children: []
+    - title: Libraire
+      target: "/formation-continue/offre-de-formation/licence-pro-libraire"
+      children: []
   - title: Masters professionnels
     target: 
     children: []

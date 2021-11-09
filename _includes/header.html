@@ -12,18 +12,18 @@
           {% assign children = item.children %}
           <li class="nav-item{% if children %} dropdown{% endif %}">
             {% if children %}
-              <a href="{{ item.url }}" class="nav-link dropdown-toggle" id="dropdown-{{ slug }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
+              <a href="{{ item.target }}" class="nav-link dropdown-toggle" id="dropdown-{{ slug }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
               <div class="dropdown-menu" aria-labelledby="dropdown-{{ slug }}">
                 <ul>
                   {% for child in children %}
                     {% assign grandchildren = child.children %}
                     <li>
-                      <a href="{{child.url}}">{{child.title}}</a>
+                      <a href="{{child.target}}">{{child.title}}</a>
                       {% if grandchildren %}
                       <ul>
                         {% for grandchild in grandchildren %}
                         <li>
-                          <a href="{{child.url}}">{{grandchild.title}}</a>
+                          <a href="{{child.target}}">{{grandchild.title}}</a>
                         </li>
                         {% endfor %}
                       </ul>
@@ -33,7 +33,7 @@
                 </ul>
               </div>
             {% else %}
-              <a href="{{ item.url }}" class="nav-link" id="{{ item.title | slugify }}">{{ item.title }}</a>
+              <a href="{{ item.target }}" class="nav-link" id="{{ item.title | slugify }}">{{ item.title }}</a>
             {% endif %}
           </li>
         {% endfor %}

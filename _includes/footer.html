@@ -20,17 +20,17 @@
         {% assign children = item.children %}
         <li class="nav-item">
           {% if children %}
-            <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+            <a href="{{ item.target }}" class="nav-link">{{ item.title }}</a>
             <ul class="nav-2">
               {% for child in children %}
                 {% assign grandchildren = child.children %}
                 <li class="nav-item">
-                  <a href="{{child.url}}" class="nav-link">{{child.title}}</a>
+                  <a href="{{child.target}}" class="nav-link">{{child.title}}</a>
                   {% if grandchildren %}
                   <ul class="nav-3">
                     {% for grandchild in grandchildren %}
                     <li class="nav-item">
-                      <a href="{{child.url}}" class="nav-link">{{grandchild.title}}</a>
+                      <a href="{{child.target}}" class="nav-link">{{grandchild.title}}</a>
                     </li>
                     {% endfor %}
                   </ul>
@@ -39,7 +39,7 @@
               {% endfor %}
             </ul>
           {% else %}
-            <a href="{{ item.url }}" class="nav-link">{{ item.title }}</a>
+            <a href="{{ item.target }}" class="nav-link">{{ item.title }}</a>
           {% endif %}
         </li>
       {% endfor %}

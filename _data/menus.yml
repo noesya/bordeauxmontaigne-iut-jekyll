@@ -67,6 +67,9 @@ primary:
     - title: Bibliothécaire
       target: "/formation-continue/offre-de-formation/licence-pro-bibliothecaire"
       children: []
+    - title: Coordination de projets de développement social et culturel
+      target: "/formation-continue/offre-de-formation/licence-pro-coordination-de-projets-de-developpement-social-et-culturel"
+      children: []
   - title: Masters professionnels
     target: 
     children: []

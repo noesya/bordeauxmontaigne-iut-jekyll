@@ -1,8 +1,4 @@
 ---
-legal:
-- title: Mentions légales
-  target: 
-  children: []
 primary:
 - title: Présentation de l'IUT
   target: 
@@ -23,7 +19,7 @@ primary:
     target: https://www.u-bordeaux-montaigne.fr/fr/actualites/vie-institutionnelle/vigipirate-consignes-de-securite.html
     children: []
   - title: Relations avec les entreprises
-    target: "/entreprises"
+    target: "/presentation-de-liut/entreprises"
     children: []
 - title: Offre de formation
   target: 
@@ -56,37 +52,37 @@ primary:
     target: 
     children:
     - title: Communication éditoriale et digitale
-      target: "/formation-continue/offre-de-formation/licence-pro-communication-editoriale-et-digitale"
+      target: "/diplomes/licences-pro/licence-pro-communication-editoriale-et-digitale"
       children: []
     - title: Conception de projets & médiation artistique et culturelle
-      target: "/formation-continue/offre-de-formation/licence-pro-conception-de-projets-mediation-artistique-et-culturelle"
+      target: "/diplomes/licences-pro/licence-pro-conception-de-projets-mediation-artistique-et-culturelle"
       children: []
     - title: Coordination de projets de développement social et culturel
-      target: "/formation-continue/offre-de-formation/licence-pro-coordination-de-projets-de-developpement-social-et-culturel"
+      target: "/diplomes/licences-pro/licence-pro-coordination-de-projets-de-developpement-social-et-culturel"
       children: []
     - title: Médiation par le jeu et gestion de ludothèques
-      target: "/formation-continue/offre-de-formation/licence-pro-mediation-par-le-jeu-et-gestion-de-ludotheques"
+      target: "/diplomes/licences-pro/licence-pro-mediation-par-le-jeu-et-gestion-de-ludotheques"
       children: []
     - title: 'Métiers du livre : Bibliothécaire'
-      target: "/formation-continue/offre-de-formation/licence-pro-bibliothecaire"
+      target: "/diplomes/licences-pro/licence-pro-bibliothecaire"
       children: []
     - title: 'Métiers du livre : Éditeur'
-      target: "/formation-continue/offre-de-formation/licence-pro-editeur"
+      target: "/diplomes/licences-pro/licence-pro-editeur"
       children: []
     - title: 'Métiers du livre : Libraire'
-      target: "/formation-continue/offre-de-formation/licence-pro-libraire"
+      target: "/diplomes/licences-pro/licence-pro-libraire"
       children: []
   - title: Diplômes Universitaires de Technologie (DUT)
     target: 
     children:
     - title: Animation sociale et socioculturelle en formation continue
-      target: "/formation-continue/offre-de-formation/dut-animation-sociale-et-socioculturelle-fc"
+      target: "/diplomes/dut/dut-animation-sociale-et-socioculturelle-fc"
       children: []
   - title: Diplômes Universitaires (DU)
     target: 
     children:
     - title: Gestion et animation de ludothèque
-      target: "/formation-continue/offre-de-formation/du-gestion-et-animation-de-ludotheques"
+      target: "/diplomes/diplomes-universitaires/du-gestion-et-animation-de-ludotheques"
       children: []
     - title: Diplôme Universitaire d'Etudes Technologiques Internationales (DUETI)
       target: "/diplomes/diplomes-universitaires/etudes-technologiques-internationales-dueti"
@@ -95,22 +91,22 @@ primary:
     target: 
     children:
     - title: Inénierie de l'animation territoriale
-      target: "/formation-continue/offre-de-formation/master-pro-ingenierie-de-lanimation-territoriale"
+      target: "/diplomes/master/master-pro-ingenierie-de-lanimation-territoriale"
       children: []
   - title: Apprentissage
-    target: "/apprentissage"
+    target: "/diplomes/apprentissage"
     children: []
   - title: Formation continue
-    target: "/formation-continue"
+    target: "/diplomes/formation-continue"
     children:
     - title: Organisation du service
-      target: "/formation-continue/organisation-du-service"
+      target: "/diplomes/formation-continue/organisation-du-service"
       children: []
     - title: Modes de financement
-      target: "/formation-continue/modes-de-financement"
+      target: "/diplomes/formation-continue/modes-de-financement"
       children: []
     - title: Offre de formation
-      target: "/formation-continue/offre-de-formation"
+      target: "/diplomes/formation-continue/offre-de-formation"
       children: []
     - title: Réglement intérieur
       target: ''
@@ -122,20 +118,23 @@ primary:
       target: "/presentation-de-liut/ressources-techniques"
       children: []
     - title: Codes utiles
-      target: "/formation-continue/codes-utiles"
+      target: "/diplomes/formation-continue/codes-utiles"
       children: []
     - title: Validation des acquis (VAE/VAPP)
       target: https://www.u-bordeaux-montaigne.fr/fr/formations/formation_continue/validation-des-acquis.html
       children: []
     - title: Médiation
-      target: "/infos/intranet/contacter-un-mediateur"
+      target: "/vie-etudiante/aide-entraide/contacter-un-mediateur"
       children: []
 - title: Vie étudiante
   target: 
   children:
   - title: Aide & entraide
     target: "/vie-etudiante/aide-entraide"
-    children: []
+    children:
+    - title: Contacter un médiateur
+      target: "/vie-etudiante/aide-entraide/contacter-un-mediateur"
+      children: []
   - title: Services numériques
     target: "/vie-etudiante/services-numeriques"
     children:
@@ -152,7 +151,7 @@ primary:
     target: "/scolarite"
     children:
     - title: Être candidat·e
-      target: "/etre-candidat"
+      target: "/scolarite/etre-candidat"
       children:
       - title: Accessibilité et handicap
         target: https://www.u-bordeaux-montaigne.fr/fr/campus/accessibilite-et-handicap.html
@@ -175,3 +174,7 @@ primary:
     - title: Statistiques
       target: "/scolarite/statistiques"
       children: []
+legal:
+- title: Mentions légales
+  target: 
+  children: []

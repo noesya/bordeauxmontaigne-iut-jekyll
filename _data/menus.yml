@@ -101,5 +101,5 @@ primary:
   target: "/etre-candidat"
   children:
   - title: Validation des acquis (VAE/VAPP)
-    target: https://www.u-bordeaux-montaigne.fr/fr/formations/formation_continue/validation-des-acquis.html
+    target: https://www.u-bordeaux-montaigne.fr/fr/formations/admission-inscription/validations_d_acquis.html
     children: []

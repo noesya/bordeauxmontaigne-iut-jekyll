@@ -1,8 +1,4 @@
 ---
-legal:
-- title: Mentions légales
-  target: 
-  children: []
 primary:
 - title: Présentation de l'IUT
   target: 
@@ -160,12 +156,6 @@ primary:
     - title: Statistiques
       target: "/scolarite/statistiques"
       children: []
-  - title: Aide & entraide
-    target: "/vie-etudiante/aide-entraide"
-    children:
-    - title: Contacter un médiateur
-      target: "/vie-etudiante/aide-entraide/contacter-un-mediateur"
-      children: []
   - title: Services numériques
     target: "/vie-etudiante/services-numeriques"
     children:
@@ -177,6 +167,12 @@ primary:
       children: []
     - title: Outils pédagogiques
       target: "/vie-etudiante/outils-pedagogiques"
+      children: []
+  - title: Aide & entraide
+    target: "/vie-etudiante/aide-entraide"
+    children:
+    - title: Contacter un médiateur
+      target: "/vie-etudiante/aide-entraide/contacter-un-mediateur"
       children: []
   - title: Centre de ressources Montaigne
     target: "/centre-de-ressources-montaigne"
@@ -190,3 +186,7 @@ primary:
     - title: L'équipe qui vous accueille
       target: "/centre-de-ressources-montaigne/equipe"
       children: []
+legal:
+- title: Mentions légales
+  target: 
+  children: []

@@ -20,17 +20,29 @@
         {% assign children = item.children %}
         <li class="nav-item">
           {% if children.size > 0 %}
-            <a href="{{ item.target }}" class="nav-link">{{ item.title }}</a>
+            {% if child.target %}
+              <a href="{{item.target}}" class="nav-link">{{item.title}}</a>
+            {% else %}
+              <span class="nav-link disabled">{{item.title}}</span>
+            {% endif %}
             <ul class="nav-2">
               {% for child in children %}
                 {% assign grandchildren = child.children %}
                 <li class="nav-item">
-                  <a href="{{child.target}}" class="nav-link">{{child.title}}</a>
+                  {% if child.target %}
+                    <a href="{{child.target}}" class="nav-link">{{child.title}}</a>
+                  {% else %}
+                    <span class="nav-link disabled">{{child.title}}</span>
+                  {% endif %}
                   {% if grandchildren.size > 0 %}
                   <ul class="nav-3">
                     {% for grandchild in grandchildren %}
                     <li class="nav-item">
-                      <a href="{{grandchild.target}}" class="nav-link">{{grandchild.title}}</a>
+                      {% if grandchild.target %}
+                        <a href="{{grandchild.target}}" class="nav-link">{{grandchild.title}}</a>
+                      {% else %}
+                        <span class="nav-link disabled">{{grandchild.title}}</span>
+                      {% endif %}
                     </li>
                     {% endfor %}
                   </ul>

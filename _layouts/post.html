@@ -48,19 +48,21 @@ layout: default
                 </td>
               </tr>
               {% endif %}
+              {% assign url = page.url | absolute_url %}
               <tr>
                 <th scope="row" class="ps-0">{{ trad.share }}</th>
-                <td class="pe-0"><a href="{{ 'https://www.facebook.com/sharer/sharer.php?u=' | append: page.url }}" target="_blank" rel="noreferrer">Facebook</a></td>
+                <td class="pe-0"><a href="{{ 'https://www.facebook.com/sharer/sharer.php?u=' | append: url }}" target="_blank" rel="noreferrer">Facebook</a></td>
               </tr>
               <tr>
                 <th scope="row" class="ps-0">{{ trad.share }}</th>
-                <td class="pe-0"><a href="{{ 'https://twitter.com/intent/tweet?text=' | append: page.title | append: ' ' | append: page.url }}" target="_blank" rel="noreferrer">Twitter</a></td>
+                <td class="pe-0"><a href="{{ 'https://twitter.com/intent/tweet?text=' | append: page.title | append: ' ' | append: url }}" target="_blank" rel="noreferrer">Twitter</a></td>
               </tr>
           </tbody>
         </table>
       </div>
       <div class="col-md-8 offset-md-1">
 
+        {% comment %}
         {% if page.image %}
           {% assign directory = page.image | slice: 0, 2 %}
           {% assign image = site.data.media[directory][page.image] %}
@@ -69,6 +71,7 @@ layout: default
           {% assign image_height = image.height %}
           <img src="{{image_url}}" alt="{{ page.title | escape }}" height="{{image_height}}" width="{{image_width}}" class="img-fluid mb-4" itemprop="image">
         {% endif %}
+        {% endcomment %}
 
         <div itemprop="articleBody">
           {{ page.text }}

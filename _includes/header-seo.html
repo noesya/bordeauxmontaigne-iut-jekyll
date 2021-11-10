@@ -1,11 +1,13 @@
 {% assign seo_image = '/assets/images/share.png' | absolute_url %}
 {% assign seo_title = site.title %}
-{% if page.title %}{% assign seo_title = seo_title | preprend: ' • ' | preprend: page.title %}{% endif %}
+{% if page.title != blank %}
+  {% assign seo_title = page.title | append: ' - ' | append: site.title %}
+{% endif %}
 {% assign seo_description = page.description | markdownify | strip_html | default: site.description %}
 {% assign seo_url = page.url | prepend: site.url %}
 
 <!-- HTML Meta Tags -->
-<title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
+<title>{{ seo_title }}</title>
 <meta name="description" content="{{ seo_description }}">
 
 <!-- Facebook Meta Tags -->

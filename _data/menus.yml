@@ -133,12 +133,6 @@ primary:
 - title: Vie étudiante
   target: 
   children:
-  - title: Aide & entraide
-    target: "/vie-etudiante/aide-entraide"
-    children:
-    - title: Contacter un médiateur
-      target: "/vie-etudiante/aide-entraide/contacter-un-mediateur"
-      children: []
   - title: Scolarité
     target: "/scolarite"
     children:
@@ -165,6 +159,12 @@ primary:
       children: []
     - title: Statistiques
       target: "/scolarite/statistiques"
+      children: []
+  - title: Aide & entraide
+    target: "/vie-etudiante/aide-entraide"
+    children:
+    - title: Contacter un médiateur
+      target: "/vie-etudiante/aide-entraide/contacter-un-mediateur"
       children: []
   - title: Services numériques
     target: "/vie-etudiante/services-numeriques"

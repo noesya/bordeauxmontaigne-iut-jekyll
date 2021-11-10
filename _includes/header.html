@@ -10,6 +10,7 @@
         <ul class="navbar-nav">
         {% for item in site.data.menus.primary %}
           {% assign children = item.children %}
+          {% assign slug = item.title | slugify %}
           <li class="nav-item{% if children %} dropdown{% endif %}">
             {% if children.size > 0 %}
               <a href="{{ item.target }}" class="nav-link dropdown-toggle" id="dropdown-{{ slug }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
@@ -33,7 +34,7 @@
                 </ul>
               </div>
             {% else %}
-              <a href="{{ item.target }}" class="nav-link" id="{{ item.title | slugify }}">{{ item.title }}</a>
+              <a href="{{ item.target }}" class="nav-link" id="{{ slug }}">{{ item.title }}</a>
             {% endif %}
           </li>
         {% endfor %}

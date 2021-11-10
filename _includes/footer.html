@@ -19,14 +19,14 @@
       {% for item in site.data.menus.primary %}
         {% assign children = item.children %}
         <li class="nav-item">
-          {% if children %}
+          {% if children.size > 0 %}
             <a href="{{ item.target }}" class="nav-link">{{ item.title }}</a>
             <ul class="nav-2">
               {% for child in children %}
                 {% assign grandchildren = child.children %}
                 <li class="nav-item">
                   <a href="{{child.target}}" class="nav-link">{{child.title}}</a>
-                  {% if grandchildren %}
+                  {% if grandchildren.size > 0 %}
                   <ul class="nav-3">
                     {% for grandchild in grandchildren %}
                     <li class="nav-item">

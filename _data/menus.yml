@@ -186,6 +186,9 @@ primary:
     - title: L'équipe qui vous accueille
       target: "/centre-de-ressources-montaigne/equipe"
       children: []
+- title: Actualités
+  target: "/actualites"
+  children: []
 legal:
 - title: Mentions légales
   target: 

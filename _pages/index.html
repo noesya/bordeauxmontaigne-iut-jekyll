@@ -1,0 +1,72 @@
+---
+layout: default
+title: "IUT Bordeaux Montaigne"
+description: "L’IUT Bordeaux Montaigne, le plus court chemin pour aller loin"
+permalink: /
+hero_image: /assets/images/uploads/iut.png
+hero_image_mobile: /assets/images/uploads/iut-mobile.png
+---
+
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.locales[lang] %}
+
+{% include hero.html title=page.description %}
+
+<div class="container">
+
+  <section class="mb-6">
+    <div class="top">
+      <h2>{{ trad.news.title }}</h2>
+      <a href="/actualites" class="link link--more">{{ trad.news.more }}</a>
+    </div>
+    <div class="row row-cols-md-2">
+      {% for post in site.posts limit:2 %}
+        <div class="col">
+          {% include post.html %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mb-6">
+    <div class="top">
+      <h2>{{ trad.institut.title }}</h2>
+    </div>
+    <div class="row row-cols-md-2">
+      {% assign parent_presentation = site.pages | where: 'parent', site.data.pages.presentation %}
+      {% for article in parent_presentation %}
+        <div class="col">
+          {% include article.html %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mb-6">
+    <div class="top">
+      <h2>{{ trad.diplomes.title }}</h2>
+    </div>
+    <div class="row row-cols-md-2">
+      {% assign parent_diplomes = site.pages | where: 'parent', site.data.pages.diplomes %}
+      {% for article in parent_diplomes %}
+        <div class="col">
+          {% include article.html %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mb-6">
+    <div class="top">
+      <h2>{{ trad.recherche.title }}</h2>
+    </div>
+    <div class="row row-cols-md-2">
+      {% for post in site.recherche %}
+        <div class="col">
+          {% include article.html %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+</div>

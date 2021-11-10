@@ -1,12 +1,17 @@
 <div class="card">
   {% if post.image %}
     {% assign directory = post.image | slice: 0, 2 %}
-    {% assign image_url = site.data.media[directory][post.image].url %}
+    {% assign image = site.data.media[directory][post.image] %}
+    {% assign image_url = image.url %}
+    {% assign image_width = image.width %}
+    {% assign image_height = image.height %}
   {% else %}
     {% assign image_url = '/assets/images/default.jpg' %}
+    {% assign image_width = 634 %}
+    {% assign image_height = 317 %}
   {% endif %}
   <div class="card-media">
-    <img src="{{image_url}}" alt="{{ post.title | escape }}" height="" width="634" loading="lazy">
+    <img src="{{image_url}}" alt="{{ post.title | escape }}" height="{{image_height}}" width="{{image_width}}" loading="lazy">
   </div>
   <div class="card-body">
     <p class="card-title">{{ post.title }}</p>

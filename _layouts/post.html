@@ -63,8 +63,11 @@ layout: default
 
         {% if page.image %}
           {% assign directory = page.image | slice: 0, 2 %}
-          {% assign image_url = site.data.media[directory][page.image].url %}
-          <img src="{{image_url}}" alt="" class="img-fluid mb-4" itemprop="image">
+          {% assign image = site.data.media[directory][page.image] %}
+          {% assign image_url = image.url %}
+          {% assign image_width = image.width %}
+          {% assign image_height = image.height %}
+          <img src="{{image_url}}" alt="{{ page.title | escape }}" height="{{image_height}}" width="{{image_width}}" class="img-fluid mb-4" itemprop="image">
         {% endif %}
 
         <div itemprop="articleBody">

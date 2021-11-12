@@ -55,6 +55,15 @@ primary:
     - title: Villes et territoires durables
       target: "/diplomes/but/villes-et-territoires-durables"
       children: []
+  - title: Diplômes Universitaires (DU)
+    target: 
+    children:
+    - title: Gestion et animation de ludothèque
+      target: "/diplomes/diplomes-universitaires/du-gestion-et-animation-de-ludotheques"
+      children: []
+    - title: Études Technologiques Internationales (DUETI)
+      target: "/diplomes/diplomes-universitaires/etudes-technologiques-internationales-dueti"
+      children: []
   - title: Licences professionnelles
     target: 
     children:
@@ -84,15 +93,6 @@ primary:
     children:
     - title: Animation sociale et socioculturelle en formation continue
       target: "/diplomes/dut/dut-animation-sociale-et-socioculturelle-fc"
-      children: []
-  - title: Diplômes Universitaires (DU)
-    target: 
-    children:
-    - title: Gestion et animation de ludothèque
-      target: "/diplomes/diplomes-universitaires/du-gestion-et-animation-de-ludotheques"
-      children: []
-    - title: Études Technologiques Internationales (DUETI)
-      target: "/diplomes/diplomes-universitaires/etudes-technologiques-internationales-dueti"
       children: []
   - title: Masters professionnels
     target: 

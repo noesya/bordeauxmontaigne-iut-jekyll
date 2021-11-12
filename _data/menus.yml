@@ -1,4 +1,8 @@
 ---
+legal:
+- title: Mentions légales
+  target: 
+  children: []
 primary:
 - title: Actualités
   target: "/actualites"
@@ -189,7 +193,3 @@ primary:
     - title: L'équipe qui vous accueille
       target: "/centre-de-ressources-montaigne/equipe"
       children: []
-legal:
-- title: Mentions légales
-  target: 
-  children: []

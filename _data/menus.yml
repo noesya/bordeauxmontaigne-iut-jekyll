@@ -24,6 +24,9 @@ primary:
   - title: Relations avec les entreprises
     target: "/presentation-de-liut/entreprises"
     children: []
+  - title: Présentation de l'IUT
+    target: "/presentation-de-liut"
+    children: []
 - title: Offre de formation
   target: 
   children:

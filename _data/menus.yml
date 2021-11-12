@@ -1,8 +1,4 @@
 ---
-legal:
-- title: Mentions légales
-  target: 
-  children: []
 primary:
 - title: Actualités
   target: "/actualites"
@@ -22,11 +18,11 @@ primary:
   - title: Plan d’accès et contact
     target: "/presentation-de-liut/plan-dacces-et-contact"
     children: []
-  - title: Consignes de sécurité
-    target: https://www.u-bordeaux-montaigne.fr/fr/actualites/vie-institutionnelle/vigipirate-consignes-de-securite.html
-    children: []
   - title: Relations avec les entreprises
     target: "/presentation-de-liut/entreprises"
+    children: []
+  - title: Consignes de sécurité
+    target: https://www.u-bordeaux-montaigne.fr/fr/actualites/vie-institutionnelle/vigipirate-consignes-de-securite.html
     children: []
 - title: Offre de formation
   target: 
@@ -193,3 +189,7 @@ primary:
     - title: Outils pédagogiques
       target: "/vie-etudiante/outils-pedagogiques"
       children: []
+legal:
+- title: Mentions légales
+  target: 
+  children: []

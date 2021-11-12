@@ -64,6 +64,12 @@ primary:
     - title: Études Technologiques Internationales (DUETI)
       target: "/diplomes/diplomes-universitaires/etudes-technologiques-internationales-dueti"
       children: []
+  - title: Masters professionnels
+    target: 
+    children:
+    - title: Inénierie de l'animation territoriale
+      target: "/diplomes/master/master-pro-ingenierie-de-lanimation-territoriale"
+      children: []
   - title: Licences professionnelles
     target: 
     children:
@@ -93,12 +99,6 @@ primary:
     children:
     - title: Animation sociale et socioculturelle en formation continue
       target: "/diplomes/dut/dut-animation-sociale-et-socioculturelle-fc"
-      children: []
-  - title: Masters professionnels
-    target: 
-    children:
-    - title: Inénierie de l'animation territoriale
-      target: "/diplomes/master/master-pro-ingenierie-de-lanimation-territoriale"
       children: []
   - title: Apprentissage
     target: "/diplomes/apprentissage"

@@ -1,5 +1,8 @@
 ---
 primary:
+- title: Actualités
+  target: "/actualites"
+  children: []
 - title: Présentation de l'IUT
   target: 
   children:
@@ -186,9 +189,6 @@ primary:
     - title: L'équipe qui vous accueille
       target: "/centre-de-ressources-montaigne/equipe"
       children: []
-- title: Actualités
-  target: "/actualites"
-  children: []
 legal:
 - title: Mentions légales
   target: 

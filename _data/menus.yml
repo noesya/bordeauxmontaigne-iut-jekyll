@@ -163,6 +163,18 @@ primary:
     - title: Statistiques
       target: "/scolarite/statistiques"
       children: []
+  - title: Centre de ressources Montaigne
+    target: "/centre-de-ressources-montaigne"
+    children:
+    - title: Présentation du CRM
+      target: "/centre-de-ressources-montaigne/presentation-crm"
+      children: []
+    - title: Consulter et emprunter
+      target: "/centre-de-ressources-montaigne/consulter-et-emprunter"
+      children: []
+    - title: L'équipe qui vous accueille
+      target: "/centre-de-ressources-montaigne/equipe"
+      children: []
   - title: Services numériques
     target: "/vie-etudiante/services-numeriques"
     children:
@@ -180,16 +192,4 @@ primary:
     children:
     - title: Contacter un médiateur
       target: "/vie-etudiante/aide-entraide/contacter-un-mediateur"
-      children: []
-  - title: Centre de ressources Montaigne
-    target: "/centre-de-ressources-montaigne"
-    children:
-    - title: Présentation du CRM
-      target: "/centre-de-ressources-montaigne/presentation-crm"
-      children: []
-    - title: Consulter et emprunter
-      target: "/centre-de-ressources-montaigne/consulter-et-emprunter"
-      children: []
-    - title: L'équipe qui vous accueille
-      target: "/centre-de-ressources-montaigne/equipe"
       children: []

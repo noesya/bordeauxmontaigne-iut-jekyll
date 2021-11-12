@@ -3,7 +3,7 @@ primary:
 - title: Actualités
   target: "/actualites"
   children: []
-- title: Présentation de l'IUT
+- title: Notre institut
   target: 
   children:
   - title: Les atouts des IUT

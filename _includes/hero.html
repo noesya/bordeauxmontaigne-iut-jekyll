@@ -5,10 +5,19 @@
     {% assign image_url = image.url %}
     {% assign image_width = image.width %}
     {% assign image_height = image.height %}
+    {% assign image_size_mobile = '375x450' %}
+    {% assign image_size_tablet = '768x450' %}
+    {% assign image_size_desktop = 'x450' %}
     <picture>
-      <source srcset="{{ image_url | img_url: 'x450' }}, {{ image_url | img_url: 'x900' }} 2x" media="(min-width: 1024px)">
-      <source srcset="{{ image_url | img_url: '768x450', crop: center }}, {{ image_url | img_url: '1536x900', crop: center }} 2x" media="(min-width: 768px)">
-      <img src="{{ image_url | img_url: '750x950', crop: center }}" alt="" height="{{image_height}}" width="{{image_width}}" class="hero__image">
+      <source srcset="{{ image_url | img_url: image_size_desktop, format: 'webp' }}, {{ image_url | img_url: image_size_desktop, scale: 2, format: 'webp' }} 2x" media="(min-width: 1024px)" type"image/webp">
+      <source srcset="{{ image_url | img_url: image_size_tablet, crop: 'center', format: 'webp' }}, {{ image_url | img_url: image_size_tablet, crop: 'center', scale: 2, format: 'webp' }} 2x" media="(min-width: 768px)" type"image/webp">
+      <source srcset="{{ image_url | img_url: image_size_mobile, crop: 'center', format: 'webp' }}, {{ image_url | img_url: image_size_mobile, crop: 'center', scale: 2, format: 'webp' }} 2x" type"image/webp">
+
+      <source srcset="{{ image_url | img_url: image_size_desktop }}, {{ image_url | img_url: image_size_desktop, scale: 2 }} 2x" media="(min-width: 1024px)">
+      <source srcset="{{ image_url | img_url: image_size_tablet, crop: 'center' }}, {{ image_url | img_url: image_size_tablet, crop: 'center', scale: 2 }} 2x" media="(min-width: 768px)">
+      <source srcset="{{ image_url | img_url: image_size_mobile, crop: 'center' }}, {{ image_url | img_url: image_size_mobile, crop: 'center', scale: 2 }} 2x">
+
+      <img src="{{ image_url | img_url: image_size_desktop }}" alt="" height="{{image_height}}" width="{{image_width}}" class="hero__image">
     </picture>
   {% endif %}
   <div class="container">

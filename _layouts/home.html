@@ -4,7 +4,7 @@ layout: default
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.locales[lang] %}
 
-{% include hero.html title=page.description %}
+{% include hero.html title=page.description image=page.image %}
 
 <div class="container">
 

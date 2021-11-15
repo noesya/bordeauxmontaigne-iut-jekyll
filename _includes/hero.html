@@ -1,6 +1,13 @@
 <header class="hero"{% if page.color %} style="background-color: {{page.color}} "{% endif %}>
-  {% if page.hero_image %}
-    {% picture {{ page.hero_image }} mobile: {{ page.hero_image_mobile }} --alt {{ page.title }} --img class="hero__image" %}
+  {% if include.image %}
+    {% assign directory = include.image | slice: 0, 2 %}
+    {% assign image = site.data.media[directory][include.image] %}
+    {% assign image_url = image.url %}
+    {% assign image_width = image.width %}
+    {% assign image_height = image.height %}
+    <picture>
+      <img src="{{ image_url | img_url: 'x450' }}" alt="{{ post.title | escape }}" height="{{image_height}}" width="{{image_width}}">
+    </picture>
   {% endif %}
   <div class="container">
     <div class="row">

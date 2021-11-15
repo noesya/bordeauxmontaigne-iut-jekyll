@@ -1,17 +1,15 @@
 <div class="card">
-  {% if post.image %}
-    {% assign directory = post.image | slice: 0, 2 %}
-    {% assign image = site.data.media[directory][post.image] %}
-    {% assign image_url = image.url %}
-    {% assign image_width = image.width %}
-    {% assign image_height = image.height %}
-  {% else %}
-    {% assign image_url = '/assets/images/default.jpg' %}
-    {% assign image_width = 634 %}
-    {% assign image_height = 317 %}
-  {% endif %}
   <div class="card-media">
-    <img src="{{image_url}}" alt="{{ post.title | escape }}" height="{{image_height}}" width="{{image_width}}" loading="lazy">
+    {% if post.image %}
+      {% include image.html
+          image=post.image
+          size_mobile='375x450'
+          size_tablet='334x167'
+          size_desktop='634x317'
+          class='img-fluid' %}
+    {% else %}
+      {% picture thumb default.jpg %}
+    {% endif %}
   </div>
   <div class="card-body">
     <p class="card-title">{{ post.title }}</p>

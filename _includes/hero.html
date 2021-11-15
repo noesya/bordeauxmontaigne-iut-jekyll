@@ -1,24 +1,12 @@
 <header class="hero"{% if page.color %} style="background-color: {{page.color}} "{% endif %}>
   {% if include.image %}
-    {% assign directory = include.image | slice: 0, 2 %}
-    {% assign image = site.data.media[directory][include.image] %}
-    {% assign image_url = image.url %}
-    {% assign image_width = image.width %}
-    {% assign image_height = image.height %}
-    {% assign image_size_mobile = '375x450' %}
-    {% assign image_size_tablet = '768x450' %}
-    {% assign image_size_desktop = 'x450' %}
-    <picture>
-      <source srcset="{{ image_url | img_url: image_size_desktop, format: 'webp' }}, {{ image_url | img_url: image_size_desktop, scale: 2, format: 'webp' }} 2x" media="(min-width: 1024px)" type"image/webp">
-      <source srcset="{{ image_url | img_url: image_size_tablet, crop: 'center', format: 'webp' }}, {{ image_url | img_url: image_size_tablet, crop: 'center', scale: 2, format: 'webp' }} 2x" media="(min-width: 768px)" type"image/webp">
-      <source srcset="{{ image_url | img_url: image_size_mobile, crop: 'center', format: 'webp' }}, {{ image_url | img_url: image_size_mobile, crop: 'center', scale: 2, format: 'webp' }} 2x" type"image/webp">
-
-      <source srcset="{{ image_url | img_url: image_size_desktop }}, {{ image_url | img_url: image_size_desktop, scale: 2 }} 2x" media="(min-width: 1024px)">
-      <source srcset="{{ image_url | img_url: image_size_tablet, crop: 'center' }}, {{ image_url | img_url: image_size_tablet, crop: 'center', scale: 2 }} 2x" media="(min-width: 768px)">
-      <source srcset="{{ image_url | img_url: image_size_mobile, crop: 'center' }}, {{ image_url | img_url: image_size_mobile, crop: 'center', scale: 2 }} 2x">
-
-      <img src="{{ image_url | img_url: image_size_desktop }}" alt="" height="{{image_height}}" width="{{image_width}}" class="hero__image">
-    </picture>
+    {% include image.html
+        image=include.image
+        size_mobile='375x450'
+        size_tablet='768x450'
+        size_desktop='x450'
+        lazy=false
+        class='hero__image' %}
   {% endif %}
   <div class="container">
     <div class="row">

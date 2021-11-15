@@ -6,7 +6,9 @@
     {% assign image_width = image.width %}
     {% assign image_height = image.height %}
     <picture>
-      <img src="{{ image_url | img_url: 'x450' }}" alt="{{ post.title | escape }}" height="{{image_height}}" width="{{image_width}}">
+      <source srcset="{{ image_url | img_url: 'x450' }}, {{ image_url | img_url: 'x900' }} 2x" media="(min-width: 1024px)">
+      <source srcset="{{ image_url | img_url: '768x450', crop: center }}, {{ image_url | img_url: '1536x900', crop: center }} 2x" media="(min-width: 768px)">
+      <img src="{{ image_url | img_url: '750x950', crop: center }}" alt="" height="{{image_height}}" width="{{image_width}}" class="hero__image">
     </picture>
   {% endif %}
   <div class="container">

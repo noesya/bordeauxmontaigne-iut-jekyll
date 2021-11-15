@@ -14,22 +14,22 @@ primary:
     target: "/presentation-de-liut"
     children: []
   - title: Les atouts des IUT
-    target: "/presentation-de-liut/les-atouts-des-iut"
+    target: "/les-atouts-des-iut"
     children: []
   - title: Équipe pédagogique
-    target: "/presentation-de-liut/equipe-pedagogique"
+    target: "/equipe-pedagogique"
     children: []
   - title: Ressources
-    target: "/presentation-de-liut/ressources-techniques"
+    target: "/ressources-techniques"
     children: []
   - title: Plan d’accès et contact
-    target: "/presentation-de-liut/plan-dacces-et-contact"
+    target: "/plan-dacces-et-contact"
     children: []
   - title: Consignes de sécurité
     target: https://www.u-bordeaux-montaigne.fr/fr/actualites/vie-institutionnelle/vigipirate-consignes-de-securite.html
     children: []
   - title: Relations avec les entreprises
-    target: "/presentation-de-liut/entreprises"
+    target: "/entreprises"
     children: []
 - title: Offre de formation
   target: 
@@ -125,7 +125,7 @@ primary:
       target: ''
       children: []
     - title: Ressources
-      target: "/presentation-de-liut/ressources-techniques"
+      target: "/ressources-techniques"
       children: []
     - title: Codes utiles
       target: "/diplomes/formation-continue/codes-utiles"
@@ -137,7 +137,7 @@ primary:
       target: "/vie-etudiante/aide-entraide/contacter-un-mediateur"
       children: []
 - title: Vie étudiante
-  target: 
+  target: "/vie-etudiante"
   children:
   - title: Scolarité
     target: "/scolarite"

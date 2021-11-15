@@ -2,7 +2,7 @@
   <div class="card-media">
     {% if post.image %}
       {% include image.html
-          image=post.image
+          image=include.image
           size_mobile='375x450'
           size_tablet='334x167'
           size_desktop='634x317'
@@ -12,7 +12,7 @@
     {% endif %}
   </div>
   <div class="card-body">
-    <p class="card-title">{{ post.title }}</p>
-    <a href="{{ post.url }}" class="stretched-link link link--more">{{trad.more}}</a>
+    <p class="card-title">{{ include.title }}</p>
+    <a href="{{ include.url }}" class="stretched-link link link--more">{{trad.more}}</a>
   </div>
 </div>

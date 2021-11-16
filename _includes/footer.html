@@ -1,16 +1,18 @@
 <footer class="footer">
   <div class="container">
-    <div class="row mb-5">
+    <div class="row mb-5" itemtype="https://schema.org/CollegeOrUniversity">
       <div class="col-md-4">
-        <a href="/"><img src="/assets/images/logo-glyph.svg" alt="{{site.title}}" width="257" height="158"></a>
+        <a href="/"><img src="/assets/images/logo-glyph.svg" alt="{{site.title}}" width="257" height="158" itemprop="logo"></a>
       </div>
       <div class="col-md-8">
         <address>
-          {{ site.data.school.name }}<br>
-          {{ site.data.school.street }}<br>
-          {{ site.data.school.zipcode }} {{ site.data.school.city }}<br>
-          {{ site.data.school.country }}<br>
-          {{ site.data.school.phone }}
+          <span itemprop="name">{{ site.data.school.name }}</span>
+          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress">{{ site.data.school.street }}</span><br>
+            <span itemprop="postalCode">{{ site.data.school.zipcode }}</span> <span itemprop="addressLocality">{{ site.data.school.city }}</span><br>
+            <span itemprop="addressCountry">{{ site.data.school.country }}</span>
+          </div>
+          <span itemprop="telephone">{{ site.data.school.phone }}</span>
         </address>
       </div>
     </div>
@@ -19,7 +21,7 @@
         {% assign children = item.children %}
         <li class="nav-item">
           {% if children.size > 0 %}
-            {% if child.target %}
+            {% if item.target != '' %}
               <a href="{{item.target}}" class="nav-link">{{item.title}}</a>
             {% else %}
               <span class="nav-link disabled">{{item.title}}</span>
@@ -28,7 +30,7 @@
               {% for child in children %}
                 {% assign grandchildren = child.children %}
                 <li class="nav-item">
-                  {% if child.target %}
+                  {% if child.target != '' %}
                     <a href="{{child.target}}" class="nav-link">{{child.title}}</a>
                   {% else %}
                     <span class="nav-link disabled">{{child.title}}</span>
@@ -37,7 +39,7 @@
                   <ul class="nav-level-3">
                     {% for grandchild in grandchildren %}
                     <li class="nav-item">
-                      {% if grandchild.target %}
+                      {% if grandchild.target != '' %}
                         <a href="{{grandchild.target}}" class="nav-link">{{grandchild.title}}</a>
                       {% else %}
                         <span class="nav-link disabled">{{grandchild.title}}</span>

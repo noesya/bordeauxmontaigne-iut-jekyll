@@ -1,14 +1,15 @@
+accessibility:
+  content: Accéder au contenu principal
+  navigation: Accéder au menu
 author: "Author"
-category: "Category"
 categories: "Categories"
+category: "Category"
 date: "Date"
 home: "Home"
-pagination: "Pagination"
-previous: "Previous"
+menu:
+  main: "Main menu"
+  title: "Menu"
 more: "Read more"
-next: "Next"
-institut:
-  title: Institut
 news:
   infos: "Article informations"
   more: "See more news"
@@ -17,4 +18,7 @@ news:
   next: "Next article"
   previous: "Previous article"
   title: "News"
+next: "Next"
+pagination: "Pagination"
+previous: "Previous"
 share: "Share on"

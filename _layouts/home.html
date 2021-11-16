@@ -27,7 +27,7 @@ layout: default
 
   <section class="mb-6">
     <div class="top">
-      <h2>{{ trad.institut.title }}</h2>
+      <h2>Institut</h2>
     </div>
     <div class="row row-cols-1 row-cols-md-2">
       {% assign parent_presentation = site.pages | where: 'parent', site.data.pages.presentation %}
@@ -41,7 +41,7 @@ layout: default
 
   <section class="mb-6">
     <div class="top">
-      <h2>{{ trad.diplomes.title }}</h2>
+      <h2>Diplômes</h2>
     </div>
     <div class="row row-cols-1 row-cols-md-2">
       {% assign parent_diplomes = site.pages | where: 'parent', site.data.pages.diplomes %}
@@ -55,7 +55,7 @@ layout: default
 
   <section class="mb-6">
     <div class="top">
-      <h2>{{ trad.recherche.title }}</h2>
+      <h2>Recherche</h2>
     </div>
     <div class="row row-cols-1 row-cols-md-2">
       {% for post in site.recherche %}

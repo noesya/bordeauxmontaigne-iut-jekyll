@@ -1,0 +1,7 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.locales[lang] %}
+
+<ul class="nav-accessibility">
+  <li><a href="#main">{{ trad.accessibility.content }}</a></li>
+  <li><a href="#navigation">{{ trad.accessibility.navigation }}</a></li>
+</ul>

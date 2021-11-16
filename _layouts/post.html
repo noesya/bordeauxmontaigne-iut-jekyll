@@ -38,7 +38,7 @@ layout: default
               {% endif %}
               {% if page.categories %}
               <tr>
-                <th scope="row" class="ps-0">{{ trad.categories }}</th>
+                <th scope="row" class="ps-0">{{ trad.category.plurial }}</th>
                 <td class="p-category pe-0">
                   {%- for c in page.categories -%}
                     {%- assign category = site.categories | where: 'identifier', c -%}

@@ -19,9 +19,10 @@
     <ul class="nav nav-level-1 grid">
       {% for item in site.data.menus.primary %}
         {% assign children = item.children %}
+        {% assign target = item.target | strip %}
         <li class="nav-item">
           {% if children.size > 0 %}
-            {% if item.target != '' %}
+            {% if target != '' %}
               <a href="{{item.target}}" class="nav-link">{{item.title}}</a>
             {% else %}
               <span class="nav-link disabled">{{item.title}}</span>
@@ -29,8 +30,9 @@
             <ul class="nav-level-2">
               {% for child in children %}
                 {% assign grandchildren = child.children %}
+                {% assign target = child.target | strip %}
                 <li class="nav-item">
-                  {% if child.target != '' %}
+                  {% if target != '' %}
                     <a href="{{child.target}}" class="nav-link">{{child.title}}</a>
                   {% else %}
                     <span class="nav-link disabled">{{child.title}}</span>
@@ -38,13 +40,14 @@
                   {% if grandchildren.size > 0 %}
                   <ul class="nav-level-3">
                     {% for grandchild in grandchildren %}
-                    <li class="nav-item">
-                      {% if grandchild.target != '' %}
-                        <a href="{{grandchild.target}}" class="nav-link">{{grandchild.title}}</a>
-                      {% else %}
-                        <span class="nav-link disabled">{{grandchild.title}}</span>
-                      {% endif %}
-                    </li>
+                      {% assign target = grandchild.target | strip %}
+                      <li class="nav-item">
+                        {% if target != '' %}
+                          <a href="{{grandchild.target}}" class="nav-link">{{grandchild.title}}</a>
+                        {% else %}
+                          <span class="nav-link disabled">{{grandchild.title}}</span>
+                        {% endif %}
+                      </li>
                     {% endfor %}
                   </ul>
                   {% endif %}
@@ -58,9 +61,10 @@
       {% endfor %}
       {% for item in site.data.menus.legal %}
         {% assign children = item.children %}
+        {% assign target = item.target | strip %}
         <li class="nav-item">
           {% if children.size > 0 %}
-            {% if child.target %}
+            {% if target != '' %}
               <a href="{{item.target}}" class="nav-link">{{item.title}}</a>
             {% else %}
               <span class="nav-link disabled">{{item.title}}</span>

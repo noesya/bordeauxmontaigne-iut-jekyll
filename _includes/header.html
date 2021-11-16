@@ -13,9 +13,10 @@
         {% for item in site.data.menus.primary %}
           {% assign children = item.children %}
           {% assign slug = item.title | slugify %}
+          {% assign target = item.target | strip %}
           <li class="nav-item{% if children %} dropdown{% endif %}">
             {% if children.size > 0 %}
-              {% if child.target != blank %}
+              {% if target != "" %}
                 <a href="{{ item.target }}" class="nav-link dropdown-toggle" id="dropdown-{{ slug }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ item.title }}</a>
               {% else %}
                 <span class="nav-link dropdown-toggle" id="dropdown-{{ slug }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ item.title }}</span>
@@ -24,8 +25,9 @@
                 <ul class="nav-level-2">
                   {% for child in children %}
                     {% assign grandchildren = child.children %}
+                    {% assign target = child.target | strip %}
                     <li class="nav-level-2">
-                      {% if child.target != blank %}
+                      {% if target != "" %}
                         <a href="{{ child.target }}" class="nav-link">{{ child.title }}</a>
                       {% else %}
                         <span class="nav-link disabled">{{ child.title }}</span>
@@ -33,13 +35,14 @@
                       {% if grandchildren.size > 0 %}
                       <ul class="nav-level-3">
                         {% for grandchild in grandchildren %}
-                        <li>
-                          {% if grandchild.target != blank %}
-                            <a href="{{ grandchild.target }}" class="nav-link">{{ grandchild.title }}</a>
-                          {% else %}
-                            <span class="nav-link disabled">{{ grandchild.title }}</span>
-                          {% endif %}
-                        </li>
+                          {% assign target = grandchild.target | strip %}
+                          <li>
+                            {% if target != "" %}
+                              <a href="{{ grandchild.target }}" class="nav-link">{{ grandchild.title }}</a>
+                            {% else %}
+                              <span class="nav-link disabled">{{ grandchild.title }}</span>
+                            {% endif %}
+                          </li>
                         {% endfor %}
                       </ul>
                       {% endif %}

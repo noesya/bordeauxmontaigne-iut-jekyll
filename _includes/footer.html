@@ -1,6 +1,6 @@
 <footer class="footer">
   <div class="container">
-    <div class="row mb-5" itemtype="https://schema.org/CollegeOrUniversity">
+    <div class="row mb-5" itemscope itemtype="https://schema.org/CollegeOrUniversity">
       <div class="col-md-4">
         <a href="/"><img src="/assets/images/logo-glyph.svg" alt="{{site.title}}" width="257" height="158" itemprop="logo"></a>
       </div>
@@ -21,12 +21,12 @@
         {% assign children = item.children %}
         {% assign target = item.target | strip %}
         <li class="nav-item">
+          {% if target != '' %}
+            <a href="{{item.target}}" class="nav-link">{{item.title}}</a>
+          {% else %}
+            <span class="nav-link disabled">{{item.title}}</span>
+          {% endif %}
           {% if children.size > 0 %}
-            {% if target != '' %}
-              <a href="{{item.target}}" class="nav-link">{{item.title}}</a>
-            {% else %}
-              <span class="nav-link disabled">{{item.title}}</span>
-            {% endif %}
             <ul class="nav-level-2">
               {% for child in children %}
                 {% assign grandchildren = child.children %}
@@ -54,26 +54,36 @@
                 </li>
               {% endfor %}
             </ul>
-          {% else %}
-            <a href="{{ item.target }}" class="nav-link">{{ item.title }}</a>
           {% endif %}
         </li>
       {% endfor %}
+
       {% for item in site.data.menus.legal %}
         {% assign children = item.children %}
         {% assign target = item.target | strip %}
         <li class="nav-item">
-          {% if children.size > 0 %}
-            {% if target != '' %}
-              <a href="{{item.target}}" class="nav-link">{{item.title}}</a>
-            {% else %}
-              <span class="nav-link disabled">{{item.title}}</span>
-            {% endif %}
+          {% if target != '' %}
+            <a href="{{item.target}}" class="nav-link">{{item.title}}</a>
           {% else %}
-            <a href="{{ item.target }}" class="nav-link">{{ item.title }}</a>
+            <span class="nav-link disabled">{{item.title}}</span>
+          {% endif %}
+          {% if children.size > 0 %}
+            <ul class="nav-level-2">
+              {% for child in children %}
+                {% assign target = child.target | strip %}
+                <li class="nav-item">
+                  {% if target != '' %}
+                    <a href="{{child.target}}" class="nav-link">{{child.title}}</a>
+                  {% else %}
+                    <span class="nav-link disabled">{{child.title}}</span>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
           {% endif %}
         </li>
       {% endfor %}
+
     </ul>
   </div>
 </footer>

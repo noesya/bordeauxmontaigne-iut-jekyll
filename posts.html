@@ -10,7 +10,7 @@ pagination:
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.locales[lang] %}
 
-{% include hero.html title=page.title %}
+{% include hero.html title=page.title filter=true %}
 
 <div class="container">
   <div class="row row-cols-1 row-cols-md-2 gy-5">

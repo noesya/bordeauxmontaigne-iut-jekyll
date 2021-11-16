@@ -20,4 +20,4 @@ presets:
       desktop: 634px
     crop: '2:1'
     attributes:
-      img: 'class="img-fluid" loading="lazy"'
+      img: 'class="img-fluid" alt="" loading="lazy"'

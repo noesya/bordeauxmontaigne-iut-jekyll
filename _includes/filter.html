@@ -1,0 +1,28 @@
+<button class="btn btn-light btn-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategories" aria-controls="offcanvasCategories">{{ trad.category.filter }}</button>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCategories" aria-labelledby="offcanvasCategoriesLabel">
+  <div class="offcanvas-header">
+    <h5 id="offcanvasCategoriesLabel">{{ trad.category.filter }}</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    {% assign parent_categories = site.categories | where: "parent", "" %}
+    <ul class="nav flex-column">
+      {% for category in parent_categories %}
+        {% assign children_categories = site.categories | where: "parent", category.identifier %}
+        <li class="nav-item">
+          <a href="{{ category.url }}" class="nav-link">{{ category.title }}</a>
+          {% if children_categories.size > 0 %}
+          <ul>
+          {% for child in children_categories %}
+            <li class="nav-item">
+              <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

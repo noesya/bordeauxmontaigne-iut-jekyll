@@ -2,8 +2,10 @@ accessibility:
   content: Accéder au contenu principal
   navigation: Accéder au menu
 author: "Auteur"
-categories: "Catégories"
-category: "Catégorie"
+category:
+  filter: "Filtrer par catégories"
+  single_title: "Catégorie"
+  plurial_title: "Catégories"
 date: "Date"
 home: "Accueil"
 menu:

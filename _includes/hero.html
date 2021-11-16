@@ -1,3 +1,5 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.locales[lang] %}
 <header class="hero"{% if page.color %} style="background-color: {{page.color}} "{% endif %}>
   {% if include.image %}
     {% include image.html
@@ -14,6 +16,11 @@
         <h1 itemprop="headline">{{ include.title }}</h1>
       </div>
     </div>
-    {{ page | breadcrumb }}
+    <div class="hero__nav">
+      {{ page | breadcrumb }}
+      {% if include.filter %}
+        {% include filter.html %}
+      {% endif %}
+    </div>
   </div>
 </header>

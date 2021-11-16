@@ -1,4 +1,4 @@
-<div class="card">
+<article class="card">
   <div class="card-media">
     {% if post.image %}
       {% include image.html
@@ -7,11 +7,11 @@
           size_tablet='334x167'
           size_desktop='634x317' %}
     {% else %}
-      {% picture thumb default.jpg --alt %}
+      {% picture thumb default.jpg %}
     {% endif %}
   </div>
   <div class="card-body">
     <p class="card-title">{{ include.title }}</p>
     <a href="{{ include.url }}" class="stretched-link link link--more">{{trad.more}}</a>
   </div>
-</div>
+</article>

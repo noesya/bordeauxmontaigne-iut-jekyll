@@ -18,6 +18,11 @@ yarn install
 
 jekyll_picture_tag utilise libvips : https://libvips.github.io/libvips/install.html
 
+### Build
+```
+yarn build
+```
+
 ## Media
 
 _media/aba5aca4-0f58-4577-960d-4b60a773fdc2.md

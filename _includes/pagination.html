@@ -16,11 +16,11 @@
     <!-- Show the button to the previous page -->
     {% if paginator.previous_page %}
       <li class="page-item">
-        <a class="page-link" href="{{ paginator.previous_page_path }}">Previous</a>
+        <a class="page-link" href="{{ paginator.previous_page_path }}">{{ trad.previous }}</a>
       </li>
     {% else %}
       <li class="page-item disabled">
-        <span class="page-link">Previous</span>
+        <span class="page-link">{{ trad.previous }}</span>
       </li>
     {% endif %}
 
@@ -72,11 +72,11 @@
     <!-- Show the button to the next page -->
     {% if paginator.next_page %}
       <li class="page-item">
-        <a class="page-link" href="{{ paginator.next_page_path }}">Next</a>
+        <a class="page-link" href="{{ paginator.next_page_path }}">{{ trad.next }}</a>
       </li>
     {% else %}
       <li class="page-item disabled">
-        <span class="page-link">Next</span>
+        <span class="page-link">{{ trad.next }}</span>
       </li>
     {% endif %}
 

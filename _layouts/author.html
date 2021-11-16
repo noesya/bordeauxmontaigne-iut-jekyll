@@ -9,6 +9,7 @@ pagination:
 {% assign posts = site.posts | where: 'author', page.identifier %}
 
 <article itemscope itemtype="https://schema.org/Person">
+  <meta itemprop="name" content="{{page.title}}"/>
 
   {% include hero.html title=page.title %}
 

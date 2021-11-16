@@ -5,10 +5,16 @@ layout: default
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.locales[lang] %}
 
-<article itemscope itemtype="https://schema.org/BlogPosting">
+<article itemscope itemtype="https://schema.org/NewsArticle">
   {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
   {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
   {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+  {% if page.image %}
+    {% assign directory = page.image | slice: 0, 2 %}
+    {% assign image = site.data.media[directory][page.image] %}
+    {% assign image_url = image.url %}
+    <meta itemprop="image" content="{{ image_url }}">
+  {% endif %}
 
   {% include hero.html title=page.title %}
 
@@ -38,7 +44,7 @@ layout: default
               {% endif %}
               {% if page.categories %}
               <tr>
-                <th scope="row" class="ps-0">{{ trad.category.plurial }}</th>
+                <th scope="row" class="ps-0">{{ trad.category.plurial_title }}</th>
                 <td class="p-category pe-0">
                   {%- for c in page.categories -%}
                     {%- assign category = site.categories | where: 'identifier', c -%}
@@ -61,18 +67,6 @@ layout: default
         </table>
       </div>
       <div class="col-md-8 offset-md-1">
-
-        {% comment %}
-        {% if page.image %}
-          {% assign directory = page.image | slice: 0, 2 %}
-          {% assign image = site.data.media[directory][page.image] %}
-          {% assign image_url = image.url %}
-          {% assign image_width = image.width %}
-          {% assign image_height = image.height %}
-          <img src="{{image_url}}" alt="{{ page.title | escape }}" height="{{image_height}}" width="{{image_width}}" class="img-fluid mb-4" itemprop="image">
-        {% endif %}
-        {% endcomment %}
-
         <div itemprop="articleBody">
           {{ page.text }}
         </div>

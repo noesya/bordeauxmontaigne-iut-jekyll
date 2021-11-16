@@ -25,17 +25,6 @@
             right: 0
             @include media-breakpoint-down(lg)
                 border-top: 1px solid $border-color
-            // @include media-breakpoint-up(md)
-            //     &::before
-            //         background-color: $modal-backdrop-bg
-            //         bottom: 0
-            //         content: ''
-            //         left: 0
-            //         opacity: $modal-backdrop-opacity
-            //         pointer-events: none
-            //         position: fixed
-            //         right: 0
-            //         top: 0
             > ul
                 @extend .container
                 @extend .grid
@@ -59,13 +48,22 @@
         list-style: none
         margin: 0
         padding: 0
-    li
-        font-size: px2rem(18)
-        line-height: px2rem(26)
-        li
+        a
+            text-decoration: none
+            &:hover
+                text-decoration: underline
+
+
+    .nav-level-2 > li
+        & > a,
+        & > span
+            color: $primary
+            font-size: px2rem(18)
+            line-height: px2rem(26)
+
+    .nav-level-3 > li
+        & > a,
+        & > span
+            color: $primary
             font-size: px2rem(14)
             line-height: px2rem(22)
-    a
-        text-decoration: none
-        &:hover
-            text-decoration: underline

@@ -1,23 +1,24 @@
+accessibility:
+  content: Accéder au contenu principal
+  navigation: Accéder au menu
 author: "Auteur"
-category: "Catégorie"
 categories: "Catégories"
+category: "Catégorie"
 date: "Date"
 home: "Accueil"
-pagination: "Pagination"
-previous: "Précédent"
+menu:
+  main: "Menu principal"
+  title: "Menu"
 more: "Lire la suite"
-next: "Suivant"
-institut:
-  title: Institut
-diplomes:
-  title: Diplômes
 news:
   infos: "Informations sur l’article"
   more: "Voir toutes les actualités"
   navigation: "Navigation des articles"
+  navigation_post: "Navigation entre articles"
   next: "Article suivant"
   previous: "Article précédent"
   title: "Actualités"
-recherche:
-  title: Recherche
+next: "Suivant"
+pagination: "Pagination"
+previous: "Précédent"
 share: "Partager sur"

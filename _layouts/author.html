@@ -1,5 +1,7 @@
 ---
 layout: default
+pagination:
+  enabled: true
 ---
 
 {% assign lang = page.lang | default: site.lang %}
@@ -29,7 +31,10 @@ layout: default
     <div class="row row-cols-1 row-cols-md-2 gy-5">
       {% for post in posts %}
         <div class="col">
-          {% include post.html %}
+          {% include post.html
+              image=post.image
+              title=post.title
+              url=post.url %}
         </div>
       {% endfor %}
     </div>

@@ -1,0 +1,69 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.locales[lang] %}
+
+{% include hero.html title=page.description image=page.image %}
+
+<div class="container">
+
+  <section class="mb-6">
+    <div class="top">
+      <h2>{{ trad.news.title }}</h2>
+      <a href="/actualites" class="link link--more">{{ trad.news.more }}</a>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2">
+      {% for post in site.posts limit:2 %}
+        <div class="col">
+          {% include post.html
+              image=post.image
+              title=post.title
+              url=post.url %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mb-6">
+    <div class="top">
+      <h2>Institut</h2>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2">
+      {% assign parent_presentation = site.pages | where: 'parent', site.data.pages.presentation %}
+      {% for article in parent_presentation %}
+        <div class="col">
+          {% include article.html %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mb-6">
+    <div class="top">
+      <h2>Diplômes</h2>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2">
+      {% assign parent_diplomes = site.pages | where: 'parent', site.data.pages.diplomes %}
+      {% for article in parent_diplomes %}
+        <div class="col">
+          {% include article.html %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mb-6">
+    <div class="top">
+      <h2>Recherche</h2>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2">
+      {% for post in site.recherche %}
+        <div class="col">
+          {% include article.html %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+</div>

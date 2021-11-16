@@ -11,8 +11,9 @@
   </head>
   {% assign body_class = page.url | remove:'/index' | remove: '.html' | split: '/' %}
   <body class="{{ body_class[1] | default: 'home' }}">
+    {% include nav-accessibility.html %}
     {% include header.html %}
-    <main class="main" aria-label="Content">
+    <main class="main" id="main" aria-label="Content">
       {{ content }}
     </main>
     {% include footer.html %}

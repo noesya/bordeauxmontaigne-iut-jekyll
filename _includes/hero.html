@@ -1,6 +1,12 @@
 <header class="hero"{% if page.color %} style="background-color: {{page.color}} "{% endif %}>
-  {% if page.hero_image %}
-    {% picture {{ page.hero_image }} mobile: {{ page.hero_image_mobile }} --alt {{ page.title }} --img class="hero__image" %}
+  {% if include.image %}
+    {% include image.html
+        image=include.image
+        size_mobile='375x450'
+        size_tablet='768x450'
+        size_desktop='x450'
+        lazy=false
+        class='hero__image' %}
   {% endif %}
   <div class="container">
     <div class="row">

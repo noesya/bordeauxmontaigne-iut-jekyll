@@ -7,7 +7,10 @@
   {% assign image_height = image.height %}
 
   {% assign image_class = include.class | default: false %}
-  {% assign image_lazy = include.lazy | default: true %}
+  {% assign image_lazy = true %}
+  {% if include.no_lazy %}
+    {% assign image_lazy = false %}
+  {% endif %}
   {% assign image_alt = include.alt | default: '' %}
 
   {% assign image_size_mobile = include.size_mobile | default: false %}

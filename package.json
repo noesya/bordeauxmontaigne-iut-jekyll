@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "webpack": "./node_modules/.bin/webpack --watch",
-    "build": "./node_modules/.bin/webpack | bundle exec jekyll build"
+    "build": "./node_modules/.bin/webpack | JEKYLL_ENV=production bundle exec jekyll build"
   },
   "dependencies": {
     "@popperjs/core": "^2.10.1",

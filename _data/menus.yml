@@ -151,14 +151,14 @@ primary:
       - title: Sportifs de haut et bon niveau
         target: https://etu.u-bordeaux-montaigne.fr/fr/culture-et-vie-etudiante/sport/sportifs-de-haut-et-bon-niveau.html
         children: []
-      - title: Validation des acquis (VAE/VAPP)
-        target: https://www.u-bordeaux-montaigne.fr/fr/formations/admission-inscription/validations_d_acquis.html
-        children: []
     - title: Inscription administrative
       target: "/scolarite/inscription-administrative"
       children: []
     - title: Frais d'inscription
       target: "/scolarite/frais-dinscription"
+      children: []
+    - title: Validation des acquis (VAE/VAPP)
+      target: https://www.u-bordeaux-montaigne.fr/fr/formations/admission-inscription/validations_d_acquis.html
       children: []
     - title: Attention au plagiat
       target: https://etu.u-bordeaux-montaigne.fr/fr/etudes-et-scolarite/examens/plagiat.html

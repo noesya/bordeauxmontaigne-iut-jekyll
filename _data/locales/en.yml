@@ -2,6 +2,7 @@ accessibility:
   content: Accéder au contenu principal
   navigation: Accéder au menu
 author: "Author"
+breadcrumb: "Breadcrumb"
 category:
   filter: "Filter by categories"
   single_title: "Category"

@@ -11,6 +11,8 @@ h1
 h2
     margin-top: $grid-gutter-width * 3
 
-// If a h2 directly follows the beginning of the article, no top margin
-[itemprop="articleBody"] > h2:first-child
-    margin-top: 0
+[itemprop="articleBody"]
+    overflow-wrap: break-word
+    // If a h2 directly follows the beginning of the article, no top margin
+    > h2:first-child
+        margin-top: 0

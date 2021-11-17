@@ -26,7 +26,7 @@
                   {% for child in children %}
                     {% assign grandchildren = child.children %}
                     {% assign target = child.target | strip %}
-                    <li class="nav-level-2">
+                    <li class="nav-item">
                       {% if target != "" %}
                         <a href="{{ child.target }}" class="nav-link">{{ child.title }}</a>
                       {% else %}
@@ -36,7 +36,7 @@
                       <ul class="nav-level-3">
                         {% for grandchild in grandchildren %}
                           {% assign target = grandchild.target | strip %}
-                          <li>
+                          <li class="nav-item">
                             {% if target != "" %}
                               <a href="{{ grandchild.target }}" class="nav-link">{{ grandchild.title }}</a>
                             {% else %}

@@ -1,8 +1,4 @@
 ---
-legal:
-- title: Mentions légales
-  target: 
-  children: []
 primary:
 - title: Actualités
   target: "/actualites"
@@ -196,3 +192,7 @@ primary:
     - title: Outils pédagogiques
       target: "/vie-etudiante/outils-pedagogiques"
       children: []
+legal:
+- title: Mentions légales
+  target: 
+  children: []

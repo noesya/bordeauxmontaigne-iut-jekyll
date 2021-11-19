@@ -26,6 +26,8 @@ jekyll-minifier:
   remove_comments: true
   compress_css: false
   compress_javascript: true
+  uglifier_args:
+    harmony: true
 
 picture:
   ignore_missing_images: true

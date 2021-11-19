@@ -5,7 +5,7 @@
   {% assign seo_image = image.url | absolute_url %}
 {% endif %}
 {% assign seo_title = site.title %}
-{% if page.title != blank %}
+{% if page.title != "" %}
   {% assign seo_title = page.title | append: ' - ' | append: site.title %}
 {% endif %}
 {% assign seo_description = page.description | markdownify | strip_html | default: site.description %}

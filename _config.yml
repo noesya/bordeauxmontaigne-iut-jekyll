@@ -25,7 +25,7 @@ jekyll-minifier:
   remove_intertag_spaces: true
   remove_comments: true
   compress_css: false
-  compress_javascript: true
+  compress_javascript: false
 
 picture:
   ignore_missing_images: true

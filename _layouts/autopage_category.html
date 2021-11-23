@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.locales[lang] %}
+
+{% include hero.html title=page.title filter=true %}
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 gy-5">
+    {% for post in paginator.posts %}
+      <div class="col">
+        {% include post.html
+            image=post.image
+            title=post.title
+            url=post.url %}
+      </div>
+    {% endfor %}
+  </div>
+  {% include pagination.html %}
+</div>

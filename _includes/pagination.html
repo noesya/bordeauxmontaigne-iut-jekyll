@@ -4,7 +4,7 @@
 {% if paginator.total_pages > 1 %}
 <nav aria-label="{{ trad.pagination }}" class="mt-5">
   <ul class="pagination justify-content-center">
-    {% assign blog_url = "/actualites/" %}
+    {% assign blog_url = paginator.first_page_path %}
     {% assign second_to_last_page_number = paginator.total_pages | times: 1 | minus: 1 %}
 
     <!-- This generates an array of all of the numbers in the trail -->
@@ -27,7 +27,7 @@
     <!-- Always show the first page -->
     {% unless trail_page_numbers contains 1 %}
       <li class="page-item">
-        <a class="page-link" href="{{ url }}">1</a>
+        <a class="page-link" href="{{ paginator.first_page_path }}">1</a>
       </li>
     {% endunless %}
 
@@ -63,9 +63,8 @@
     <!-- Always show the last page -->
     {% unless trail_page_numbers contains paginator.total_pages %}
       {% assign page_number = paginator.total_pages %}
-      {% assign url = blog_url | append: page_number | append: "/" %}
       <li class="page-item">
-        <a class="page-link" href="{{ url }}">{{ page_number }}</a>
+        <a class="page-link" href="{{ paginator.last_page_path }}">{{ page_number }}</a>
       </li>
     {% endunless %}
 

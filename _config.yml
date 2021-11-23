@@ -69,9 +69,6 @@ collections:
   authors:
     output: true
     permalink: /:collection/:name
-  categories:
-    output: true
-    permalink: /actualites/:name
   pages:
     output: true
   posts:

@@ -8,115 +8,115 @@ primary:
   target: "/actualites"
   children: []
 - title: Notre institut
-  target: 
+  target: "/notre-institut"
   children:
   - title: Présentation de l'IUT
-    target: "/presentation-de-liut"
+    target: "/notre-institut/presentation-de-liut"
     children: []
   - title: Les atouts des IUT
-    target: "/les-atouts-des-iut"
+    target: "/notre-institut/les-atouts-des-iut"
     children: []
   - title: Équipe pédagogique
-    target: "/equipe-pedagogique"
+    target: "/notre-institut/equipe-pedagogique"
     children: []
   - title: Ressources
-    target: "/ressources-techniques"
+    target: "/notre-institut/ressources-techniques"
     children: []
   - title: Plan d’accès et contact
-    target: "/plan-dacces-et-contact"
+    target: "/notre-institut/plan-dacces-et-contact"
     children: []
   - title: Consignes de sécurité
     target: https://www.u-bordeaux-montaigne.fr/fr/actualites/vie-institutionnelle/vigipirate-consignes-de-securite.html
     children: []
   - title: Relations avec les entreprises
-    target: "/entreprises"
+    target: "/notre-institut/entreprises"
     children: []
 - title: Offre de formation
   target: 
   children:
   - title: Bachelor Universitaire de Technologie (B.U.T.)
-    target: "/diplomes/but"
+    target: "/offre-de-formation/but"
     children:
     - title: Animation sociale et socioculturelle
-      target: "/diplomes/but/animation-sociale-et-socioculturelle"
+      target: "/offre-de-formation/but/animation-sociale-et-socioculturelle"
       children: []
     - title: Communication des organisations
-      target: "/diplomes/but/communication-des-organisations"
+      target: "/offre-de-formation/but/communication-des-organisations"
       children: []
     - title: Information numérique dans les organisations
-      target: "/diplomes/but/information-numerique-dans-les-organisations"
+      target: "/offre-de-formation/but/information-numerique-dans-les-organisations"
       children: []
     - title: Métiers du multimédia et de l’internet
-      target: "/diplomes/but/metiers-du-multimedia-et-de-linternet"
+      target: "/offre-de-formation/but/metiers-du-multimedia-et-de-linternet"
       children: []
     - title: Métiers du livre et du patrimoine
-      target: "/diplomes/but/metiers-du-livre-et-du-patrimoine"
+      target: "/offre-de-formation/but/metiers-du-livre-et-du-patrimoine"
       children: []
     - title: Publicité
-      target: "/diplomes/but/publicite"
+      target: "/offre-de-formation/but/publicite-1"
       children: []
     - title: Villes et territoires durables
-      target: "/diplomes/but/villes-et-territoires-durables"
+      target: "/offre-de-formation/but/villes-et-territoires-durables"
       children: []
   - title: Diplômes Universitaires (DU)
     target: 
     children:
     - title: Gestion et animation de ludothèque
-      target: "/diplomes/diplomes-universitaires/du-gestion-et-animation-de-ludotheques"
+      target: "/offre-de-formation/diplomes-universitaires/du-gestion-et-animation-de-ludotheques"
       children: []
     - title: Études Technologiques Internationales (DUETI)
-      target: "/diplomes/diplomes-universitaires/etudes-technologiques-internationales-dueti"
+      target: "/offre-de-formation/diplomes-universitaires/etudes-technologiques-internationales-dueti"
       children: []
   - title: Masters professionnels
     target: 
     children:
     - title: Inénierie de l'animation territoriale
-      target: "/diplomes/master/master-pro-ingenierie-de-lanimation-territoriale"
+      target: "/offre-de-formation/master/master-pro-ingenierie-de-lanimation-territoriale"
       children: []
   - title: Licences professionnelles
     target: 
     children:
     - title: Communication éditoriale et digitale
-      target: "/diplomes/licences-pro/licence-pro-communication-editoriale-et-digitale"
+      target: "/offre-de-formation/licences-pro/licence-pro-communication-editoriale-et-digitale"
       children: []
     - title: Conception de projets & médiation artistique et culturelle
-      target: "/diplomes/licences-pro/licence-pro-conception-de-projets-mediation-artistique-et-culturelle"
+      target: "/offre-de-formation/licences-pro/licence-pro-conception-de-projets-mediation-artistique-et-culturelle"
       children: []
     - title: Coordination de projets de développement social et culturel
-      target: "/diplomes/licences-pro/licence-pro-coordination-de-projets-de-developpement-social-et-culturel"
+      target: "/offre-de-formation/licences-pro/licence-pro-coordination-de-projets-de-developpement-social-et-culturel"
       children: []
     - title: Médiation par le jeu et gestion de ludothèques
-      target: "/diplomes/licences-pro/licence-pro-mediation-par-le-jeu-et-gestion-de-ludotheques"
+      target: "/offre-de-formation/licences-pro/licence-pro-mediation-par-le-jeu-et-gestion-de-ludotheques"
       children: []
     - title: 'Métiers du livre : Bibliothécaire'
-      target: "/diplomes/licences-pro/licence-pro-bibliothecaire"
+      target: "/offre-de-formation/licences-pro/licence-pro-bibliothecaire"
       children: []
     - title: 'Métiers du livre : Éditeur'
-      target: "/diplomes/licences-pro/licence-pro-editeur"
+      target: "/offre-de-formation/licences-pro/licence-pro-editeur"
       children: []
     - title: 'Métiers du livre : Libraire'
-      target: "/diplomes/licences-pro/licence-pro-libraire"
+      target: "/offre-de-formation/licences-pro/licence-pro-libraire"
       children: []
   - title: Diplômes Universitaires de Technologie (DUT)
     target: 
     children:
     - title: Animation sociale et socioculturelle en formation continue
-      target: "/diplomes/dut/dut-animation-sociale-et-socioculturelle-fc"
+      target: "/offre-de-formation/dut/dut-animation-sociale-et-socioculturelle-fc"
       children: []
   - title: Apprentissage
-    target: "/diplomes/apprentissage"
+    target: "/offre-de-formation/apprentissage"
     children: []
   - title: Formation continue
-    target: "/diplomes/formation-continue"
+    target: "/offre-de-formation/formation-continue"
     children:
     - title: Organisation du service
-      target: "/diplomes/formation-continue/organisation-du-service"
+      target: "/offre-de-formation/formation-continue/organisation-du-service"
       children: []
     - title: Modes de financement
-      target: "/diplomes/formation-continue/modes-de-financement"
+      target: "/offre-de-formation/formation-continue/modes-de-financement"
       children: []
     - title: Offre de formation
-      target: "/diplomes/formation-continue/offre-de-formation"
+      target: "/offre-de-formation/formation-continue/offre-de-formation-fc"
       children: []
     - title: Réglement intérieur
       target: ''
@@ -125,10 +125,10 @@ primary:
       target: ''
       children: []
     - title: Ressources
-      target: "/ressources-techniques"
+      target: "/notre-institut/ressources-techniques"
       children: []
     - title: Codes utiles
-      target: "/diplomes/formation-continue/codes-utiles"
+      target: "/offre-de-formation/formation-continue/codes-utiles"
       children: []
     - title: Validation des acquis (VAE/VAPP)
       target: https://www.u-bordeaux-montaigne.fr/fr/formations/formation_continue/validation-des-acquis.html
@@ -140,16 +140,16 @@ primary:
   target: "/vie-etudiante"
   children:
   - title: Scolarité
-    target: "/scolarite"
+    target: "/vie-etudiante/scolarite"
     children:
     - title: Être candidat·e
-      target: "/scolarite/etre-candidat"
+      target: "/vie-etudiante/scolarite/etre-candidat"
       children: []
     - title: Inscription administrative
-      target: "/scolarite/inscription-administrative"
+      target: "/vie-etudiante/scolarite/inscription-administrative"
       children: []
     - title: Frais d'inscription
-      target: "/scolarite/frais-dinscription"
+      target: "/vie-etudiante/scolarite/frais-dinscription"
       children: []
     - title: Accessibilité et handicap
       target: https://www.u-bordeaux-montaigne.fr/fr/campus/accessibilite-et-handicap.html
@@ -164,19 +164,19 @@ primary:
       target: https://etu.u-bordeaux-montaigne.fr/fr/etudes-et-scolarite/examens/plagiat.html
       children: []
     - title: Statistiques
-      target: "/scolarite/statistiques"
+      target: "/vie-etudiante/scolarite/statistiques"
       children: []
   - title: Centre de ressources Montaigne
-    target: "/centre-de-ressources-montaigne"
+    target: "/vie-etudiante/centre-de-ressources-montaigne"
     children:
     - title: Présentation du CRM
-      target: "/centre-de-ressources-montaigne/presentation-crm"
+      target: "/vie-etudiante/centre-de-ressources-montaigne/presentation-crm"
       children: []
     - title: Consulter et emprunter
-      target: "/centre-de-ressources-montaigne/consulter-et-emprunter"
+      target: "/vie-etudiante/centre-de-ressources-montaigne/consulter-et-emprunter"
       children: []
     - title: L'équipe qui vous accueille
-      target: "/centre-de-ressources-montaigne/equipe"
+      target: "/vie-etudiante/centre-de-ressources-montaigne/equipe"
       children: []
   - title: Aide & entraide
     target: "/vie-etudiante/aide-entraide"
@@ -188,11 +188,11 @@ primary:
     target: "/vie-etudiante/services-numeriques"
     children:
     - title: Aquipass
-      target: "/vie-etudiante/aquipass"
+      target: "/vie-etudiante/services-numeriques/aquipass"
       children: []
     - title: Service d'impression
-      target: "/vie-etudiante/service-dimpression"
+      target: "/vie-etudiante/services-numeriques/service-dimpression"
       children: []
     - title: Outils pédagogiques
-      target: "/vie-etudiante/outils-pedagogiques"
+      target: "/vie-etudiante/services-numeriques/outils-pedagogiques"
       children: []

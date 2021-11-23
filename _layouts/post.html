@@ -9,12 +9,6 @@ layout: default
   {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
   {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
   {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-  {% if page.image %}
-    {% assign directory = page.image | slice: 0, 2 %}
-    {% assign image = site.data.media[directory][page.image] %}
-    {% assign image_url = image.url %}
-    <meta itemprop="image" content="{{ image_url }}">
-  {% endif %}
 
   {% include hero.html title=page.title %}
 
@@ -71,6 +65,14 @@ layout: default
         </table>
       </div>
       <div class="col-md-8 offset-md-1">
+
+        {% if page.image %}
+          {% assign directory = page.image | slice: 0, 2 %}
+          {% assign image = site.data.media[directory][page.image] %}
+          {% assign image_url = image.url %}
+          <img src="{{image_url}}" alt="{{page.title}}" class="img-fluid mb-4" itemprop="image">
+        {% endif %}
+
         <div itemprop="articleBody">
           {{ page.text }}
         </div>

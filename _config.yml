@@ -33,7 +33,6 @@ picture:
   ignore_missing_images: true
   source: "assets/images/"
 
-
 defaults:
   -
     scope:
@@ -87,3 +86,22 @@ pagination:
   trail:
     before: 2 # The number of links before the current page
     after: 2  # The number of links after the current page
+
+autopages:
+  enabled: true
+
+  # Category pages, omit entire config element to disable
+  categories:
+    # Optional, the list of layouts that should be processed for every category found in the site
+    layouts:
+      - 'autopage_category.html'
+    # Optional, the title that each category paginate page should get (:cat is replaced by the Category name)
+    title: ':cat'
+    # Optional, the permalink for the  pagination page (:cat is replaced),
+    # the pagination permalink path is then appended to this permalink structure
+    permalink: '/actualites/:cat'
+    # Optional, when true logging related to category pages will be supressed.
+    silent: false
+    slugify:
+      mode: 'latin'   # :cat is slugified. Modes: default, raw, pretty, ascii, latin
+      case: false       # Whether to replace all uppercase letters with their lowercase counterparts

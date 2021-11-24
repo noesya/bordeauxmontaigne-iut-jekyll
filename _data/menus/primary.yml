@@ -1,5 +1,4 @@
 ---
-primary:
 - title: Actualités
   target: "/actualites"
   children: []
@@ -95,10 +94,7 @@ primary:
       children: []
   - title: Diplômes Universitaires de Technologie (DUT)
     target: 
-    children:
-    - title: Animation sociale et socioculturelle en formation continue
-      target: 
-      children: []
+    children: []
   - title: Apprentissage
     target: "/offre-de-formation/apprentissage"
     children: []
@@ -192,7 +188,3 @@ primary:
     - title: Outils pédagogiques
       target: "/vie-etudiante/services-numeriques/outils-pedagogiques"
       children: []
-legal:
-- title: Mentions légales
-  target: "/mentions-legales"
-  children: []

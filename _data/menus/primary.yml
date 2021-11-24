@@ -92,9 +92,6 @@
     - title: 'Métiers du livre : Libraire'
       target: "/offre-de-formation/licences-pro/licence-pro-libraire"
       children: []
-  - title: Diplômes Universitaires de Technologie (DUT)
-    target: 
-    children: []
   - title: Apprentissage
     target: "/offre-de-formation/apprentissage"
     children: []

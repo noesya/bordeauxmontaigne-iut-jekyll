@@ -1,8 +1,4 @@
 ---
-legal:
-- title: Mentions légales
-  target: 
-  children: []
 primary:
 - title: Actualités
   target: "/actualites"
@@ -29,7 +25,7 @@ primary:
     target: https://www.u-bordeaux-montaigne.fr/fr/actualites/vie-institutionnelle/vigipirate-consignes-de-securite.html
     children: []
   - title: Relations avec les entreprises
-    target: "/notre-institut/entreprises"
+    target: "/notre-institut/relations-avec-les-entreprises"
     children: []
 - title: Offre de formation
   target: 
@@ -101,7 +97,7 @@ primary:
     target: 
     children:
     - title: Animation sociale et socioculturelle en formation continue
-      target: "/offre-de-formation/dut/dut-animation-sociale-et-socioculturelle-fc"
+      target: 
       children: []
   - title: Apprentissage
     target: "/offre-de-formation/apprentissage"
@@ -196,3 +192,7 @@ primary:
     - title: Outils pédagogiques
       target: "/vie-etudiante/services-numeriques/outils-pedagogiques"
       children: []
+legal:
+- title: Mentions légales
+  target: "/mentions-legales"
+  children: []

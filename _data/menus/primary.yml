@@ -1,9 +1,4 @@
 ---
-legal:
-- title: Mentions légales
-  target: 
-  children: []
-primary:
 - title: Actualités
   target: "/actualites"
   children: []
@@ -29,7 +24,7 @@ primary:
     target: https://www.u-bordeaux-montaigne.fr/fr/actualites/vie-institutionnelle/vigipirate-consignes-de-securite.html
     children: []
   - title: Relations avec les entreprises
-    target: "/notre-institut/entreprises"
+    target: "/notre-institut/relations-avec-les-entreprises"
     children: []
 - title: Offre de formation
   target: 
@@ -96,12 +91,6 @@ primary:
       children: []
     - title: 'Métiers du livre : Libraire'
       target: "/offre-de-formation/licences-pro/licence-pro-libraire"
-      children: []
-  - title: Diplômes Universitaires de Technologie (DUT)
-    target: 
-    children:
-    - title: Animation sociale et socioculturelle en formation continue
-      target: "/offre-de-formation/dut/dut-animation-sociale-et-socioculturelle-fc"
       children: []
   - title: Apprentissage
     target: "/offre-de-formation/apprentissage"

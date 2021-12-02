@@ -1,0 +1,12 @@
+- name: A la une
+  identifier: 6bbdb43b-a264-41e5-91a0-187609185738
+  link: /actualites/a-la-une
+  parent:
+- name: Flash info
+  identifier: 1c5069b3-6685-41c6-bdfa-2655af82fd39
+  link: /actualites/flash-info
+  parent:
+- name: Flash info enfant
+  identifier: 1c5069b3-6685-41c6-bdfa-123456
+  link: /actualites/flash-info/flash-info-enfant/
+  parent: 1c5069b3-6685-41c6-bdfa-2655af82fd39

@@ -4,14 +4,13 @@ layout: default
 
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.locales[lang] %}
-{% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.identifier' %}
 
 {% include hero.html title=page.title filter=true %}
 
-<div class="container">
-  {% if posts.size > 0 %}
+{% if paginator.posts.size > 0 %}
+  <div class="container">
     <div class="row row-cols-1 row-cols-md-2 gy-5">
-      {% for post in posts %}
+      {% for post in paginator.posts %}
         <div class="col">
           {% include post.html
               image=post.image
@@ -20,5 +19,6 @@ layout: default
         </div>
       {% endfor %}
     </div>
-  {% endif %}
-</div>
+    {% include pagination.html %}
+  </div>
+{% endif %}

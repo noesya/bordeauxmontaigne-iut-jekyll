@@ -1,9 +1,4 @@
 ---
-legal:
-- title: Mentions légales
-  target: 
-  children: []
-primary:
 - title: Actualités
   target: "/actualites"
   children: []
@@ -29,7 +24,7 @@ primary:
     target: https://www.u-bordeaux-montaigne.fr/fr/actualites/vie-institutionnelle/vigipirate-consignes-de-securite.html
     children: []
   - title: Relations avec les entreprises
-    target: "/notre-institut/entreprises"
+    target: "/notre-institut/relations-avec-les-entreprises"
     children: []
 - title: Offre de formation
   target: 
@@ -58,6 +53,9 @@ primary:
     - title: Villes et territoires durables
       target: "/offre-de-formation/but/villes-et-territoires-durables"
       children: []
+    - title: Métiers du multimédia et de l'internet
+      target: "/programs"
+      children: []
   - title: Diplômes Universitaires (DU)
     target: 
     children:
@@ -66,12 +64,6 @@ primary:
       children: []
     - title: Études Technologiques Internationales (DUETI)
       target: "/offre-de-formation/diplomes-universitaires/etudes-technologiques-internationales-dueti"
-      children: []
-  - title: Masters professionnels
-    target: 
-    children:
-    - title: Inénierie de l'animation territoriale
-      target: "/offre-de-formation/master/master-pro-ingenierie-de-lanimation-territoriale"
       children: []
   - title: Licences professionnelles
     target: 
@@ -97,11 +89,11 @@ primary:
     - title: 'Métiers du livre : Libraire'
       target: "/offre-de-formation/licences-pro/licence-pro-libraire"
       children: []
-  - title: Diplômes Universitaires de Technologie (DUT)
+  - title: Masters professionnels
     target: 
     children:
-    - title: Animation sociale et socioculturelle en formation continue
-      target: "/offre-de-formation/dut/dut-animation-sociale-et-socioculturelle-fc"
+    - title: Inénierie de l'animation territoriale
+      target: "/offre-de-formation/master/master-pro-ingenierie-de-lanimation-territoriale"
       children: []
   - title: Apprentissage
     target: "/offre-de-formation/apprentissage"
@@ -196,3 +188,6 @@ primary:
     - title: Outils pédagogiques
       target: "/vie-etudiante/services-numeriques/outils-pedagogiques"
       children: []
+- title: Intranet
+  target: "/intranet"
+  children: []

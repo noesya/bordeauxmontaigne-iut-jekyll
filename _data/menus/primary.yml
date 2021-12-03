@@ -56,6 +56,9 @@
     - title: Métiers du multimédia et de l'internet
       target: "/programs"
       children: []
+    - title: Publicité
+      target: "/programs"
+      children: []
   - title: Diplômes Universitaires (DU)
     target: 
     children:

@@ -53,6 +53,12 @@
     - title: Villes et territoires durables
       target: "/offre-de-formation/but/villes-et-territoires-durables"
       children: []
+    - title: Métiers du multimédia et de l'internet
+      target: "/programs"
+      children: []
+    - title: Publicité
+      target: "/programs"
+      children: []
   - title: Diplômes Universitaires (DU)
     target: 
     children:
@@ -185,3 +191,6 @@
     - title: Outils pédagogiques
       target: "/vie-etudiante/services-numeriques/outils-pedagogiques"
       children: []
+- title: Intranet
+  target: "/intranet"
+  children: []

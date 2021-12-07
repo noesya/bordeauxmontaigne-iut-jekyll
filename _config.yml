@@ -51,9 +51,17 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  -
+    scope:
+      path: ""
+      type: "programs"
+    values:
+      layout: "program"
 
 collections:
   pages:
+    output: true
+  programs:
     output: true
   posts:
     output: true

@@ -1,8 +1,8 @@
 <div class="card card--article">
   <div class="card-body">
-    <p class="card-title "><a href="{{ article.url }}" class="stretched-link link link--more">{{ article.title }}</a></p>
-    {% if article.description %}
-      <p class="card-text">{{ article.description }}</p>
+    <p class="card-title "><a href="{{ include.url }}" class="stretched-link link link--more">{{ include.title }}</a></p>
+    {% if include.description %}
+      <p class="card-text">{{ include.description | strip_newlines | strip_html | truncatewords: 14 }}</p>
     {% endif %}
   </div>
 </div>

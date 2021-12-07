@@ -1,0 +1,13 @@
+{% for article in articles %}
+  {% assign target = article.target | strip %}
+  {% if target != "" %}
+    {% assign page = site.pages | where: "permalink", article.target | first %}
+    <div class="col">
+      {% include article.html
+          url = page.permalink
+          title = page.title
+          description = page.description
+          %}
+    </div>
+  {% endif %}
+{% endfor %}

@@ -26,44 +26,35 @@ layout: default
   </section>
 
   <section class="mb-6">
+    {% assign institut = site.data.menus.primary[1] %}
     <div class="top">
-      <h2>Notre institut</h2>
+      <h2>{{ institut.title }}</h2>
     </div>
     <div class="row row-cols-1 row-cols-md-2">
-      {% assign parent_presentation = site.pages | where: 'parent', site.data.pages.presentation %}
-      {% for article in parent_presentation %}
-        <div class="col">
-          {% include article.html %}
-        </div>
-      {% endfor %}
+      {% assign articles = institut.children %}
+      {% include articles.html %}
     </div>
   </section>
 
   <section class="mb-6">
+    {% assign offre = site.data.menus.primary[2] %}
     <div class="top">
-      <h2>Offre de formation</h2>
+      <h2>{{ offre.title }}</h2>
     </div>
     <div class="row row-cols-1 row-cols-md-2">
-      {% assign parent_diplomes = site.pages | where: 'parent', site.data.pages.diplomes %}
-      {% for article in parent_diplomes %}
-        <div class="col">
-          {% include article.html %}
-        </div>
-      {% endfor %}
+      {% assign articles = offre.children %}
+      {% include articles.html %}
     </div>
   </section>
 
   <section class="mb-6">
+    {% assign vie = site.data.menus.primary[3] %}
     <div class="top">
-      <h2>Vie étudiante</h2>
+      <h2>{{ vie.title }}</h2>
     </div>
     <div class="row row-cols-1 row-cols-md-2">
-      {% assign parent_vie = site.pages | where: 'parent', site.data.pages.vie %}
-      {% for article in parent_vie %}
-        <div class="col">
-          {% include article.html %}
-        </div>
-      {% endfor %}
+      {% assign articles = vie.children %}
+      {% include articles.html %}
     </div>
   </section>
 

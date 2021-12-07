@@ -15,31 +15,19 @@ pagination:
 
   <div class="container">
 
-   {% if page.image %}
-     {% assign directory = page.image | slice: 0, 2 %}
-     {% assign image_url = site.data.media[directory][page.image].url %}
-     <img src="{{image_url}}" alt="" class="img-fluid mb-4" itemprop="image">
-   {% endif %}
+    {% if page.image %}
+      {% assign directory = page.image | slice: 0, 2 %}
+      {% assign image_url = site.data.media[directory][page.image].url %}
+      <img src="{{image_url}}" alt="" class="img-fluid mb-4" itemprop="image">
+    {% endif %}
 
-   {% if page.biography %}
-   <div itemprop="articleBody">
-     {{ page.biography | correct_punctuation }}
-   </div>
-   {% endif %}
+    {% if page.biography %}
+      <div itemprop="articleBody">
+        {{ page.biography | correct_punctuation }}
+      </div>
+    {% endif %}
 
-  {% if posts.size > 0 %}
-    <hr class="my-5">
-    <div class="row row-cols-1 row-cols-md-2 gy-5">
-      {% for post in posts %}
-        <div class="col">
-          {% include post.html
-              image=post.image
-              title=post.title
-              url=post.url %}
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
+  {% include posts.html %}
 
   </div>
 </article>

@@ -42,12 +42,6 @@ defaults:
   -
     scope:
       path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  -
-    scope:
-      path: ""
       type: "pages"
     values:
       layout: "page"
@@ -59,9 +53,6 @@ defaults:
       layout: "post"
 
 collections:
-  authors:
-    output: true
-    permalink: /:collection/:name
   pages:
     output: true
   posts:

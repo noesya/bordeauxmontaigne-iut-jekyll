@@ -8,18 +8,40 @@ layout: default
       <table class="table mb-4">
         <tbody class="border-top">
 
+          {% if page.parent %}
+            {% assign parent = site.programs | where: 'identifier', page.parent | first %}
+            <tr>
+              <th scope="row" class="ps-0">parent</th>
+              <td class="pe-0"><a href="{{ parent.url }}">{{ parent.title }}</a></td>
+            </tr>
+          {% endif %}
+
           {% if page.level %}
-          <tr>
-            <th scope="row" class="ps-0">level</th>
-            <td class="pe-0">{{ page.level }}</td>
-          </tr>
+            <tr>
+              <th scope="row" class="ps-0">level</th>
+              <td class="pe-0">{{ page.level }}</td>
+            </tr>
+          {% endif %}
+
+          {% if page.ects %}
+            <tr>
+              <th scope="row" class="ps-0">ects</th>
+              <td class="pe-0">{{ page.ects }}</td>
+            </tr>
           {% endif %}
 
           {% if page.duration %}
-          <tr>
-            <th scope="row" class="ps-0">duration</th>
-            <td class="pe-0">{{ page.duration }}</td>
-          </tr>
+            <tr>
+              <th scope="row" class="ps-0">duration</th>
+              <td class="pe-0">{{ page.duration }}</td>
+            </tr>
+          {% endif %}
+
+          {% if page.continuing %}
+            <tr>
+              <th scope="row" class="ps-0">continuing</th>
+              <td class="pe-0">{{ page.continuing }}</td>
+            </tr>
           {% endif %}
 
         </tbody>

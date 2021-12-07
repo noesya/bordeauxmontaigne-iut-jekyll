@@ -37,8 +37,8 @@ defaults:
   -
     scope:
       path: ""
-    values:
-      layout: "default"
+      values:
+        layout: "default"
   -
     scope:
       path: ""
@@ -57,6 +57,18 @@ defaults:
       type: "programs"
     values:
       layout: "program"
+  -
+    scope:
+      path: "auteurs"
+      type: "pages"
+    values:
+      layout: "author"
+  -
+    scope:
+      path: "actualites"
+      type: "pages"
+    values:
+      layout: "posts"
 
 collections:
   pages:

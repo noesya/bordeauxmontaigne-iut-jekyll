@@ -1,51 +1,50 @@
 ---
-layout: scrollspy
+layout: default
+schema:
+  itemtype: Article
+scrollspy: true
 ---
 
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.locales[lang] %}
 {% assign children = site.pages | where: 'parent', page.identifier %}
 
-<article itemscope itemtype="https://schema.org/Article">
-  {% if page.excerpt %}<meta itemprop="description" content="{{ page.description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+{% if page.excerpt %}<meta itemprop="description" content="{{ page.description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
 
-  {% include hero.html title=page.title %}
-
-  <div class="container">
-   <div class="row">
-     <div class="col-md-4">
-       {{page.text | page_nav_links}}
-     </div>
-     <div class="col-md-8">
-
-       {% if page.image %}
-         {% assign directory = page.image | slice: 0, 2 %}
-         {% assign image_url = site.data.media[directory][page.image].url %}
-         <img src="{{image_url}}" alt="" class="img-fluid mb-4" itemprop="image">
-       {% endif %}
-
-       {% if page.text %}
-       <div itemprop="articleBody">
-         {{page.text | page_nav_text_with_ids | correct_punctuation}}
-       </div>
-       {% endif %}
-
-       {% if children.size > 0 %}
-         <hr class="my-5">
-         <div class="row row-cols-md-2 g-3">
-             {% for child in children %}
-             <div class="col">
-                 <a href="{{ child.url }}">{{ child.title }}</a>
-             </div>
-             {% endfor %}
-         </div>
-       {% endif %}
-
-       {% if page.related_category %}
-
-       {% endif %}
-
-     </div>
+<div class="container">
+ <div class="row">
+   <div class="col-md-4">
+     {{page.text | page_nav_links}}
    </div>
-  </div>
-</article>
+   <div class="col-md-8">
+
+     {% if page.image %}
+       {% assign directory = page.image | slice: 0, 2 %}
+       {% assign image_url = site.data.media[directory][page.image].url %}
+       <img src="{{image_url}}" alt="" class="img-fluid mb-4" itemprop="image">
+     {% endif %}
+
+     {% if page.text %}
+     <div itemprop="articleBody">
+       {{page.text | page_nav_text_with_ids | correct_punctuation}}
+     </div>
+     {% endif %}
+
+     {% if children.size > 0 %}
+       <hr class="my-5">
+       <div class="row row-cols-md-2 g-3">
+           {% for child in children %}
+           <div class="col">
+               <a href="{{ child.url }}">{{ child.title }}</a>
+           </div>
+           {% endfor %}
+       </div>
+     {% endif %}
+
+     {% if page.related_category %}
+
+     {% endif %}
+
+   </div>
+ </div>
+</div>

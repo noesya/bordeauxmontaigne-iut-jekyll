@@ -1,83 +1,81 @@
 ---
 layout: default
+schema:
+  itemtype: NewsArticle
 ---
 
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.locales[lang] %}
 
-<article itemscope itemtype="https://schema.org/NewsArticle">
-  {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
-  {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
-  {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+{% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+{% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+{% if page.excerpt != '' %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
 
-  {% include hero.html title=page.title %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <table class="table mb-4" aria-label="{{ lang.news.infos }}">
+          <tbody class="border-top">
+            <tr>
+              <th scope="row" class="ps-0">{{ trad.date }}</th>
+              <td class="pe-0">
+                <time datetime="{{ page.date | date: "%Y-%m-%d" }}">
+                  {% if lang == 'fr' %}
+                    {{ page.date | date: "%d/%m/%Y" }}
+                  {% else %}
+                    {{ page.date | date_to_string: "ordinal", "US" }}
+                  {% endif %}
+                </time>
+              </td>
+            </tr>
+            {% if page.author %}
+            {% assign author = site.data.authors | where: 'identifier', page.author %}
+            <tr>
+              <th scope="row" class="ps-0">{{ trad.author }}</th>
+              <td class="p-author pe-0" itemscope itemtype="https://schema.org/Person" itemprop="author">
+                <a href="{{ author[0].link }}" itemprop="url">
+                  <span itemprop="name">{{ author[0].name }}</span>
+                </a>
+              </td>
+            </tr>
+            {% endif %}
+            {% if page.categories %}
+            <tr>
+              <th scope="row" class="ps-0">{{ trad.category.plurial_title }}</th>
+              <td class="p-category pe-0">
+                {%- for c in page.categories -%}
+                  {%- assign category = site.data.categories | where: 'identifier', c -%}
+                  {% unless forloop.first %}, {% endunless %}
+                  <a href="{{ category[0].link }}" itemtype="https://schema.org/articleSection">{{ category[0].name }}</a>
+                {%- endfor -%}
+              </td>
+            </tr>
+            {% endif %}
+            {% assign url = page.url | absolute_url %}
+            <tr>
+              <th scope="row" class="ps-0">{{ trad.share }}</th>
+              <td class="pe-0"><a href="{{ 'https://www.facebook.com/sharer/sharer.php?u=' | append: url }}" target="_blank" rel="noreferrer">Facebook</a></td>
+            </tr>
+            <tr>
+              <th scope="row" class="ps-0">{{ trad.share }}</th>
+              <td class="pe-0"><a href="{{ 'https://twitter.com/intent/tweet?text=' | append: page.title | append: ' ' | append: url }}" target="_blank" rel="noreferrer">Twitter</a></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-8 offset-md-1">
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3">
-        <table class="table mb-4" aria-label="{{ lang.news.infos }}">
-            <tbody class="border-top">
-              <tr>
-                <th scope="row" class="ps-0">{{ trad.date }}</th>
-                <td class="pe-0">
-                  <time datetime="{{ page.date | date: "%Y-%m-%d" }}">
-                    {% if lang == 'fr' %}
-                      {{ page.date | date: "%d/%m/%Y" }}
-                    {% else %}
-                      {{ page.date | date_to_string: "ordinal", "US" }}
-                    {% endif %}
-                  </time>
-                </td>
-              </tr>
-              {% if page.author %}
-              {% assign author = site.data.authors | where: 'identifier', page.author %}
-              <tr>
-                <th scope="row" class="ps-0">{{ trad.author }}</th>
-                <td class="p-author pe-0" itemscope itemtype="https://schema.org/Person" itemprop="author">
-                  <a href="{{ author[0].link }}" itemprop="url">
-                    <span itemprop="name">{{ author[0].name }}</span>
-                  </a>
-                </td>
-              </tr>
-              {% endif %}
-              {% if page.categories %}
-              <tr>
-                <th scope="row" class="ps-0">{{ trad.category.plurial_title }}</th>
-                <td class="p-category pe-0">
-                  {%- for c in page.categories -%}
-                    {%- assign category = site.data.categories | where: 'identifier', c -%}
-                    {% unless forloop.first %}, {% endunless %}
-                    <a href="{{ category[0].link }}" itemtype="https://schema.org/articleSection">{{ category[0].name }}</a>
-                  {%- endfor -%}
-                </td>
-              </tr>
-              {% endif %}
-              {% assign url = page.url | absolute_url %}
-              <tr>
-                <th scope="row" class="ps-0">{{ trad.share }}</th>
-                <td class="pe-0"><a href="{{ 'https://www.facebook.com/sharer/sharer.php?u=' | append: url }}" target="_blank" rel="noreferrer">Facebook</a></td>
-              </tr>
-              <tr>
-                <th scope="row" class="ps-0">{{ trad.share }}</th>
-                <td class="pe-0"><a href="{{ 'https://twitter.com/intent/tweet?text=' | append: page.title | append: ' ' | append: url }}" target="_blank" rel="noreferrer">Twitter</a></td>
-              </tr>
-          </tbody>
-        </table>
+      {% if page.image %}
+        {% assign directory = page.image | slice: 0, 2 %}
+        {% assign image = site.data.media[directory][page.image] %}
+        {% assign image_url = image.url %}
+        <img src="{{image_url}}" alt="{{page.title}}" class="img-fluid mb-4" itemprop="image">
+      {% endif %}
+
+      <div itemprop="articleBody">
+        {{ page.text }}
       </div>
-      <div class="col-md-8 offset-md-1">
-
-        {% if page.image %}
-          {% assign directory = page.image | slice: 0, 2 %}
-          {% assign image = site.data.media[directory][page.image] %}
-          {% assign image_url = image.url %}
-          <img src="{{image_url}}" alt="{{page.title}}" class="img-fluid mb-4" itemprop="image">
-        {% endif %}
-
-        <div itemprop="articleBody">
-          {{ page.text }}
-        </div>
-        {% include post-pagination.html %}
-      </div>
+      {% include post-pagination.html %}
     </div>
   </div>
-</article>
+</div>

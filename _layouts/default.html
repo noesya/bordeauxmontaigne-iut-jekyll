@@ -10,11 +10,24 @@
     {% include header-ga.html %}
   </head>
   {% assign body_class = page.url | remove:'/index' | remove: '.html' | split: '/' %}
-  <body class="{{ body_class[1] | default: 'home' }}">
+  <body class="{{ body_class[1] | default: 'home' }}" {% if layout.scrollspy %}data-bs-spy="scroll" data-bs-target="#nav-toc" data-bs-offset="0"{% endif %}>
+
     {% include nav-accessibility.html %}
     {% include header.html %}
     <main class="main" id="main" aria-label="Content">
+      {% if layout.schema %}
+        <article itemscope itemtype="https://schema.org/{{ layout.schema.itemtype }}">
+      {% endif %}
+
+      {% if layout.hide_hero != true %}
+        {% include hero.html title=page.title image=page.image %}
+      {% endif %}
+
       {{ content }}
+
+      {% if layout.schema %}
+        </article>
+      {% endif %}
     </main>
     {% include footer.html %}
     {% include cookie-banner.html %}

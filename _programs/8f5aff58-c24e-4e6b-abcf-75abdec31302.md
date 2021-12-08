@@ -1,5 +1,5 @@
 ---
-title: "parcours Ingénierie de l’animation territoriale"
+title: "Ingénierie de l’animation territoriale"
 identifier: "8f5aff58-c24e-4e6b-abcf-75abdec31302"
 parent: "6aeda620-1f1b-4c2f-ac2f-6464bfc65d52"
 continuing: false
@@ -29,4 +29,3 @@ pricing: >
 registration: >
    
 ---
-

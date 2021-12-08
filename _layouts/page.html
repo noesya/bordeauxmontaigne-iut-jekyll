@@ -3,7 +3,13 @@ layout: default
 schema:
   itemtype: Article
 scrollspy: true
+hide_hero_image: true
 ---
+
+{% assign lang = page.lang | default: site.lang %}
+{% assign trad = site.data.locales[lang] %}
+
+{% assign children = site.pages | where: 'parent', page.identifier %}
 
 <meta itemprop="headline" content="{{page.title}}">
 {% if page.excerpt %}<meta itemprop="description" content="{{ page.description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
@@ -11,7 +17,23 @@ scrollspy: true
 <div class="container">
  <div class="row">
    <div class="col-md-4">
-     {{page.text | page_nav_links}}
+     <ul class='nav toc' id='nav-toc'>
+       {{page.text | page_nav_links}}
+
+       {% if children.size > 0 %}
+         <li class="nav-item">
+           <a class="nav-link" href="#page-detail">En détail</a>
+         </li>
+       {% endif %}
+
+      {% if page.related_category != '' %}
+        {% assign category = site.categories | where: 'identifier', page.related_category | first %}
+        {% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.related_category' %}
+        <li class="nav-item">
+          <a class="nav-link" href="#page-news">Actualités de la catégorie</a>
+        </li>
+      {% endif %}
+     </ul>
    </div>
    <div class="col-md-8">
 
@@ -24,12 +46,15 @@ scrollspy: true
      {% if page.text %}
      <div itemprop="articleBody">
        {{page.text | page_nav_text_with_ids | correct_punctuation}}
+       {{ content }}
      </div>
      {% endif %}
 
-     {% assign children = site.pages | where: 'parent', page.identifier %}
      {% if children.size > 0 %}
-       <hr class="my-5">
+       <hr class="mt-5 mb-0">
+       <div class="top">
+         <h2 id="page-detail">En détail</h2>
+       </div>
        <div class="row row-cols-md-2 g-3">
            {% for child in children %}
            <div class="col">
@@ -39,15 +64,21 @@ scrollspy: true
        </div>
      {% endif %}
 
-     {% if page.related_category %}
-       {% assign category = site.categories | where: 'identifier', page.related_category %}
+     {% if page.related_category != '' %}
+       {% assign category = site.categories | where: 'identifier', page.related_category | first %}
        {% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.related_category' %}
-       <hr class="my-5">
-       <h3>Actualités de la catégorie « {{ category[0].name }} »</h3>
+       <hr class="mt-5 mb-0">
+       <div class="top">
+         <h2 id="page-news">Actualités</h2>
+         <a href="{{ category.url }}" class="link link--more">{{ trad.news.more }} « {{ category.title }} »</a>
+       </div>
        <div class="row row-cols-md-2 g-3">
-           {% for post in posts %}
+           {% for post in posts limit:4 %}
            <div class="col">
-               <a href="{{ post.url }}">{{ post.title }}</a>
+             {% include post.html
+                 image=post.image
+                 title=post.title
+                 url=post.url %}
            </div>
            {% endfor %}
        </div>

@@ -1,15 +1,17 @@
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.locales[lang] %}
 <header class="hero"{% if page.color %} style="background-color: {{page.color}} "{% endif %}>
-  {% if include.image %}
-    {% include image.html
-        image=include.image
-        size_mobile='375x450'
-        size_tablet='768x450'
-        size_desktop='x450'
-        no_lazy=true
-        class='hero__image' %}
-  {% endif %}
+  {% unless layout.hide_hero_image %}
+    {% if include.image %}
+      {% include image.html
+          image=include.image
+          size_mobile='375x450'
+          size_tablet='768x450'
+          size_desktop='x450'
+          no_lazy=true
+          class='hero__image' %}
+    {% endif %}
+  {% endunless %}
   <div class="container">
     <div class="row">
       <div class="col-md-9">

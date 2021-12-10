@@ -6,17 +6,17 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    {% assign parent_categories = site.categories | where: "parent", "" %}
+    {% assign root_categories = site.data.categories | where: "parent", "" | sort: "position" %}
     <ul class="nav flex-column">
-      {% for category in parent_categories %}
-        {% assign children_categories = site.categories | where: "parent", category.identifier %}
+      {% for category in root_categories %}
         <li class="nav-item">
-          <a href="{{ category.url }}" class="nav-link">{{ category.title }}</a>
+          <a href="{{ category.link }}" class="nav-link">{{ category.name }}</a>
+          {% assign children_categories = site.data.categories | where: "parent", category.identifier | sort: "position" %}
           {% if children_categories.size > 0 %}
           <ul>
           {% for child in children_categories %}
             <li class="nav-item">
-              <a href="{{ child.url }}" class="nav-link">{{ child.title }}</a>
+              <a href="{{ child.link }}" class="nav-link">{{ child.name }}</a>
             </li>
           {% endfor %}
           </ul>

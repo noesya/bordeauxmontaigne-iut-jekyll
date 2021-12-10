@@ -7,49 +7,33 @@ hide_hero: true
 
 <div class="container">
 
-  <section class="mb-6">
-    {% assign news = site.data.menus.primary[0] %}
-    <div class="top">
-      <h2>{{ news.title }}</h2>
-      <a href="/actualites" class="link link--more">{{ trad.news.more }}</a>
-    </div>
-    <div class="row row-cols-1 row-cols-md-2">
-      {% for post in site.posts limit:4 %}
-        <div class="col">
-          {% include post.html
-              image=post.image
-              title=post.title
-              url=post.url %}
+  {% for section in site.data.menus.primary %}
+
+    <section class="mb-6">
+      <div class="top">
+        <h2>{{ section.title }}</h2>
+        {% if forloop.first %} <!-- waiting type -->
+          <a href="{{ section.url }}" class="link link--more">{{ trad.news.more }}</a>
+        {% endif %}
+      </div>
+      {% if forloop.first %} <!-- waiting type -->
+        <div class="row row-cols-1 row-cols-md-2">
+          {% for post in site.posts limit:4 %}
+            <div class="col">
+              {% include post.html
+                  image=post.image
+                  title=post.title
+                  url=post.url %}
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
-    </div>
-  </section>
+      {% else %}
+        {% assign articles = section.children %}
+        {% include articles.html %}
+      {% endif %}
 
-  <section class="mb-6">
-    {% assign institut = site.data.menus.primary[1] %}
-    <div class="top">
-      <h2>{{ institut.title }}</h2>
-    </div>
-    {% assign articles = institut.children %}
-    {% include articles.html %}
-  </section>
+    </section>
 
-  <section class="mb-6">
-    {% assign offre = site.data.menus.primary[2] %}
-    <div class="top">
-      <h2>{{ offre.title }}</h2>
-    </div>
-    {% assign articles = offre.children %}
-    {% include articles.html %}
-  </section>
-
-  <section class="mb-6">
-    {% assign vie = site.data.menus.primary[3] %}
-    <div class="top">
-      <h2>{{ vie.title }}</h2>
-    </div>
-    {% assign articles = vie.children %}
-    {% include articles.html %}
-  </section>
+  {% endfor %}
 
 </div>

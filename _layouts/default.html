@@ -1,7 +1,7 @@
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.locales[lang] %}
 <!DOCTYPE html>
-<html lang="{{lang}}">
+<html lang="{{lang}}" style="--color: {{ layout.color | default: "#002539" }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
     {% include layout/ga.html %}
   </head>
   {% assign body_class = page.url | remove:'/index' | remove: '.html' | split: '/' %}
-  <body class="{{ body_class[1] | default: 'home' }}"{% if layout.scrollspy %} data-bs-spy="scroll" data-bs-target="#nav-toc" data-bs-offset="0"{% endif %}>
+  <body class="{{ body_class[1] | default: 'home' }} layout-{{ page.layout }}"{% if layout.scrollspy %} data-bs-spy="scroll" data-bs-target="#nav-toc" data-bs-offset="0"{% endif %}>
     {% include layout/nav-accessibility.html %}
     {% include layout/header.html %}
 

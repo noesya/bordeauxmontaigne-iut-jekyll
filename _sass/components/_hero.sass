@@ -1,6 +1,6 @@
 .hero
     align-items: flex-end
-    background-color: $site
+    background-color: var(--color)
     background-image: url(/assets/images/glyph.svg)
     background-position: right
     background-repeat: no-repeat
@@ -13,13 +13,16 @@
     padding-bottom: $grid-gutter-width * 2.5
     position: relative
     &__image
+        filter: blur(10px)
         height: 100%
         left: 0
         object-fit: cover
-        opacity: .5
+        opacity: .2
         position: absolute
         top: 0
         width: 100%
+        .layout-home &
+            filter: none
     &__nav
         align-items: flex-start
         display: flex

@@ -194,3 +194,6 @@
 - title: Intranet
   target: "/intranet"
   children: []
+- title: Offre de formation
+  target: "/programs"
+  children: []

@@ -6,7 +6,7 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    {% assign root_categories = site.data.categories | where: "parent", nil | sort: "position" %}
+    {% assign root_categories = site.data.categories | where: "parent", "" | sort: "position" %}
     <ul class="nav flex-column">
       {% for category in root_categories %}
         <li class="nav-item">

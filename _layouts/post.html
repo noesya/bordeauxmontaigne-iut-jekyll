@@ -31,12 +31,12 @@ hide_hero_image: true
             </td>
           </tr>
           {% if page.author %}
-          {% assign author = site.authors | where: 'identifier', page.author %}
+          {% assign author = site.data.authors | where: 'identifier', page.author %}
           <tr>
             <th scope="row" class="ps-0">{{ trad.author }}</th>
             <td class="p-author pe-0" itemscope itemtype="https://schema.org/Person" itemprop="author">
-              <a href="{{ author[0].url }}" itemprop="url">
-                <span itemprop="name">{{ author[0].title }}</span>
+              <a href="{{ author[0].link }}" itemprop="url">
+                <span itemprop="name">{{ author[0].name }}</span>
               </a>
             </td>
           </tr>
@@ -46,9 +46,9 @@ hide_hero_image: true
             <th scope="row" class="ps-0">{{ trad.category.plurial_title }}</th>
             <td class="p-category pe-0">
               {% for c in page.categories %}
-                {% assign category = site.data.categories | where: 'identifier', c %}
+                {% assign category = site.data.categories | where: 'identifier', c | first %}
                 {% unless forloop.first %}, {% endunless %}
-                <a href="{{ category[0].url }}" itemtype="https://schema.org/articleSection">{{ category[0].title }}</a>
+                <a href="{{ category.link }}" itemtype="https://schema.org/articleSection">{{ category.name }}</a>
               {% endfor %}
             </td>
           </tr>

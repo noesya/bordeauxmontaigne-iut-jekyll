@@ -48,7 +48,7 @@
       target: "/offre-de-formation/but/metiers-du-livre-et-du-patrimoine"
       children: []
     - title: Publicité
-      target: "/offre-de-formation/but/publicite-1"
+      target: "/offre-de-formation/but/publicite"
       children: []
     - title: Villes et territoires durables
       target: "/offre-de-formation/but/villes-et-territoires-durables"

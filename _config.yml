@@ -11,9 +11,9 @@ exclude:
   - yarn.lock
 
 plugins:
+  - jekyll-include-cache
   - jekyll-minifier
   - jekyll-paginate-v2
-  - jekyll-include-cache
   - jekyll-sitemap
 
 sass:
@@ -43,18 +43,6 @@ defaults:
   -
     scope:
       path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  -
-    scope:
-      path: ""
-      type: "categories"
-    values:
-      layout: "category"
-  -
-    scope:
-      path: ""
       type: "pages"
     values:
       layout: "page"
@@ -70,11 +58,21 @@ defaults:
       type: "programs"
     values:
       layout: "program"
+  -
+    scope:
+      path: "auteurs"
+      type: "pages"
+    values:
+      layout: "author"
+  -
+    scope:
+      path: "actualites"
+      type: "pages"
+    values:
+      layout: "posts"
+
 
 collections:
-  authors:
-    output: true
-    permalink: /:collection/:name
   pages:
     output: true
   programs:

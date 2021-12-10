@@ -10,7 +10,7 @@ pagination:
 
 <meta itemprop="name" content="{{page.title}}">
 
-<div class="container">
+<div class="container mb-5">
 
  {% if page.image %}
    {% assign directory = page.image | slice: 0, 2 %}
@@ -24,6 +24,6 @@ pagination:
  </div>
  {% endif %}
 
-{% include posts.html %}
-
 </div>
+
+{% include posts.html %}

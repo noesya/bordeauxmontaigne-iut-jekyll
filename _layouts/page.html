@@ -27,7 +27,7 @@ hide_hero_image: true
        {% endif %}
 
       {% if page.related_category != '' %}
-        {% assign category = site.categories | where: 'identifier', page.related_category | first %}
+        {% assign category = site.data.categories | where: 'identifier', page.related_category | first %}
         {% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.related_category' %}
         <li class="nav-item">
           <a class="nav-link" href="#page-news">Actualités de la catégorie</a>
@@ -65,7 +65,7 @@ hide_hero_image: true
      {% endif %}
 
      {% if page.related_category != '' %}
-       {% assign category = site.categories | where: 'identifier', page.related_category | first %}
+       {% assign category = site.data.categories | where: 'identifier', page.related_category | first %}
        {% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.related_category' %}
        <hr class="mt-5 mb-0">
        <div class="top">

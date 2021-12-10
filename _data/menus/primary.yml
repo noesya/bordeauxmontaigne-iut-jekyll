@@ -131,6 +131,9 @@
     - title: Médiation
       target: "/vie-etudiante/aide-entraide/contacter-un-mediateur"
       children: []
+- title: Offre de formation
+  target: "/programs"
+  children: []
 - title: Vie étudiante
   target: "/vie-etudiante"
   children:
@@ -193,7 +196,4 @@
       children: []
 - title: Intranet
   target: "/intranet"
-  children: []
-- title: Offre de formation
-  target: "/programs"
   children: []

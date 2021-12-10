@@ -1,0 +1,100 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <table class="table mb-4">
+        <tbody class="border-top">
+
+          {% if page.parent %}
+            {% assign parent = site.programs | where: 'identifier', page.parent | first %}
+            <tr>
+              <th scope="row" class="ps-0">parent</th>
+              <td class="pe-0"><a href="{{ parent.url }}">{{ parent.title }}</a></td>
+            </tr>
+          {% endif %}
+
+          {% if page.level %}
+            <tr>
+              <th scope="row" class="ps-0">level</th>
+              <td class="pe-0">{{ page.level }}</td>
+            </tr>
+          {% endif %}
+
+          {% if page.ects %}
+            <tr>
+              <th scope="row" class="ps-0">ects</th>
+              <td class="pe-0">{{ page.ects }}</td>
+            </tr>
+          {% endif %}
+
+          {% if page.duration %}
+            <tr>
+              <th scope="row" class="ps-0">duration</th>
+              <td class="pe-0">{{ page.duration }}</td>
+            </tr>
+          {% endif %}
+
+          {% if page.continuing %}
+            <tr>
+              <th scope="row" class="ps-0">continuing</th>
+              <td class="pe-0">{{ page.continuing }}</td>
+            </tr>
+          {% endif %}
+
+        </tbody>
+      </table>
+
+      {% if page.contacts %}
+        {{ page.contacts }}
+      {% endif %}
+
+    </div>
+    <div class="col-md-8 offset-md-1">
+
+      {% if page.evaluation %}
+        <h2>evaluation</h2>
+        {{ page.evaluation }}
+      {% endif %}
+
+      {% if page.objectives %}
+        <h2>objectives</h2>
+        {{ page.objectives }}
+      {% endif %}
+
+      {% if page.opportunities %}
+        <h2>opportunities</h2>
+        {{ page.opportunities }}
+      {% endif %}
+
+      {% if page.other %}
+        <h2>other</h2>
+        {{ page.other }}
+      {% endif %}
+
+      {% if page.pedagogy %}
+        <h2>pedagogy</h2>
+        {{ page.pedagogy }}
+      {% endif %}
+
+      {% if page.prerequisites %}
+        <h2>pedagogy</h2>
+        {{ page.pedagogy }}
+      {% endif %}
+
+      {% if page.pricing %}
+        <h2>pricing</h2>
+        {{ page.pricing }}
+      {% endif %}
+
+      {% if page.registration %}
+        <h2>registration</h2>
+        {{ page.registration }}
+      {% endif %}
+
+      {{ content }}
+    </div>
+  </div>
+</div>

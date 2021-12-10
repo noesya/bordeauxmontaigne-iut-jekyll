@@ -1,0 +1,14 @@
+---
+layout: default
+title: L’offre de formation
+description: >
+  Découvrez toute l’offre de formation de l’IUT
+---
+
+<div class="container">
+  <ul>
+    {% for program in site.programs %}
+      <li><a href="{{ program.url }}">{{ program.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>

@@ -3,99 +3,79 @@ layout: default
 color: "#CA0051"
 ---
 
+{% assign text = '' %}
+{% for part in site.data.programs %}
+  {% assign chapter = '' %}
+  {% for variable in part.content %}
+    {% assign chapter = chapter | append: page[variable] %}
+  {% endfor %}
+  {% if chapter != '' %}
+    {% assign text = text | append: '<h2>' | append: part.title | append: '</h2>' | append: chapter %}
+  {% endif %}
+{% endfor %}
+
+
 <div class="container">
-  <div class="row">
-    <div class="col-md-3">
-      <table class="table mb-4">
-        <tbody class="border-top">
+ <div class="row">
+   <div class="col-md-4">
+     <ul class='nav toc' id='nav-toc'>
+       {{text | page_nav_links}}
 
-          {% if page.parent %}
-            {% assign parent = site.programs | where: 'identifier', page.parent | first %}
-            <tr>
-              <th scope="row" class="ps-0">parent</th>
-              <td class="pe-0"><a href="{{ parent.url }}">{{ parent.title }}</a></td>
-            </tr>
-          {% endif %}
+       {% if children.size > 0 %}
+         <li class="nav-item">
+           <a class="nav-link" href="#page-detail">En détail</a>
+         </li>
+       {% endif %}
 
-          {% if page.level %}
-            <tr>
-              <th scope="row" class="ps-0">level</th>
-              <td class="pe-0">{{ page.level }}</td>
-            </tr>
-          {% endif %}
-
-          {% if page.ects %}
-            <tr>
-              <th scope="row" class="ps-0">ects</th>
-              <td class="pe-0">{{ page.ects }}</td>
-            </tr>
-          {% endif %}
-
-          {% if page.duration %}
-            <tr>
-              <th scope="row" class="ps-0">duration</th>
-              <td class="pe-0">{{ page.duration }}</td>
-            </tr>
-          {% endif %}
-
-          {% if page.continuing %}
-            <tr>
-              <th scope="row" class="ps-0">continuing</th>
-              <td class="pe-0">{{ page.continuing }}</td>
-            </tr>
-          {% endif %}
-
-        </tbody>
-      </table>
-
-      {% if page.contacts %}
-        {{ page.contacts }}
+      {% if page.related_category != '' %}
+        {% assign category = site.data.categories | where: 'identifier', page.related_category | first %}
+        {% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.related_category' %}
+        <li class="nav-item">
+          <a class="nav-link" href="#page-news">Actualités de la catégorie</a>
+        </li>
       {% endif %}
+     </ul>
+   </div>
+   <div class="col-md-8">
+     <div itemprop="articleBody">
+       {{text | page_nav_text_with_ids | correct_punctuation}}
+       {{ content }}
+     </div>
 
-    </div>
-    <div class="col-md-8 offset-md-1">
+     {% if children.size > 0 %}
+       <hr class="mt-5 mb-0">
+       <div class="top">
+         <h2 id="page-detail">En détail</h2>
+       </div>
+       <div class="row row-cols-md-2 g-3">
+           {% for child in children %}
+           <div class="col">
+               <a href="{{ child.url }}">{{ child.title }}</a>
+           </div>
+           {% endfor %}
+       </div>
+     {% endif %}
 
-      {% if page.evaluation %}
-        <h2>evaluation</h2>
-        {{ page.evaluation }}
-      {% endif %}
+     {% if page.related_category != '' %}
+       {% assign category = site.data.categories | where: 'identifier', page.related_category | first %}
+       {% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.related_category' %}
+       <hr class="mt-5 mb-0">
+       <div class="top">
+         <h2 id="page-news">Actualités</h2>
+         <a href="{{ category.link }}" class="link link--more">{{ trad.news.more }} « {{ category.name }} »</a>
+       </div>
+       <div class="row row-cols-md-2 g-3">
+           {% for post in posts limit:4 %}
+           <div class="col">
+             {% include post.html
+                 image=post.image
+                 title=post.title
+                 url=post.url %}
+           </div>
+           {% endfor %}
+       </div>
+     {% endif %}
 
-      {% if page.objectives %}
-        <h2>objectives</h2>
-        {{ page.objectives }}
-      {% endif %}
-
-      {% if page.opportunities %}
-        <h2>opportunities</h2>
-        {{ page.opportunities }}
-      {% endif %}
-
-      {% if page.other %}
-        <h2>other</h2>
-        {{ page.other }}
-      {% endif %}
-
-      {% if page.pedagogy %}
-        <h2>pedagogy</h2>
-        {{ page.pedagogy }}
-      {% endif %}
-
-      {% if page.prerequisites %}
-        <h2>pedagogy</h2>
-        {{ page.pedagogy }}
-      {% endif %}
-
-      {% if page.pricing %}
-        <h2>pricing</h2>
-        {{ page.pricing }}
-      {% endif %}
-
-      {% if page.registration %}
-        <h2>registration</h2>
-        {{ page.registration }}
-      {% endif %}
-
-      {{ content }}
     </div>
   </div>
 </div>

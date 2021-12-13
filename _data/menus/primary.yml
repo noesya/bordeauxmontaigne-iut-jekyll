@@ -187,6 +187,10 @@
     target: "/programmes/diplome-d-universite"
     kind: program
     children: []
+  - title: Licences professionnelles
+    target: "/programmes/licence-professionnelle"
+    kind: program
+    children: []
 - title: Vie étudiante
   target: "/vie-etudiante"
   kind: page

@@ -195,6 +195,10 @@
     target: "/programmes/master-professionnel"
     kind: program
     children: []
+  - title: Apprentissage
+    target: "/offre-de-formation/apprentissage"
+    kind: page
+    children: []
 - title: Vie étudiante
   target: "/vie-etudiante"
   kind: page

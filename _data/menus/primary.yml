@@ -36,8 +36,8 @@
     kind: page
     children: []
 - title: Offre de formation
-  target: "/offre-de-formation/formation-continue/offre-de-formation-fc"
-  kind: 
+  target: 
+  kind: blank
   children:
   - title: Bachelor Universitaire de Technologie (B.U.T.)
     target: "/offre-de-formation/but"

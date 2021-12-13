@@ -12,11 +12,11 @@ hide_hero: true
     <section class="mb-6">
       <div class="top">
         <h2>{{ section.title }}</h2>
-        {% if forloop.first %} <!-- waiting type -->
+        {% if section.kind == "news" %}
           <a href="{{ section.url }}" class="link link--more">{{ trad.news.more }}</a>
         {% endif %}
       </div>
-      {% if forloop.first %} <!-- waiting type -->
+      {% if section.kind == "news" %}
         <div class="row row-cols-1 row-cols-md-2">
           {% for post in site.posts limit:4 %}
             <div class="col">

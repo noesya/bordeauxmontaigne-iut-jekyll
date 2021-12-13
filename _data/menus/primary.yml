@@ -183,6 +183,10 @@
     target: "/programmes/bachelor-universitaire-de-technologie"
     kind: program
     children: []
+  - title: Diplômes Universitaires (DU)
+    target: "/programmes/diplome-d-universite"
+    kind: program
+    children: []
 - title: Vie étudiante
   target: "/vie-etudiante"
   kind: page

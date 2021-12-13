@@ -1,7 +1,7 @@
 ---
-- title: Actualités
+- title: Actualites
   target: "/actualites"
-  kind: url
+  kind: news
   children: []
 - title: Notre institut
   target: "/notre-institut"
@@ -72,11 +72,11 @@
       kind: page
       children: []
     - title: Métiers du multimédia et de l'internet
-      target: "/programs"
+      target: "/programmes"
       kind: programs
       children: []
     - title: Publicité
-      target: "/programs"
+      target: "/programmes"
       kind: programs
       children: []
   - title: Diplômes Universitaires (DU)
@@ -176,7 +176,7 @@
       kind: page
       children: []
 - title: Offre de formation
-  target: "/programs"
+  target: "/programmes"
   kind: programs
   children: []
 - title: Vie étudiante

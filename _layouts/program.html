@@ -14,6 +14,7 @@ color: "#CA0051"
   {% endif %}
 {% endfor %}
 
+{% assign children = site.programs | where: 'parent', page.identifier %}
 
 <div class="container">
  <div class="row">
@@ -27,7 +28,7 @@ color: "#CA0051"
          </li>
        {% endif %}
 
-      {% if page.related_category != '' %}
+      {% if page.related_category %}
         {% assign category = site.data.categories | where: 'identifier', page.related_category | first %}
         {% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.related_category' %}
         <li class="nav-item">
@@ -56,7 +57,7 @@ color: "#CA0051"
        </div>
      {% endif %}
 
-     {% if page.related_category != '' %}
+     {% if page.related_category %}
        {% assign category = site.data.categories | where: 'identifier', page.related_category | first %}
        {% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.related_category' %}
        <hr class="mt-5 mb-0">

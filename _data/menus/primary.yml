@@ -178,7 +178,11 @@
 - title: Offre de formation
   target: "/programmes"
   kind: programs
-  children: []
+  children:
+  - title: Bachelor Universitaire de Technologie (B.U.T.)
+    target: "/programmes/bachelor-universitaire-de-technologie"
+    kind: program
+    children: []
 - title: Vie étudiante
   target: "/vie-etudiante"
   kind: page

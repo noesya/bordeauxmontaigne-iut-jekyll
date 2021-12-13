@@ -191,6 +191,10 @@
     target: "/programmes/licence-professionnelle"
     kind: program
     children: []
+  - title: Masters professionnels
+    target: "/programmes/master-professionnel"
+    kind: program
+    children: []
 - title: Vie étudiante
   target: "/vie-etudiante"
   kind: page

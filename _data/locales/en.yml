@@ -24,4 +24,6 @@ news:
 next: "Next"
 pagination: "Pagination"
 previous: "Previous"
+programs:
+  more: "See more programs"
 share: "Share on"

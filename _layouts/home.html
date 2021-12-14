@@ -11,9 +11,15 @@ hide_hero: true
 
     <section class="mb-6">
       <div class="top">
-        <h2>{{ section.title }}</h2>
-        {% if section.kind == "news" %}
-          <a href="{{ section.url }}" class="link link--more">{{ trad.news.more }}</a>
+        <h2><a href="{{ section.target }}">{{ section.title }}</a></h2>
+        {% if section.kind == "news" or section.kind == "programs" %}
+          <a href="{{ section.target }}" class="link link--more">
+            {% if section.kind == "news" %}
+              {{ trad.news.more }}
+            {% elsif section.kind == "programs" %}
+              {{ trad.programs.more }}
+            {% endif %}
+          </a>
         {% endif %}
       </div>
       {% if section.kind == "news" %}

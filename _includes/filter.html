@@ -7,22 +7,6 @@
   </div>
   <div class="offcanvas-body">
     {% assign root_categories = site.data.categories | where: "parent", "" | sort: "position" %}
-    <ul class="nav flex-column">
-      {% for category in root_categories %}
-        <li class="nav-item">
-          <a href="{{ category.link }}" class="nav-link">{{ category.name }}</a>
-          {% assign children_categories = site.data.categories | where: "parent", category.identifier | sort: "position" %}
-          {% if children_categories.size > 0 %}
-          <ul>
-          {% for child in children_categories %}
-            <li class="nav-item">
-              <a href="{{ child.link }}" class="nav-link">{{ child.name }}</a>
-            </li>
-          {% endfor %}
-          </ul>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+    {% include categories.html categories=root_categories class="nav flex-column" level=1 %}
   </div>
 </div>

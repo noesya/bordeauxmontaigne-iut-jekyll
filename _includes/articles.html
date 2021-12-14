@@ -2,7 +2,11 @@
   {% for article in articles %}
     {% assign target = article.target | strip %}
     {% if target != "" and article.kind != "url" %}
-      {% assign page = site.pages | where: "permalink", article.target | first %}
+      {% if article.kind == 'program' %}
+        {% assign page = site.programs | where: "permalink", article.target | first %}
+      {% else %}
+        {% assign page = site.pages | where: "permalink", article.target | first %}
+      {% endif %}
       <div class="col">
         {% include article.html
             url = page.permalink

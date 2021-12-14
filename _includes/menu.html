@@ -1,0 +1,38 @@
+<ul class="{{ include.class }} nav-level-{{ include.level }}">
+  {% for item in include.items %}
+    {% assign slug = item.title | slugify %}
+    {% assign children = item.children %}
+    {% assign target = item.target | strip %}
+    <li class="nav-item{% if children.size > 0 and include.dropdown and include.level == 1 %} dropdown{% endif %}">
+
+      {% assign attr = "" %}
+      {% assign class = "nav-link" %}
+      {% if children.size > 0 and include.dropdown and include.level == 1 %}
+        {% assign class = "nav-link dropdown-toggle" %}
+        {% capture attr %}
+          id="dropdown-{{ slug }}" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+        {% endcapture %}
+      {% endif %}
+
+      {% if target != '' %}
+        <a href="{{item.target}}" class="{{class}}" {{attr}}>{{item.title}}</a>
+      {% else %}
+        <span class="{{class}}{% if include.level > 1 %} disabled{% endif %}" {{attr}}>{{item.title}}</span>
+      {% endif %}
+
+      {% if children.size > 0 and include.dropdown and include.level == 1 %}
+        <div class="dropdown-menu" aria-labelledby="dropdown-{{ slug }}">
+      {% endif %}
+
+      {% if children.size > 0 %}
+        {% assign next_level = include.level | plus: 1 %}
+        {% include menu.html items=children level=next_level %}
+      {% endif %}
+
+      {% if children.size > 0 and include.dropdown and include.level == 1 %}
+        </div>
+      {% endif %}
+
+    </li>
+  {% endfor %}
+</ul>

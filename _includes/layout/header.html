@@ -9,6 +9,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+
+        {% include menu.html items=site.data.menus.primary class="navbar-nav" dropdown=true level=1 %}
+
+        {% comment %}
         <ul class="navbar-nav nav-level-1">
         {% for item in site.data.menus.primary %}
           {% assign children = item.children %}
@@ -56,6 +61,9 @@
           </li>
         {% endfor %}
         </ul>
+        {% endcomment %}
+
+
       </div>
     </div>
   </nav>

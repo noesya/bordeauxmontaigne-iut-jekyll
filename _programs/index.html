@@ -7,9 +7,15 @@ description: >
   Découvrez toute l’offre de formation de l’IUT
 ---
 
+<div class="container">
+  {% assign programs = site.programs | where_exp: "item", "item.parent != nil" | where: "parent", "" | sort: "position" %}
+  {% include programs.html programs=programs %}
+</div>
+
+{% comment %}
 {% assign parent = "" %}
 <div class="container">
-  {% for program in site.programs %}
+  {% for program in programs %}
     {% assign parent = program.parent | strip %}
 
     {% if parent != "" %}
@@ -34,3 +40,4 @@ description: >
 
   {% endfor %}
 </div>
+{% endcomment %}

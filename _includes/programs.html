@@ -1,0 +1,9 @@
+<ul>
+  {% for program in include.programs %}
+  <li>
+    <a href="{{ program.url }}">{{ program.title }}</a>
+    {% assign children = site.programs | where: "parent", program.identifier | sort: "position" %}
+    {% include programs.html programs=children %}
+  </li>
+  {% endfor %}
+</ul>

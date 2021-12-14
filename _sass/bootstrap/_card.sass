@@ -14,3 +14,8 @@
             object-fit: cover
             object-position: top
             width: 100%
+    .stretched-link::after
+        transition: background .3s ease
+    .stretched-link:hover
+        &::after
+            background-color: rgba(white, .2)

@@ -1,4 +1,4 @@
-<ul class="{{ include.class }} nav-level-{{ include.level }}">
+<ul class="{{ include.class }}{% if include.level %} nav-level-{{ include.level }}{% endif %}">
   {% for item in include.items %}
     {% assign slug = item.title | slugify %}
     {% assign children = item.children %}
@@ -35,4 +35,11 @@
 
     </li>
   {% endfor %}
+
+  {% if include.level == 1 and include.show_legals %}
+    <li class="nav-item">
+      <span class="nav-link">{{ trad.legal }}</span>
+      {% include menu.html items=site.data.menus.legal %}
+    </li>
+  {% endif %}
 </ul>

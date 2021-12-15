@@ -1,9 +1,31 @@
-<ul>
+{% if include.level == 1 %}
+  <div class="row row-cols-1 row-cols-md-2">
+{% endif %}
+
   {% for program in include.programs %}
-  <li>
-    <a href="{{ program.url }}">{{ program.title }}</a>
-    {% assign children = site.programs | where: "parent", program.identifier | sort: "position" %}
-    {% include programs.html programs=children %}
-  </li>
+
+    {% if include.level == 1 %}
+      <div class="col-md-8">
+        <h2><a href="{{ program.url }}">{{ program.title }}</a></h2>
+        {% if program.excerpt %}
+          <p>{{ program.excerpt }}</p>
+        {% endif %}
+      </div>
+      {% assign level = include.level | plus: 1 %}
+      {% assign children = site.programs | where: "parent", program.identifier | sort: "position" %}
+      {% include programs.html programs=children level=level %}
+    {% else %}
+      <div class="col">
+        {% include program.html
+            url = program.permalink
+            title = program.title
+            description = program.excerpt
+            %}
+      </div>
+    {% endif %}
+
   {% endfor %}
-</ul>
+
+{% if include.level == 1 %}
+  </div>
+{% endif %}

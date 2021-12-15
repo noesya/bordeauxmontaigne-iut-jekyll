@@ -1,0 +1,8 @@
+<div class="card card--program">
+  <div class="card-body">
+    <p class="card-title "><a href="{{ include.url }}" class="stretched-link link link--more">{{ include.title }}</a></p>
+    {% if include.description %}
+      <p class="card-text">{{ include.description | strip_newlines | strip_html | truncate: 120 }}</p>
+    {% endif %}
+  </div>
+</div>

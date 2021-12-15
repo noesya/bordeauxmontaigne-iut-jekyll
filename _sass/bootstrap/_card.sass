@@ -1,5 +1,6 @@
 .card
-    &--article
+    &--article,
+    &--program
         .link
             font-size: px2rem(22)
             text-decoration: none
@@ -19,3 +20,8 @@
     .stretched-link:hover
         &::after
             background-color: rgba(white, .2)
+
+    @include media-breakpoint-up(md)
+        &--program
+            img
+                max-width: 50%

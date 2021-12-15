@@ -52,7 +52,7 @@ scrollspy: true
      {% endif %}
 
      {% if children.size > 0 %}
-       <hr class="mt-5 mb-0">
+       <hr class="my-5">
        <div class="top">
          <h2 id="page-detail">{{ trad.detail }}</h2>
        </div>
@@ -68,7 +68,7 @@ scrollspy: true
      {% if page.related_category != '' %}
        {% assign category = site.data.categories | where: 'identifier', page.related_category | first %}
        {% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.related_category' %}
-       <hr class="mt-5 mb-0">
+       <hr class="my-5">
        <div class="top">
          <h2 id="page-news">{{ trad.news.tite }}</h2>
          <a href="{{ category.link }}" class="link link--more">{{ trad.news.more }} « {{ category.name }} »</a>

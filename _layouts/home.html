@@ -23,12 +23,13 @@ hide_hero: true
         {% endif %}
       </div>
       {% if section.kind == "news" %}
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gy-4">
           {% for post in site.posts limit:6 %}
             <div class="col">
               {% include post.html
                   image=post.image
                   title=post.title
+                  date=post.date
                   url=post.url %}
             </div>
           {% endfor %}

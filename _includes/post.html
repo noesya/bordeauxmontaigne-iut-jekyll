@@ -15,6 +15,7 @@
   </div>
   <div class="card-body">
     <p class="card-title">{{ include.title }}</p>
+    <time datetime="{{ include.date | date: '%Y-%m-%d %H:%M' }}">{{ include.date | date: '%d/%m/%Y' }}</time>
     <a href="{{ include.url }}" class="stretched-link link link--more">{{trad.more}}</a>
   </div>
 </article>

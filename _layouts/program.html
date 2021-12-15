@@ -1,6 +1,9 @@
 ---
 layout: default
 color: "#CA0051"
+schema:
+  itemtype: EducationalOccupationalProgram
+scrollspy: true
 ---
 
 {% assign text = '' %}
@@ -15,6 +18,9 @@ color: "#CA0051"
 {% endfor %}
 
 {% assign children = site.programs | where: 'parent', page.identifier %}
+
+<meta itemprop="name" content="{{page.title}}">
+<meta itemprop="url" content="{{ page.url | absolute_url }}">
 
 <div class="container">
  <div class="row">

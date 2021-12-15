@@ -12,6 +12,7 @@ scrollspy: true
 {% assign children = site.pages | where: 'parent', page.identifier %}
 
 <meta itemprop="headline" content="{{page.title}}">
+<meta itemprop="url" content="{{ page.url | absolute_url }}">
 {% if page.excerpt %}<meta itemprop="description" content="{{ page.description | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
 
 <div class="container">

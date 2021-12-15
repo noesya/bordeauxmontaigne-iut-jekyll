@@ -16,7 +16,7 @@ schema:
 
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4 col-lg-3">
       <table class="table mb-4" aria-label="{{ lang.news.infos }}">
         <tbody class="border-top">
           <tr>
@@ -46,11 +46,11 @@ schema:
           <tr>
             <th scope="row" class="ps-0">{{ trad.category.plurial_title }}</th>
             <td class="p-category pe-0">
-              {% for c in page.categories %}
+              {%- for c in page.categories -%}
                 {%- assign category = site.data.categories | where: 'identifier', c | first -%}
                 {% unless forloop.first %}, {% endunless %}
                 <a href="{{ category.link }}" itemtype="https://schema.org/articleSection">{{ category.name }}</a>
-              {% endfor %}
+              {%- endfor -%}
             </td>
           </tr>
           {% endif %}
@@ -66,7 +66,7 @@ schema:
         </tbody>
       </table>
     </div>
-    <div class="col-md-8 offset-md-1">
+    <div class="col-md-8 offset-lg-1">
 
       {% if page.image %}
         {% assign directory = page.image | slice: 0, 2 %}

@@ -8,12 +8,14 @@ category:
   single_title: "Category"
   plurial_title: "Categories"
 date: "Date"
+detail: "In detail"
 home: "Home"
 menu:
   main: "Main menu"
   title: "Menu"
 more: "Read more"
 news:
+  category: "Actualités de la catégorie"
   infos: "Article informations"
   more: "See more news"
   navigation: "Articles navigation"
@@ -26,4 +28,5 @@ pagination: "Pagination"
 previous: "Previous"
 programs:
   more: "See more programs"
+  title: "Programs"
 share: "Share on"

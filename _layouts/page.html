@@ -23,7 +23,7 @@ scrollspy: true
 
        {% if children.size > 0 %}
          <li class="nav-item">
-           <a class="nav-link" href="#page-detail">En détail</a>
+           <a class="nav-link" href="#page-detail">{{ trad.detail }}</a>
          </li>
        {% endif %}
 
@@ -31,7 +31,7 @@ scrollspy: true
         {% assign category = site.data.categories | where: 'identifier', page.related_category | first %}
         {% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.related_category' %}
         <li class="nav-item">
-          <a class="nav-link" href="#page-news">Actualités de la catégorie</a>
+          <a class="nav-link" href="#page-news">{{ trad.news.category }}</a>
         </li>
       {% endif %}
      </ul>
@@ -54,7 +54,7 @@ scrollspy: true
      {% if children.size > 0 %}
        <hr class="mt-5 mb-0">
        <div class="top">
-         <h2 id="page-detail">En détail</h2>
+         <h2 id="page-detail">{{ trad.detail }}</h2>
        </div>
        <div class="row row-cols-md-2 g-3">
            {% for child in children %}
@@ -70,7 +70,7 @@ scrollspy: true
        {% assign posts = site.posts | where_exp: 'post', 'post.categories contains page.related_category' %}
        <hr class="mt-5 mb-0">
        <div class="top">
-         <h2 id="page-news">Actualités</h2>
+         <h2 id="page-news">{{ trad.news.tite }}</h2>
          <a href="{{ category.link }}" class="link link--more">{{ trad.news.more }} « {{ category.name }} »</a>
        </div>
        <div class="row row-cols-md-2 g-3">

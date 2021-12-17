@@ -1,6 +1,6 @@
 accessibility:
-  content: Accéder au contenu principal
-  navigation: Accéder au menu
+  content: "Accéder au contenu principal"
+  navigation: "Accéder au menu"
 author: "Auteur"
 breadcrumb: "Fil d’Ariane"
 category:
@@ -30,5 +30,6 @@ pagination: "Pagination"
 previous: "Précédent"
 programs:
   more: "Voir toutes les formations"
+  news: "Actualités de la formation"
   title: "Formations"
 share: "Partager sur"

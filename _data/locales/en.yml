@@ -1,6 +1,6 @@
 accessibility:
-  content: Accéder au contenu principal
-  navigation: Accéder au menu
+  content: "Go to main content"
+  navigation: "Go to menu"
 author: "Author"
 breadcrumb: "Breadcrumb"
 category:
@@ -17,7 +17,7 @@ menu:
   title: "Menu"
 more: "Read more"
 news:
-  category: "Actualités de la catégorie"
+  category: "Category's news"
   infos: "Article informations"
   more: "See more news"
   navigation: "Articles navigation"
@@ -30,5 +30,6 @@ pagination: "Pagination"
 previous: "Previous"
 programs:
   more: "See more programs"
+  news: "Program's news"
   title: "Programs"
 share: "Share on"

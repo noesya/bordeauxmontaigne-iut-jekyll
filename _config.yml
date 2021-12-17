@@ -3,6 +3,8 @@ description: "L’IUT Bordeaux Montaigne, le plus court chemin pour aller loi
 lang: fr
 url: "https://bordeauxmontaigne-iut.netlify.app"
 
+future: false
+
 exclude:
   - Gemfile
   - Gemfile.lock

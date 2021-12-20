@@ -4,6 +4,9 @@
         .link
             font-size: px2rem(22)
             text-decoration: none
+    &--program
+        .card-media
+            --bs-aspect-ratio: 70%
     &-media
         @extend .ratio
         --bs-aspect-ratio: 50%
@@ -32,5 +35,5 @@
 
     @include media-breakpoint-up(md)
         &--program
-            img
-                max-width: 50%
+            .card-media
+                max-width: calc(50% - #{$grid-gutter-width}/2)

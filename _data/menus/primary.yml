@@ -35,6 +35,10 @@
     target: "/notre-institut/relations-avec-les-entreprises"
     kind: page
     children: []
+  - title: Equipe
+    target: "/equipe"
+    kind: staff
+    children: []
 - title: Offre de formation
   target: 
   kind: blank

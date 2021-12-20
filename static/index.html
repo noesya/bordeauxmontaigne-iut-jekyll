@@ -1,0 +1,24 @@
+---
+layout: default
+permalink: /enseignants
+title: Enseignants
+description: >
+---
+
+{% assign trad = site.data.locales[site.lang] %}
+
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+  {% assign teachers = site.teachers | sort: 'last_name' %}
+  {% for teacher in teachers %}
+    <div class="col">
+      <div class="card">
+        <h2>
+          {{teacher.first_name}} {{teacher.last_name}}
+        </h2>
+        <p>{{teacher.excerpt}}</p>
+        <a href="{{teacher.url}}" class="stretched-link link link--more">{{trad.more}}</a>
+      </div>
+    </div>
+  {% endfor %}
+</div>

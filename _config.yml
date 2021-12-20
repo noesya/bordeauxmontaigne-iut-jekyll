@@ -82,6 +82,9 @@ collections:
   posts:
     output: true
     permalink: /actualites/:year/:month/:day/:title
+  teachers:
+    output: true
+    permalink: /enseignants/:title
 
 pagination:
   enabled: true

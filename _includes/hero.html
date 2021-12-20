@@ -1,13 +1,29 @@
 {% assign lang = page.lang | default: site.lang %}
 {% assign trad = site.data.locales[lang] %}
+
+{% assign size_mobile='375x450' %}
+{% if layout.hero.size_mobile %}
+  {% assign size_mobile=layout.hero.size_mobile %}
+{% endif %}
+
+{% assign size_tablet='768x450' %}
+{% if layout.hero.size_tablet %}
+  {% assign size_tablet=layout.hero.size_tablet %}
+{% endif %}
+
+{% assign size_desktop='x450' %}
+{% if layout.hero.size_desktop %}
+  {% assign size_desktop=layout.hero.size_desktop %}
+{% endif %}
+
 <header class="hero"{% if page.color %} style="background-color: {{page.color}} "{% endif %}>
   {% unless layout.hide_hero_image %}
     {% if include.image %}
       {% include image.html
           image=include.image
-          size_mobile='375x450'
-          size_tablet='768x450'
-          size_desktop='x450'
+          size_mobile=size_mobile
+          size_tablet=size_tablet
+          size_desktop=size_desktop
           no_lazy=true
           class='hero__image' %}
     {% endif %}

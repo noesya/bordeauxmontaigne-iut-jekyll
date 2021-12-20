@@ -15,9 +15,13 @@
     target: "/notre-institut/les-atouts-des-iut"
     kind: page
     children: []
-  - title: Équipe pédagogique
+  - title: Équipe pédagogique (-)
     target: "/notre-institut/equipe-pedagogique"
     kind: page
+    children: []
+  - title: Équipe pédagogique
+    target: "/equipe"
+    kind: staff
     children: []
   - title: Ressources
     target: "/notre-institut/ressources-techniques"

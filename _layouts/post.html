@@ -3,6 +3,10 @@ layout: default
 color: "#007960"
 schema:
   itemtype: NewsArticle
+hero:
+  size_mobile: '351x168'
+  size_tablet: '456x219'
+  size_desktop: '856x410'
 ---
 
 {% assign lang = page.lang | default: site.lang %}
@@ -69,10 +73,13 @@ schema:
     <div class="col-md-8 offset-lg-1">
 
       {% if page.image %}
-        {% assign directory = page.image | slice: 0, 2 %}
-        {% assign image = site.data.media[directory][page.image] %}
-        {% assign image_url = image.url %}
-        <img src="{{image_url}}" alt="{{page.title}}" class="img-fluid mb-4" itemprop="image">
+        {% include image.html
+            image=page.image
+            size_mobile='351x168'
+            size_tablet='456x219'
+            size_desktop='856x410'
+            class='img-fluid mb-4'
+            itemprop=true %}
       {% endif %}
 
       <div itemprop="articleBody">

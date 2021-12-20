@@ -7,7 +7,7 @@
     {% if include.level == 1 %}
       <div class="col-md-8">
         <h2><a href="{{ program.url }}">{{ program.title }}</a></h2>
-        {% if program.excerpt %}
+        {% if program.excerpt != '' %}
           <p>{{ program.excerpt }}</p>
         {% endif %}
       </div>

@@ -1,7 +1,18 @@
 <div class="card card--program">
+
+  {% if post.image %}
+    <div class="card-media">
+      {% include image.html
+          image=include.image
+          size_mobile='375x450'
+          size_tablet='334x167'
+          size_desktop='634x317' %}
+    </div>
+  {% endif %}
+
   <div class="card-body">
     <p class="card-title "><a href="{{ include.url }}" class="stretched-link link link--more">{{ include.title }}</a></p>
-    {% if include.description %}
+    {% if include.description != "" %}
       <p class="card-text">{{ include.description | strip_newlines | strip_html | truncate: 120 }}</p>
     {% endif %}
   </div>

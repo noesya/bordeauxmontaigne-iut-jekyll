@@ -1,3 +1,8 @@
+{% assign title_tag = "p" %}
+{% if include.title_tag %}
+  {% assign title_tag = include.title_tag %}
+{% endif %}
+
 <div class="card card--program">
 
   {% if post.image %}
@@ -11,7 +16,7 @@
   {% endif %}
 
   <div class="card-body">
-    <p class="card-title "><a href="{{ include.url }}" class="stretched-link link link--more">{{ include.title }}</a></p>
+    <{{title_tag}} class="card-title "><a href="{{ include.url }}"{% if title_tag == 'p' %} class="link link--more"{% endif %}>{{ include.title }}</a></{{title_tag}}>
     {% if include.description != "" %}
       <p class="card-text">{{ include.description | strip_newlines | strip_html | truncate: 120 }}</p>
     {% endif %}

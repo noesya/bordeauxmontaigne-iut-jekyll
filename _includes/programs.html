@@ -5,11 +5,13 @@
   {% for program in include.programs %}
 
     {% if include.level == 1 %}
-      <div class="col-md-8">
-        <h2><a href="{{ program.url }}">{{ program.title }}</a></h2>
-        {% if program.excerpt != '' %}
-          <p>{{ program.excerpt }}</p>
-        {% endif %}
+      <div class="col-md-8{% unless forloop.first %} mt-6{% endunless %}">
+        {% include program.html
+            url = program.permalink
+            title = program.title
+            description = program.description
+            title_tag = "h2"
+            %}
       </div>
       {% assign level = include.level | plus: 1 %}
       {% assign children = site.programs | where: "parent", program.identifier | sort: "position" %}
@@ -19,7 +21,7 @@
         {% include program.html
             url = program.permalink
             title = program.title
-            description = program.excerpt
+            description = program.description
             %}
       </div>
     {% endif %}

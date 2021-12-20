@@ -2,11 +2,13 @@
   {% for category in include.categories %}
     <li class="nav-item">
       <a href="{{ category.link }}" class="nav-link">{{ category.name }}</a>
+      {% comment %}
       {% assign children_categories = site.data.categories | where: "parent", category.identifier | sort: "position" %}
       {% if children_categories.size > 0 %}
         {% assign level = include.level | plus: 1 %}
         {% include categories.html categories=children_categories level=level %}
       {% endif %}
+      {% endcomment %}
     </li>
   {% endfor %}
 </ul>

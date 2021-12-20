@@ -14,6 +14,7 @@
       {% assign image_lazy = false %}
     {% endif %}
     {% assign image_alt = include.alt | default: '' %}
+    {% assign itemprop = include.itemprop | default: false %}
 
     {% assign image_size_mobile = include.size_mobile | default: false %}
     {% assign image_size_tablet = include.size_tablet | default: false %}
@@ -31,6 +32,7 @@
       <img src="{{ image_url | img_url: image_size_desktop }}"
         {% if image_class %}class="{{ image_class }}"{% endif %}
         {% if image_lazy %}loading="lazy"{% endif %}
+        {% if itemprop %}itemprop="image"{% endif %}
         alt="{{ image_alt }}"
         height="{{image_height}}"
         width="{{ image_width }}">

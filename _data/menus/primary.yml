@@ -19,6 +19,10 @@
     target: "/notre-institut/equipe-pedagogique"
     kind: page
     children: []
+  - title: Equipe
+    target: "/equipe"
+    kind: staff
+    children: []
   - title: Ressources
     target: "/notre-institut/ressources-techniques"
     kind: page
@@ -34,10 +38,6 @@
   - title: Relations avec les entreprises
     target: "/notre-institut/relations-avec-les-entreprises"
     kind: page
-    children: []
-  - title: Equipe
-    target: "/equipe"
-    kind: staff
     children: []
 - title: Offre de formation
   target: 

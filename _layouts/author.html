@@ -16,7 +16,7 @@ pagination:
  {% if page.image %}
    {% assign directory = page.image | slice: 0, 2 %}
    {% assign image_url = site.data.media[directory][page.image].url %}
-   <img src="{{image_url}}" alt="" class="img-fluid mb-4" itemprop="image">
+   <img src="{{image_url}}" alt="{{ page.image_alt }}" class="img-fluid mb-4" itemprop="image">
  {% endif %}
 
  {% if page.biography %}

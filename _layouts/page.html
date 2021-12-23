@@ -39,7 +39,7 @@ scrollspy: true
      {% if page.image %}
        {% assign directory = page.image | slice: 0, 2 %}
        {% assign image_url = site.data.media[directory][page.image].url %}
-       <img src="{{image_url}}" alt="" class="img-fluid mb-4" itemprop="image">
+       <img src="{{image_url}}" alt="{{ page.image_alt }}" class="img-fluid mb-4" itemprop="image">
      {% endif %}
 
      {% if page.text %}
@@ -76,6 +76,7 @@ scrollspy: true
            <div class="col">
              {% include post.html
                  image=post.image
+                 image_alt=post.image_alt
                  title=post.title
                  url=post.url %}
            </div>

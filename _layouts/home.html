@@ -3,7 +3,7 @@ layout: default
 hide_hero: true
 ---
 
-{% include hero.html title=page.description image=page.image %}
+{% include hero.html title=page.description image=page.image image_alt=page.image_alt %}
 
 <div class="container">
 
@@ -28,6 +28,7 @@ hide_hero: true
             <div class="col">
               {% include post.html
                   image=post.image
+                  image_alt=post.image_alt
                   title=post.title
                   date=post.date
                   url=post.url %}

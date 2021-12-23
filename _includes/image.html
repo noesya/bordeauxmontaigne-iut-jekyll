@@ -13,7 +13,7 @@
     {% if include.no_lazy %}
       {% assign image_lazy = false %}
     {% endif %}
-    {% assign image_alt = include.alt | default: '' %}
+    {% assign image_alt = include.image_alt | default: '' %}
     {% assign itemprop = include.itemprop | default: false %}
 
     {% assign image_size_mobile = include.size_mobile | default: false %}

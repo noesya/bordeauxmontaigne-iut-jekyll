@@ -21,7 +21,7 @@
       {% endif %}
 
       {% unless layout.hide_hero %}
-        {% include hero.html title=page.title image=page.image %}
+        {% include hero.html title=page.title image=page.image image_alt=page.image_alt %}
       {% endunless %}
 
       {{ content }}
